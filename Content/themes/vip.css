@@ -1,0 +1,107 @@
+.VIPuser_center{ width: 1190px; margin: 0 auto;}
+.VIPuser_logo{ width: 214px; height: 40px; float: left; margin-top: 15px;}
+.VIPuser_nav{ float: right;}
+.VIPuser_nav a{ color: #666; font-size: 16px; line-height: 70px; float: left; margin-right: 40px;}
+.VIPuser_nav a:hover{ color: #f25f55}
+.VIPuser_main{ width:100%; background: #fffee1;}
+.VIPuser_banner{ width: 100%; height: 459px; background: url(/Content/images/VIP_banner.png) no-repeat; background-position: 50% 0;}
+.VIPuser_title{ color: #fffee1; font-size: 34px; text-align: center; position: relative;line-height: 88px;}
+.VIPuser_line{ width: 267px; height: 13px; position: absolute; top: 37.5px;}
+.VIPuser_type_box{ width: 360px; height: 266px; border-radius: 15px; margin: -75px 15px 40px 15px; float: left;}
+.VIPuser_type{ width: 360px; height: 266px; background: #ffeec9; border-radius: 15px; text-align: center; position: relative; margin: -8px 0px 0px -8px;}
+.VIPuser_tip{ width: 53px; height: 49px; color: #fff; font-size: 16px; text-align: center; line-height: 40px; position: absolute; top: -7px; left: 30px;}
+.VIPuser_hg{ width: 183px; height: 142px; margin-top: 36px;}
+.VIPuser_price{ width: 100%; height: 56px; background: #fec854; position: relative; margin-top: 30px; bottom: 0; border-bottom-right-radius: 15px;}
+.VIPuser_price span{ color: #fff; float: left;}
+.VIPuser_price>img{ position: absolute; top: 0; left: -28px; height: 58px; width: 58px;}
+.VIPuser_btn{ display: block; width: 130px; height: 56px; background: url(/Content/images/VIP_btn.png); float: right; color: #fff; font-size: 24px; line-height: 56px; padding-left: 20px}
+.VIPuser_btn:hover{ background: url(/Content/images/VIP_btn2.png);}
+.VIPuser_buy{ width: 100%; height: 50px; background: #ffe09c; border-radius: 50px; overflow: hidden; position: relative; margin-bottom: 40px;}
+.VIPuser_buy img{ width: 15px; height: 15px; position: absolute; top: 17.5px; left: 40px}
+.VIPuser_buy div ul li{ width: 33%; color: #b46000; font-size: 14px; text-align: center; line-height: 25px; float: left;}
+.VIPuser_compare{ width: 100%; height: 232px; background: #f25f55;}
+.VIPuser_compare tr{ height: 58px; background: #fff; font-size: 14px; color: #666; text-align: center;}
+.VIPuser_compare th{ width: 33.33%; font-size: 16px; color: #fff;}
+.VIPuser_compare td{ border-left: 1px solid #fec854; border-bottom: 1px solid #fec854}
+.VIPuser_explain{ margin: 50px 0 100px 20px}
+.VIPuser_explain h1{ color: #333; font-size: 16px; font-weight: normal; margin-bottom: 20px;}
+.VIPuser_explain p{ color: #666; font-size: 14px; line-height: 30px;}
+.VIP_mask{ width: 100%; height: 100%; position: fixed; top: 0; left: 0;z-index: 2000;background: rgba(0, 0, 0, 0.35);display: none;}
+.VIP_window{ width: 498px;background: #fff;border: 6px solid #dfdfdf;position: absolute;top: 200px;left: 50%;margin-left: -249px;text-align: center}
+.VIP_window_title{ width: 100%;height: 40px;background: #f7f7f7;border-bottom: 1px solid #dfdfdf;color: #666;font-size: 14px;text-align: center;line-height: 40px;font-weight: normal;position: relative}
+.VIP_window_close{ display: block;width: 19px;height: 19px;position: absolute;top: 11px;right: 11px;background: url(/Content/images/VIP_close.png)}
+.VIP_window_item{ color: #fd9d1c;font-size: 14px;font-weight: 700;}
+.VIP_window_msg{ width: 420px; height: 36px; background: #f5f5f5;line-height: 36px;margin:20px 39px;color: #666}
+.VIP_window_Q{ display: block;width: 230px;text-align: right;float: left;color: #666;margin-right: 10px;}
+.VIP_window_A{ float: left;color: #666;}
+.VIP_window_R{ float: left;color: #666;cursor: pointer}
+.VIP_window_R input{ margin-right: 5px;}
+.VIP_window_I{ width: 240px;height: 38px;border: 1px solid #dfdfdf; text-align: center}
+.VIP_window_btn{ display: block;width: 240px;height: 44px;background: #f25f55;border-radius: 5px;color: #fff;text-align: center;line-height: 44px;font-size: 16px;margin: 20px 129px;}
+.VIP_window_btn:hover{ background: #ff6c62;}
+#VIP_window_two{display: none}
+#item_form ul{ width: 420px; margin: 0 auto; margin-bottom: 20px; height: 20px;}
+#item_form ul li{ float: left; text-align: center; width: 50%;}
+#item_form ul li *{ display: inline-block; vertical-align: middle; cursor: pointer;}
+.vip-money{ width: 400px; margin: 10px auto; display: none;}
+.vip-money p{ float: left; width: 50%; text-align: right;}
+.vip-money p:first-child{ text-align: left;}
+.vip-money.act{ display: block;}
+.vip-money p span{ margin: 0; width: auto; float: none; display: inline-block;}
+/************************全局样式************************/
+.myfl{float: left;}
+.myfr{float: right;}
+
+
+.VIP_btn{ display: block; width: 290px; height: 65px; background: #fb5c52; border-radius: 65px; -moz-border-radius: 65px; -o-border-radius: 65px; -webkit-border-radius: 65px; color: #fff; font-size: 24px; text-align: center; line-height: 65px; margin: 47px auto 77px auto; -webkit-box-shadow:0 10px 10px 1px #edb4b2; -moz-box-shadow:0 10px 10px 1px #edb4b2; box-shadow:0 10px 10px 1px #edb4b2;}
+
+body{ background: #f8f8f8;}
+.footer{ background-color: #fff;}
+
+#VIPDetailNew .banner{ position: relative; background: url(../images/vip/vipNew1.png) no-repeat center center; height: 365px; width: 100%;}
+#VIPDetailNew .banner a{ position: absolute; background-color: transparent;width: 231px;
+    top: 274px;
+    left: 50%;
+    margin-left: -105px;
+    height: 55px;
+}
+#VIPDetailNew  .tc{ width: 1202px; margin: 0 auto;}
+#VIPDetailNew  h2{ height: 100px; line-height: 100px; font-size: 28px; color: #333; font-weight: 500;}
+
+#VIPDetailNew table{ width: 100%; text-align: center;}
+#VIPDetailNew table th{ height:129px; background-color: #fff; font-weight: 500; border-top:6px solid #a3b7d1;}
+#VIPDetailNew table th span{ font-size: 20px;}
+#VIPDetailNew table th p{ font-size: 17px; line-height: 54px;}
+#VIPDetailNew table th div{font-size: 18px}
+#VIPDetailNew table th div em{ font-size: 24px; font-weight: bold;}
+
+#VIPDetailNew table th.yellow{ border-top:6px solid #fdc170; width: 220px;}
+#VIPDetailNew table th.yellow  em{ color: #fdc170;}
+#VIPDetailNew table th.green{ border-top:6px solid #4dd4b0; width: 220px;}
+#VIPDetailNew table th.green em{ color: #4dd4b0;}
+#VIPDetailNew table th.blue{ border-top:6px solid #6fa8fc; width: 220px;}
+#VIPDetailNew table th.blue em{ color: #6fa8fc;}
+#VIPDetailNew table tr>*{ border-left: 1px solid #bfbfbf; border-bottom: 1px solid #bfbfbf;}
+#VIPDetailNew table {border-right: 1px solid #bfbfbf;}
+
+#VIPDetailNew table td{ height: 73px; font-size: 14px; padding:0 5px;}
+#VIPDetailNew table tbody tr:nth-child(odd){ background: #f6f9fa;}
+#VIPDetailNew table tbody tr:nth-child(even){ background: #fff;}
+#VIPDetailNew table tbody .icon-right1{ color: #666; font-size: 30px;}
+#VIPDetailNew table tbody .icon-cuo{ color: #ff464e; font-size: 22px;}
+#VIPDetailNew table tbody span{ font-size: 16px; color: #ff464e;}
+#VIPDetailNew table tbody  img{ padding-bottom: 10px; margin-left: 10px;}
+#VIPDetailNew table tbody h3{ position: relative; width: 30px; display: inline-block; font-size: 30px; font-weight: 500; }
+#VIPDetailNew table tbody h3 img{ position: absolute; top: -20px; left: 15px;}
+#VIPDetailNew table tbody span.gray{ color: #333;}
+#VIPDetailNew table td b{ font-size: 15px;}
+
+td.yellow,i.yellow,td.yellow *{ color: #fdc170 !important;}
+td.green,i.green,td.green *{ color: #4dd4b0 !important;}
+td.blue,i.blue,td.blue *{ color: #6fa8fc !important;}
+
+#VIPDetailNew table .yellowBox{ background-color: #fdc170 !important; color: #fff; font-size: 18px; font-weight: bold;}
+#VIPDetailNew table .greenBox{ background-color: #4dd4b0 !important;color: #fff; font-size: 18px; font-weight: bold;}
+#VIPDetailNew table .blueBox{ background-color: #6fa8fc !important;color: #fff; font-size: 18px; font-weight: bold;}
+
+#VIPDetailNew table tbody td{ position: relative;}

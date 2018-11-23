@@ -1,0 +1,52 @@
+.beVIP{width: 1140px;background-color: #fff;padding: 0 30px 114px;margin: 15px auto ; background-color: #fff;}
+.beVIP h2{color: #000;font-size: 16px;font-weight: bold;height:48px;border-bottom: 2px solid #D0CDCC;}
+.beVIP h2 span{display: inline-block;line-height: 48px;border-bottom: 2px solid #e74d3c;}
+body{ background-color: rgb(231,232,236);}
+.beVIP .info{padding: 20px 240px 40px;font-size: 14px;}
+.beVIP .info a{color: #4f96d7;}
+
+.beVIP .cat,.new-vip .cat{height: 40px;font-size: 14px;padding: 0 240px;}
+.beVIP .cat .btn,.new-vip  .cat .btn,.new-vip .day-num div.btn{ color: #000; cursor: pointer; text-align: center;display: inline-block;vertical-align: middle;line-height: 40px; height: 40px;width: 96px;border: 1px dashed #aaa;}
+.beVIP .cat .btn.act,.new-vip .cat .btn.act{background-color: #f67634;border: 1px solid #f67634;color: #fff;}
+
+.beVIP .price{font-size: 14px;text-align: center;padding: 20px 0; line-height: 20px;}
+.beVIP .price .current-money{color: #e74d3c; font-size: 18px;font-weight: bold;margin: 0 3px;}
+.beVIP .price .market-money{display: inline-block;background-image: url(../images/dian.png);background-repeat: repeat-x;background-position: center center;}
+
+.beVIP .VIP-charge{width:710px;margin: 0 auto;border:8px solid #f0f0f5;height:480px;}
+.beVIP .VIP-charge p.warn{color: #E74C3C;margin-left: 82px;height:55px;line-height: 55px;}
+.beVIP .VIP-charge h3{margin-left:120px;margin-bottom:25px;}
+
+
+.beVIP .VIP-charge p.warn span{font-size:16px;}
+
+.beVIP .VIP-charge .charge-con {margin-left: 82px;}
+.beVIP .VIP-charge .charge-con *{display: inline-block;vertical-align: top;}
+.beVIP .VIP-charge .charge-con div{padding-right: 33px; height: 100%; margin-left:94px; line-height: 23px; padding-left:60px;background-image: url(../images/zfb.png);background-repeat: no-repeat;}
+.beVIP .VIP-charge .charge-con span{margin-top: 5px; display: inline-block; border:2px solid #ef5c50;color: #ef5c50;padding: 4px 25px;}
+.beVIP  .VIP-num input{vertical-align: middle; height: 28px;border: 1px solid #ddd;text-indent: 1em;line-height: 28px; }
+.beVIP  .VIP-num {text-align: center;padding: 37px;}
+.beVIP  .ml25{margin-left: 25px;}
+.beVIP .w240{width: 240px;}
+.beVIP .account-pic{display: block;margin: 0 auto;height: auto;width: auto;}
+.beVIP input[type="text"]:focus{border: 1px solid #008abd;box-shadow: 0 0 3px #008abd;}
+
+.beVIP .tc.checbox{text-align: center;padding-top: 35px;padding-bottom: 14px;}
+.beVIP .tc.checbox a{color: #999;}
+.beVIP .submit{cursor: pointer; box-shadow: 0 3px 3px #b43f35;background-color: #ee5b4e;color: #fff;display: block;margin: 0 auto;width: 181px;height: 45px;line-height: 45px;font-size: 16px;font-weight: bold;text-align: center;border-radius: 5px;}
+.beVIP .submit:hover{background-color:#D23628;}
+.beVIP .know-vip{color:#4f96d7;line-height: 40px;}
+.beVIP .tc {text-align: center;}
+
+.new-vip .day-num { margin: 28px auto; text-align: left;font-size: 14px; width: 633px; }
+.new-vip .cat{width:633px; margin: 0 auto; text-align: left;padding: 0; font-size: 14px;color: #000; }
+.new-vip .day-num div.btn{ display: inline-block; font-size: 14px; position: relative; border: 1px solid #dedede; margin-left: 28px;}
+.new-vip .day-num div.act{ border: 1px solid #f35f56;}
+.new-vip .day-num div span{ color: #f35f56; display: none; position: absolute; bottom:-1px; right:-1px; height: 16px; line-height: 16px;}
+.new-vip .day-num div.act span{ display: block;}
+.new-vip .cat .btn{ margin-left: 28px; font-size: 14px; cursor: default;color: #000; }
+.new-vip .jier_center{ width: 617px;}
+.new-vip .info{ width: 640px; margin: 0 auto; font-size: 14px; margin-top: 28px; line-height: 28px;}
+.new-vip .info span{ display: inline-block; width: 70px;float: left}
+.new-vip .info p{ margin-left: 70px;}
+

@@ -1,0 +1,10 @@
+.down-hd{ background: url(/content/images/mianfei_shy.png) no-repeat; background-position: center center; height: 765px; width: 100%;}
+.down-hd div{ padding-top: 405px; width: 800px; text-align: center; margin: 0 auto; position: relative;}
+.down-hd div a{ display: block; margin-left: 580px; margin-bottom: 20px;}
+.down-info{ background: #f5f6f7; color: #323232; }
+.down-info div{ width: 1150px; position: relative; padding-top: 120px; margin: 0 auto;height:460px; }
+.down-info div img{ position: absolute; display: block; top: 100px; right: 0;}
+.down-info h2{ font-weight: 500; font-size: 50px; margin-bottom: 50px; }
+.down-info p{ font-size: 20px; color: #595959; margin-bottom: 32px;}
+.down-info p i{ font-size: 25px; font-weight: bold; margin-right: 15px;}
+.down-hd .app{ width: 150px; margin-left: -23px; position: absolute; bottom: 0; left: 50%;}

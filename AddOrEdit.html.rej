@@ -1,0 +1,13 @@
+diff a/www.meilipa.com/AddOrEdit.html b/www.meilipa.com/AddOrEdit.html	(rejected hunks)
+@@ -909,9 +909,9 @@
+             <div class="item">
+                 <span class="label vt"><span>*</span>活动时间：</span>
+                 <div class="item-con">
+-                    <input type="text" class="w150" datatype="*" nullmsg="请选择" placeholder="活动开始时间" id="begindate" name="sk_begindate" onclick=" WdatePicker({ minDate: '2017-11-30', maxDate: '#F{$dp.$D(\'enddate\')||\'2030-10-01\'}', dateFmt: 'yyyy-MM-dd', onpicked: function () { document.getElementById('enddate').click(); timeChange(); }})" value="2018-06-04">
++                    <input type="text" class="w150" datatype="*" nullmsg="请选择" placeholder="活动开始时间" id="begindate" name="sk_begindate" onclick=" WdatePicker({ minDate: '2017-11-30', maxDate: '#F{$dp.$D(\'enddate\')||\'2030-10-01\'}', dateFmt: 'yyyy-MM-dd', onpicked: function () { document.getElementById('enddate').click(); timeChange(); }})" value="2018-06-22">
+                     -
+-                    <input type="text" class="w150" datatype="*" nullmsg="请选择" placeholder="活动结束时间" id="enddate" name="sk_enddate" onclick="WdatePicker({ minDate: '#F{$dp.$D(\'begindate\')||\'2030-10-01\'}', dateFmt: 'yyyy-MM-dd', onpicked: function () { timeChange(); }})" value="2018-06-08">
++                    <input type="text" class="w150" datatype="*" nullmsg="请选择" placeholder="活动结束时间" id="enddate" name="sk_enddate" onclick="WdatePicker({ minDate: '#F{$dp.$D(\'begindate\')||\'2030-10-01\'}', dateFmt: 'yyyy-MM-dd', onpicked: function () { timeChange(); }})" value="2018-06-26">
+ 
+                     <span style="margin-left: 20px">共</span><em id="Date-num">0</em><span>天</span> <span style="margin-left: 10px;">总份数： <em id="all-num" style="color: #ff464e;">0</em></span>
+                     <span style="margin-left: 20px;color:#ff464e;display: none;" id="data-warn">活动天数不能大于15天</span>

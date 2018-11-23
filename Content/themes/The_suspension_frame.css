@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.xuanfubox{background:url(../images/xfk_bj.png) no-repeat; width:139px; height:365px; display:block;}
+.xuanfubox_a a img{display:inline-block; vertical-align:top; border:0;}
+.xuanfubox_b{width:139px; display:block; }
+.xuanfubox_b ul{display:inline-block; padding-left:16px; margin:5px 0;}
+.xuanfubox_b ul li{height:25px; line-height:25px; float:left;list-style:none;padding-right:1px; padding-left: 5px; width: 48px;}
+.xuanfubox_b ul li a{ height:25px; line-height:25px; float:left; color:#666666; font-size:12px; text-align:left; text-decoration:none;}
+.xuanfubox_b ul li a:hover{color:#ef5443;}
+.clear{clear:both;font-size:0;line-height:0;height:0}
+
+.xuanfubox_c{width:125px; margin:0 auto; height:40px; display:block;cursor: pointer;}
+.xuanfubox_c div a{width:105px;  height:30px; color:#e74c3c; text-decoration:none; font-size:14px; line-height:19px;}
+.xuanfubox_c div a img{border:0; vertical-align:top; display:inline-block;}
+
+.xuanfubox_d{width:125px; cursor:pointer; height:30px;margin:0 auto;}
+.xuanfubox_d a{width:125px; line-height:16px; color:#666666; font-size:12px; font-family:"微软雅黑"; text-decoration:none;}
+
+.xuanfubox_e{width:115px; float:left; margin-left:52px; margin-top:21px;}
+.xuanfubox_e p{ line-height:20px; color:#fff; font-size:14px; font-weight:bold; font-family:"微软雅黑"; text-decoration:none;}
+
+/* CSS right float */
+.maint-right {float: right; margin-right: -150px;}
+ .prt_cct {
+        margin: 5px auto;
+    }
+
+    .top_ranking {
+        border-bottom: 1px dashed #e4e4e4;
+        height: 42px;
+        padding: 7px;
+    }
+
+        .top_ranking .src_left {
+            margin: 0 10px;
+            width: 75px;
+        }
+
+        .top_ranking .src_right {
+            width: 165px;
+            height: 45px;
+            overflow: hidden;
+        }
+
+        .top_ranking .ranking_icon {
+            float: left;
+        }
+
+        .top_ranking .ranking_pic {
+            float: left;
+            margin-left: 14px;
+        }
+
+    .bg_pic {
+        background: url(/Content/images/ontrial_left.png) no-repeat;
+    }
+
+    .rd_top2 li {
+        padding: 10px 16px 15px;
+    }
+
+        .rd_top2 li a {
+            display: block;
+        }
+
+        .rd_top2 li img {
+            height: 180px;
+            width: 180px;
+        }
+
+        .rd_top2 li .top2_words {
+            margin-top: 3px;
+            text-align: center;
+            width: 100%;
+        }
+
+    .top2_lst:hover {
+        background: #eaeaea;
+        cursor: pointer;
+    }
+
+        .top2_lst:hover .top2_words:hover {
+            color: #db2728;
+        }

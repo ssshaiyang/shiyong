@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <title>免费使用对比</title>
+    
+    <meta name="keywords" content="试客网,试客联盟,试客之家,试客联盟网,试客联盟中心,免费试用,试用网,免费试用网,免费试用平台,试客,飞猪试用,试客平台,飞猪试用" />
+    <meta name="description" content="欢迎来免费飞猪试用试用网:飞猪试用—是全国领先的免费试用网和试客网,深得试客信赖的免费试用中心网站,是免费试用网和试客网站的首选,飞猪试用免费试用网为试客提供最优质和实用的优秀免费试用商品." />
+    <link rel="stylesheet" type="text/css" href="./Content/themes/base.css?70752855b2b4becb890ee28904769cae"/>
+<link rel="stylesheet" type="text/css" href="./Content/themes/index.css?feb7fa97c3a9e7c848d170ff2bc1480c"/>
+<link rel="stylesheet" type="text/css" href="./Content/pagination/css/pagination.css?4983b5c10bde10c615b150678bdca342"/>
+<link rel="stylesheet" type="text/css" href="./Content/fancybox/jquery.fancybox.css?cd3adc6dae37113b897d5c08f529c611"/>
+<link rel="stylesheet" type="text/css" href="./Content/themes/credit.css?e613b01c757ca8560e322db13cfcd94a"/>
+<link rel="stylesheet" type="text/css" href="./Content/font/iconfont.css?b0d1dc6721ac2a1f9b75ab0b55683aa5"/>
+
+    <script type="text/javascript" src="./Scripts/jquery-1.8.3.js?3abcbdff1ad084b023234ea421c4042e"></script>
+<script type="text/javascript" src="./Scripts/jquery.pagination.js?15b292e84183853f7571abd19f950921"></script>
+<script type="text/javascript" src="./Scripts/jquery.fancybox.pack.js?402cc442860bd19fc48250d6b786b9d9"></script>
+<script type="text/javascript" src="./PageScript/Common.js?36568842f8c551531d9920f22039b2c2"></script>
+<script type="text/javascript" src="./Scripts/credit.js?5ee8324cbb0bee7d17c2f221650050fc"></script>
+<script type="text/javascript" src="./Scripts/jquery.form.js?bebb42d88be1e4d7a69944748522a581"></script>
+
+    
+    
+    <script>
+       $(document).ready(function(){
+           getBisdata();
+           getactivityNum();
+           getVipRankIndex();
+           getPayCode();
+           toVip();
+            var username = localStorage.getItem("username");
+            console.log(username);
+            $(".username").text(username)
+        });
+    </script>
+</head>
+<body>
+    
+
+
+
+<style>
+    .header_top{width: 1075px;}
+</style>
+
+
+
+<div id="lingla-hd" style="background: #F2F2F2; width: 100%; height: 35px; border-bottom: 1px solid #e2e2e2;">
+    <div class="header_top" style="margin-left: auto; margin-right: auto;">
+            <div class="header_leftt">
+                    <div class="top_pm">
+                        <div class="op-menu">
+                            <a href="./index.html" target="_blank" class="top-nickname"><i class="top-down"></i></a>
+                            <div class="top-toggle" style="left: 0;">
+                                <!-- <a href="/JPinShopIssueBis" target="_blank"><i style="background: url(./Content/images/bis_bg_head_icon2.png); width: 15px; height: 15px; margin-top: -2px;"></i>活动管理</a>
+                                <a href="/ShopissueOfTaskBis/TaskManageList" target="_blank"><i style="background: url(./Content/images/bis_bg_head_icon3.png); width: 15px; height: 15px; margin-top: -5px;"></i>有奖竞猜</a> -->
+                                <a style="border: none;" onclick="logout()">
+                                    <i style="background: url(//www.meilipa.com./Content/images/nav5.png); width: 15px; height: 15px; margin-top: -2px;">
+                                    </i>退出
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <span class="color_fg" style="float:left;">|</span>
+                <!--top_pm-->
+               <!--  <div class="top_ml">
+                    <dl>
+                        <dd>
+                            <a class="xin_po" href="/bisremind" target="_blank">提醒(<strong>0</strong>)</a>
+                        </dd>
+                    </dl>
+                </div> -->
+                <!-- <span class="color_fg" style="float: left">|</span> -->
+                <!--top_ml-->
+                <!-- <div class="top_left">
+                    <a href="/Regist/about" target="_blank" class="on-service">在线客服</a>
+                </div> -->
+                <!--top_ml-->
+                <!-- <div class="shou_btn">
+                    <em>&nbsp;&nbsp;收藏</em>
+                    <div class="shou_toggle"><span>Ctrl</span>或<span>Cmd+D</span>收藏本站</div>
+                </div> -->
+            </div>
+        <!--header_left-->
+        <!-- <div class="header_right">
+            <a href="/" title="试客联盟官网">飞猪试用首页</a><span class="color_fg">|</span>
+            <a href="/other/appdownload" target="_blank"><i class="top-icon-ph"></i>手机客户端</a><span class="color_fg">|</span>
+            <a href="/invitation/NewInvitation" target="_blank">分享赚钱<span style="color: #ed594f; font-weight: bold;">月入4000</span></a><span class="color_fg">|</span>
+                <a href="javascript:" onclick="login()">做问卷送金币</a>
+                <span class="color_fg">|</span>
+            <a href="/help/index" target="_blank">帮助中心</a><span class="color_fg">|</span>
+            <span class="wzdh">
+                <a href="/help/index" target="_blank" class="sbdjx" id="naviatetext">网站导航</a>
+                <div class="oneto" id="naviate">
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="//jing.meilipa.com">免费试用</a>
+                        </p>
+                        <p>
+                            <a href="//jing.meilipa.com" target="_blank">试用专区</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="/invitation/NewInvitation">站内活动</a>
+                        </p>
+                        <p>
+                            <a href="/invitation/NewInvitation" target="_blank">邀请有奖</a>&nbsp;&nbsp;<a href="/lottery" target="_blank">金币抽奖</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p style="padding-top: 8px;">
+                            <a href="/help/MerchantApply" target="_blank">商家报名</a>&nbsp;&nbsp;
+                            <a href="/Feedback" target="_blank">意见反馈</a>
+                        </p>
+                    </div>
+                </div>
+            </span>
+        </div> -->
+    </div>
+</div>
+
+
+<style>
+    .nav ul li a {
+        padding: 0 27px;
+    }
+</style>
+<div class="yonghu_top">
+    <div id="header" class="header">
+        <div class="header_main">
+            <!--header_top-->
+            <div class="header_center">
+                <a href="/">
+                    <div class="qn-logo">
+                    </div>
+                </a>
+                <div class="lanrenzhijia showtrytype">
+                    <div id="img">
+                        <a href="//www.meilipa.com/Regist/CreditCertification" target="_blank">
+                            <img src="//www.meilipa.com./Content/images/mediare.jpg" width="186" height="22" alt="" border="0" style="display: none;">
+                        </a>
+                        <a href="//www.meilipa.com/Regist/CreditCertification" target="_blank">
+                            <img src="//www.meilipa.com./Content/images/mediasan.jpg" width="186" height="22" alt="" border="0" style="display: none;">
+                        </a>
+                        <a href="//www.meilipa.com/Regist/CreditCertification" target="_blank">
+                            <img src="//www.meilipa.com./Content/images/mediasi.jpg" width="186" height="22" alt="" border="0" style="display: none;">
+                        </a>
+                        <a href="//www.meilipa.com/Regist/CreditCertification" target="_blank">
+                            <img src="//www.meilipa.com./Content/images/mediayi.jpg" width="186" height="22" alt="" border="0" style="display: none;">
+                        </a>
+                    </div>
+                </div>
+                <a href="/Invitation/NewInvitation" target="_blank" class="qn-lg-right"></a>
+                <div id="logo_right" class="logo_right">
+                    <div class="kl">
+                        <i class="iconfont icon-search"></i>
+                        <input id="searchText" name="" type="text" class="pl" value="" onkeydown=' keySearch(event); ' placeholder="搜索试用品" />
+                        <span id="inputsearch" class="fl p-red" onclick=" searchGoods()">搜索</span>
+                    </div>
+                    <!--kl-->
+                </div>
+                <!--logo_right-->
+            </div>
+            <!--header_center-->
+            <!--nav-->
+        </div>
+        <div id="nav" class="nav" style="font-family: 微软雅黑;">
+            <div class="main">
+
+                <!--qiandaog-->
+                <ul>
+                    <li class="showtrytype"><div class="fication"><i></i>试用品分类</div></li>
+                    <li><a href="./index.html" class="" target="_blank">首页</a></li>
+                    <li>
+                        <a href="./index.html" class="jpSwip " target="_blank">
+                            美丽好货
+                            <span class="ntp-hot">
+                                <img src="./Content/images/new.gif" class="png_bg" />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./index.html" target="_blank">
+                            金币兑换
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./index.html" target="_blank">
+                            限量秒杀
+                            <span class="ntp-hot" style="top:-23px;left: 44px;">
+                                <img src="./Content/images/icon/hit.gif" class="png_bg" />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./index.html" target="_blank">
+                            新人必中
+                            <span class="ntp-hot" style="top:-23px;left: 44px;">
+                                <img src="./Content/images/icon/hit.gif" class="png_bg" />
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./index.html" class="" target="_blank">
+                            邀请有礼
+                        </a>
+                    </li>
+                </ul>
+                <div class="qiandaodiv">
+                        <div class="qiandao">
+                            <a id="signbtn" href="javascript:" title="使用金币可以直接通过试用资格" onclick="signin()">签到领金币</a>
+                        </div>
+                    
+                    <div class="qian">
+                        <div class="qiand">
+                            <div class="qian_left">
+                                <div style="height: 30px; line-height: 30px; margin-left: 14px;">
+                                    <h2 style="font-size: 28px; display: inline-block;">5</h2>&nbsp;金币
+                                  
+                                </div>
+                                <ul class="qian_w">
+                                    <li class="qian_t ">
+                                        <div>
+                                            <span>+5</span>
+                                        </div>
+                                        <p>1天</p>
+                                    </li>
+                                    <li class="qian_t">
+                                        <div>
+                                            <span>+10</span>
+                                        </div>
+                                        <p>2天</p>
+                                    </li>
+                                    <li class="qian_t">
+                                        <div>
+                                            <span>+15</span>
+                                        </div>
+                                        <p>3天</p>
+                                    </li>
+                                    <li class="qian_t">
+                                        <div>
+                                            <span>+20</span>
+                                        </div>
+                                        <p>4天</p>
+                                    </li>
+                                    <li class="qian_t qian_l" style="width:41px;">
+                                        <div>
+                                            <span>+20</span>
+                                        </div>
+                                        <p>5天</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="qian_right">
+                                <div class="qian_s" onclick="signin()">点击签到</div>
+                                <div class="qian_v">
+                                    <i></i>
+                                    <span>5</span><em>金币</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qianbi">
+                            <ul>
+                                <a href="//www.meilipa.com/Lottery" target="_blank"><li class="qian_dd"><i></i></li></a>
+                                <a href="//www.meilipa.com/VIP/UserVip" target="_blank"><li class="qian_ff"><i></i></li></a>
+                                <a href="//www.meilipa.com/invitation/NewInvitation" target="_blank"><li class="qian_gg" style="margin-top: 13px;margin-right: 20px;margin-left: 32px;"><div class="qian_gg_body"></div></li></a>
+                            </ul>
+                            <ul class="fote" style="margin-top: 20px; border-top: 1px solid #dddddd;width: 458px;">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sj_apply" style="margin-right:10px;">
+                    <a href="/help/MerchantApply4" target="_blank">商家报名</a>
+                </div>
+            </div>
+        </div>
+
+        <!--header_main-->
+    </div>
+    <!--header-->
+</div>
+<script>
+    var jpSwip = 0;
+    setInterval(function () {
+        jpSwip++;
+        jpSwip = jpSwip == 22 ? 0 : jpSwip;
+        $(".jpSwip").css("background-position", "center -" + jpSwip * 45 + "px");
+    }, 100);
+</script>
+
+<style>
+     .compare>div {
+         height: 593px;
+         background: url(./Content/images/zs/compare1.png) #4a3ad1 no-repeat center center; background-size:auto 100% ;
+     }
+    .compare .com2 {
+        height: 1369px;
+        background-image: url(./Content/images/zs/compare2.png);
+    }
+    .compare .com3 {
+        height: 1834px;
+        background-image: url(./Content/images/zs/compare3.png);
+    }
+    .compare .com4 {
+        height:1038px;
+        background-image: url(./Content/images/zs/compare4.png);
+    }
+    .compare{min-width: 1195px;margin: 0 auto;}
+    .compare .com2 h2{ padding-left: 163px; font-size: 26px;color: #fff;margin: 0 auto;width: 760px;margin-bottom: 40px;}
+    .com2 p{font-size: 20px;color: #fff;margin: 0 auto;width: 760px;margin-bottom:53px;text-indent: 2em;}
+    .com3 ul{width:1000px;margin: 0 auto;padding-top:522px;color: #fff;}
+    .com3 ul .fl{float: left;width: 35%;margin-left: 10%;background:transparent;border:none;}
+    .com3 ul .fr{float: right;width: 36%;margin-right: 5%;}
+    .com3 ul li{height: 212px;font-size: 20px;}
+    .com3 div{position: relative;}
+    .com3 div span{ font-size: 24px; position: absolute;left: -100px;display: block;width:100px;text-align: right;top: -3px;}
+</style>
+<div class="compare">
+    <div class="com1"></div>
+    <div class="com2">
+        <div style="height:241px;"></div>
+        <h2>原来使用淘客快速起量的商家。</h2>
+        <p>单一淘客渠道成交，权重低，使用飞猪试用免费试用的多渠道成交，不但能起到快速起量的效</p>
+        <h2>需要打造基础销量的商家。</h2>
+        <p>你的基础销量还靠刷单吗？和刷单告别吧！飞猪试用免费试用基础销量服务，让真实买家购买，最优质的客户群，打开更多的人</p>
+        <h2>原来每天靠刷单来维持转换率和排名的商家。</h2>
+        <p>使用飞猪试用免费试用每日固定放出一定比例的试用订单，让真实买家多渠道购买，减少推广成本和降权风险的同时，获得更多潜在买家和订单。</p>
+        <h2>需要处理积压库存的商家。</h2>
+        <p>大量积压库存怎么处理？用积压库存换取真实买家成交，优化店铺权重和店铺层级，划算！</p>
+        <h2>浏量多，转化低的商家。</h2>
+        <p>因为缺少购买信心，导致真实买家只浏览不购买，日积月累大大降低了综合排名。飞猪试用试用 优化店铺DSR，优化宝贝转化率，增强购买信心</p>
+        <h2>刚入淘宝天猫 ，排名迟迟无法优化，店铺一直无法盈利。</h2>
+        <p>平台资深运营 专业一对一指导 全面解析淘宝规则 安全 稳定 有效优化权重。 高效！</p>
+    </div>
+    <div class="com3">
+        <ul>
+            <li>
+                <div class="fl"></div>
+                <div class="fr" style="margin-right: 12%;">淘内真实买家通过指定关键词搜索进店， 深度浏览，加入购物车，等待第二天开奖</div>
+            </li>
+            <li>
+                <div class="fl"><span>未中奖：</span>买家通过购物车进店（收藏宝贝、关注店铺），等待第三天开奖</div>
+                <div class="fr"><span>中奖：</span>买家需收藏宝贝，关注店铺，货比三家, 浏览副宝贝，下单</div>
+            </li>
+            <li style="height: 217px;">
+                <div class="fl"><span>未中奖：</span>买家再次通过购物车进店，货比 三家，等待第四天开奖</div>
+                <div class="fr"><span>中奖：</span>买家需货比三家，浏览副宝贝后下单</div>
+            </li>
+            <li style="height: 221px;">
+                <div class="fl"><span>未中奖：</span>买家再次通过购物车进店，浏览副宝贝，等待下一天</div>
+                <div class="fr"><span>中奖：</span>买家需浏览副宝贝后下单</div>
+            </li>
+            <li>
+                <div class="fl"><span>未中奖：</span>此次活动将没有资格中奖，免费给商家带来真实免费的搜索流量、收藏加购、货比等流程</div>
+                <div class="fr"><span>中奖：</span>买家通过购物车下单</div>
+            </li>
+        </ul>
+    </div>
+    <div class="com4"></div>
+</div>
+
+<div class="footer">
+    <div class="footer_main">
+        <div class="footer_left">
+            <div class="footer_xy" style="padding-top: 58px;">
+                <a href="//www.meilipa.com/Regist/about" target="_blank">联系我们</a><span>|</span>
+                <a href="//www.meilipa.com/Help/AdvertisingCost" target="_blank">商务合作</a><span>|</span>
+                <a href="//www.meilipa.com/Regist/UserAgreement" target="_blank">用户协议</a><span>|</span>
+                <a href="//www.meilipa.com/help/index" target="_blank">帮助中心</a>
+            </div>
+            <div class="footer_fl">
+                <span>Copyright © 2017 meili.com</span> 浙ICP备17042206号-1&nbsp;&nbsp;浙公网安备33010302003013号&nbsp;&nbsp;杭州美名科技有限公司
+            </div>
+            <div>
+                <a class="f_t" rel="nofollow" title="飞猪试用官网" target="_blank"></a>
+                
+                <a class="f_f" rel="nofollow" href="https://v.pinpaibao.com.cn/cert/site/?site=www.meilipa.com&at=business" title="飞猪试用官网" target="_blank"></a>
+                <a class="f_g" rel="nofollow" href="https://v.pinpaibao.com.cn/cert/site/?site=www.meilipa.com&at=business" title="飞猪试用官网" target="_blank"></a>
+            </div>
+        </div>
+        <div class="footer_right" style="float: right; margin-left: 80px;">
+            <div class="footer-sp1">bussiness@feizhugou.com</div>
+            
+        </div>
+        <div style="float: left; margin-top: 52px;margin-left: 80px;">
+            <p style="width: 100px;text-align: center">关注飞猪试用公众号</p>
+            <img style="width: 100px; height: 100px;" src="/shangjia_code.jpg" />
+        </div>      
+    </div>
+</div>
+
+    <script src="./Scripts/jquery.form.js" type="text/javascript"></script>
+<div class="tchs" id="logindialog" style="display: none;">
+    <div id="dialog_log_qiandao" class="dialog-wrapper dialog_log_qiandao" style="width: 416px;">
+        <span class="red">
+            登录/注册
+            <a href="javascript:void(0)" title="关闭窗口" onclick="$('#logindialog').hide()">
+                <span class="close"></span>
+            </a>
+        </span>
+        <div class="diginfo" style="border: none">
+            <div class="log-cont">
+                <ul class="clickTitle">
+                    <li onclick="tab(this,0)" class="active"><i class="icon-1"></i> 用户登录</li>
+                    <li onclick="window.open('//www.meilipa.com/Regist/UserRegister')"><i class="icon-2"></i> 用户注册</li>
+                </ul>
+                <div class="tabcont">
+                    <div class="tab">
+                        <form style=" width: 288px; margin: 0 auto;" method="POST">
+                            <div class="mb-20 msg-input">
+                                <input type="text" id="username" placeholder="请输入邮箱/手机号/用户名" title="邮箱/手机号/用户名" onkeydown=keyLogin(event)>
+                                <input type="password" class="pwd" id="password" placeholder="请输入密码" autocomplete="off" disableautocomplete="" onkeydown=keyLogin(event)>
+                            </div>
+                            <div class="btn">
+                                <input id="submitbtn" type="button" class="btn-input" value="立即登录" title="登 录" onclick="loginSubmit(1, location.href)">
+                            </div>
+                            <div class="clearfix msg-tip" style="height: 52px;">
+                                <div class="msg-tip-lf">
+                                    <p id="error" class="err-txt" style="display:none;">请输入密码</p>
+                                    <p class="tip-txt" style="margin-bottom:0;">使用其他账号登录</p>
+                                </div>
+                                <a class="msg-tip-rt" href="//www.meilipa.com/Security/FindPassword?usertype=1">
+                                    <p>忘记密码？</p>
+                                </a>
+                                <div class="jiao"></div>
+                            </div>
+                        </form>
+                        <div class="qq-login">
+                            <a href="javascript:" onclick="WxLogin()">
+                                <div class="qq-icon wx-icon"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    <a class="totop" id="back-to-top" style="display: none" />
+</body>
+</html>
+<div style="display: none">
+     
+</div>

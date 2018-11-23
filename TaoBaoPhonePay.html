@@ -1,0 +1,2976 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <title>发布免费试用–飞猪试用</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta charset = "utf-8">
+    <meta name="keywords" content="试客网,试客联盟,试客之家,试客联盟网,试客联盟中心,免费试用,试用网,免费试用网,免费试用平台,试客,飞猪试用,试客平台,飞猪试用" />
+    <meta name="description" content="欢迎来免费飞猪试用试用网:飞猪试用—是全国领先的免费试用网和试客网,深得试客信赖的免费试用中心网站,是免费试用网和试客网站的首选,飞猪试用免费试用网为试客提供最优质和实用的优秀免费试用商品." />
+    <link rel="stylesheet" type="text/css" href="./Content/themes/base.css"/>
+<link rel="stylesheet" type="text/css" href="./Content/themes/index.css"/>
+<link rel="stylesheet" type="text/css" href="./Content/pagination/css/pagination.css"/>
+<link rel="stylesheet" type="text/css" href="./Content/fancybox/jquery.fancybox.css"/>
+<link rel="stylesheet" type="text/css" href="./Content/themes/credit.css"/>
+
+    <script type="text/javascript" src="./Scripts/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="./Scripts/jquery.pagination.js"></script>
+<script type="text/javascript" src="./Scripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="./PageScript/Common.js"></script>
+<script type="text/javascript" src="./Scripts/credit.js"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="./Content/font/iconfont.css" />
+    <script>
+        function getgoodsClassify(){
+        $.get('http://api.feizhugou.com/activity/goodsClassify',function(d){
+            if (d.code == 1000) {
+                for(var i = 0;i<d.data.length;i++){
+                    var html = '<option  value="'+i+'">'+d.data[i].name+'</option>'
+                    $("#sk_commodity_type").append(html)
+                }
+            }
+        })
+    };
+        $(document).ready(function(){
+           getBisdata();
+           getshopname();
+           getavtdetails();
+           getgoodsClassify();
+           getVipRankIndex();
+          
+       })
+        $(function(){
+           // getavtdetails();
+        });
+    </script>
+</head>
+<body>
+    
+<link rel="stylesheet" type="text/css" href="./Content/themes/base.css"/>
+<link rel="stylesheet" type="text/css" href="./Content/pagination/css/pagination.css"/>
+<link rel="stylesheet" type="text/css" href="./Content/themes/shangjia_index.css"/>
+
+<script type="text/javascript" src="./Scripts/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="./Scripts/jquery.pagination.js"></script>
+<script type="text/javascript" src="./Scripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="./PageScript/Common.js"></script>
+<script type="text/javascript" src="./Scripts/credit.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="./Content/font/iconfont.css"/>
+<script src="./PageScript/layoutbis.js"></script>
+<script src="./Scripts/SuperSlide/jquery.SuperSlide.2.1.1.js"></script>
+<script>
+    // checklogin();
+    var canPublish = 'False';
+    var isyearVip = 'False';
+
+    var txnum = '';
+    $.fn.serializeObject = function () {  
+        var o = {};  
+        var a = this.serializeArray();  
+        $.each(a, function () {  
+            if (o[this.name]) {  
+                if (!o[this.name].push) {  
+                    o[this.name] = [o[this.name]];  
+                }  
+                o[this.name].push(this.value || '');  
+            } else {  
+                o[this.name] = this.value || '';  
+            }  
+        });  
+        return o;  
+    };  
+</script>
+
+
+
+<div id="lingla-hd" style="background: #F2F2F2; width: 100%; height: 35px; border-bottom: 1px solid #e2e2e2;">
+    <div class="header_top" style="margin-left: auto; margin-right: auto;">
+            <div class="header_leftt">
+                    <div class="top_pm">
+                        <div class="op-menu">
+                            <a href="./index.html" target="_blank" class="top-nickname"><i class="top-down"></i></a>
+                            <div class="top-toggle" style="left: 0;">
+                               <!--  <a href="/JPinShopIssueBis" target="_blank"><i style="background: url(/Content/images/bis_bg_head_icon2.png); width: 15px; height: 15px; margin-top: -2px;"></i>免费试用</a>
+                                <a href="/ShopissueOfTaskBis/TaskManageList" target="_blank"><i style="background: url(/Content/images/bis_bg_head_icon3.png); width: 15px; height: 15px; margin-top: -5px;"></i>有奖竞猜</a> -->
+                                <a style="border: none;" onclick="logout()">
+                                    <i style="background: url(http://www.meilipa.com/Content/images/nav5.png); width: 15px; height: 15px; margin-top: -2px;">
+                                    </i>退出
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <span class="color_fg" style="float:left;">|</span>
+                <!--top_pm-->
+              <!--   <div class="top_ml">
+                    <dl>
+                        <dd>
+                            <a class="xin_po" href="/bisremind" target="_blank">提醒(<strong>0</strong>)</a>
+                        </dd>
+                    </dl>
+                </div>
+                <span class="color_fg" style="float: left">|</span>
+                
+                <div class="top_left">
+                    <a href="/Regist/about" target="_blank" class="on-service">在线客服</a>
+                </div>
+                
+                <div class="shou_btn">
+                    <em>&nbsp;&nbsp;收藏</em>
+                    <div class="shou_toggle"><span>Ctrl</span>或<span>Cmd+D</span>收藏本站</div>
+                </div> -->
+            </div>
+        <!--header_left-->
+       <!--  <div class="header_right">
+            <a href="/" title="试客联盟官网">飞猪试用首页</a><span class="color_fg">|</span>
+            <a href="/other/appdownload" target="_blank"><i class="top-icon-ph"></i>手机客户端</a><span class="color_fg">|</span>
+            <a href="/invitation/NewInvitation" target="_blank">分享赚钱<span style="color: #ed594f; font-weight: bold;">月入4000</span></a><span class="color_fg">|</span>
+                <a href="javascript:" onclick="login()">做问卷送金币</a>
+                <span class="color_fg">|</span>
+            <a href="/help/index" target="_blank">帮助中心</a><span class="color_fg">|</span>
+            <span class="wzdh">
+                <a href="/help/index" target="_blank" class="sbdjx" id="naviatetext">网站导航</a>
+                <div class="oneto" id="naviate">
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="http://jing.meilipa.com">免费试用</a>
+                        </p>
+                        <p>
+                            <a href="http://jing.meilipa.com" target="_blank">试用专区</a>&nbsp;&nbsp;<a href="http://report.meilipa.com" target="_blank">试用报告</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="/invitation/NewInvitation">站内活动</a>
+                        </p>
+                        <p>
+                            <a href="/invitation/NewInvitation" target="_blank">邀请有奖</a>&nbsp;&nbsp;<a href="/lottery" target="_blank">金币抽奖</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p style="padding-top: 8px;">
+                            <a href="/help/MerchantApply" target="_blank">商家报名</a>&nbsp;&nbsp;
+                            <a href="/Feedback" target="_blank">意见反馈</a>
+                        </p>
+                    </div>
+                </div>
+            </span>
+        </div> -->
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+        $('#kefu').mouseover(function () {
+            $('#qykf').show();
+            $('#ptkf').hide();
+        });
+        $('#kefu').mouseout(function () {
+            $('#qykf').hide();
+            $('#ptkf').show();
+        });
+        $('.yaoqing').mouseover(function () {
+            $('.yaoqing').css({ 'background-color': '#f13439' });
+        });
+        $('.yaoqing').mouseout(function () {
+            $('.yaoqing').css({ 'background-color': '#ff464e' });
+        });
+    })
+</script>
+<div class="floattips">
+
+    <a class="yaoqing" href="index.html" target="_blank">
+        <i class="ic9" style="background: url(http://www.meilipa.com/Content/images/cbl_yaoqing.png) no-repeat; height: 25px; margin: 5px 14px;"></i>
+        <div class="xz_xg1" style="margin-top: -2px;">
+            <p style="color: #fff;">分享赚钱</p>
+        </div>
+    </a>
+    <div class="second_li secnd_li secet qq-online-parent">
+        <a href="javascript:void(0)" target="_blank" class="qq-online-box">
+            <span class="shend iconqq"></span>
+                 <span class="qq-online-span">招商经理</span>
+           
+        </a>
+        <div class="hint_text2 qq-online-box2" style="display: none;right: 34px;height:auto; width:256px; padding-right:6px;margin-top:-65px;    background: url(/Content/images/fix_hint.png) no-repeat right 91px;">
+            <div class="qq-online-black-box">
+             
+                    <div class="qq-online-header">商家专属通道</div>
+                    <div class="qq-online-body" style="padding-bottom:20px;">
+                        <p style="line-height:66px;">
+
+                            <span>QQ咨询：1550643358</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3003747532&amp;site=qq&amp;menu=yes" style="display:inline; width:auto; height:auto;margin-left:6px;">
+                                <img style="width:87px;height:29px;vertical-align:middle;" border="0" src="http://www.meilipa.com/Content/images/qq-online.png" alt="点击这里给我发消息" title="点击这里给我发消息">
+                            </a>
+                        </p>
+                        <p style="line-height:20px;">咨询热线：13208049855</p>
+                    </div>
+               
+                <div class="qq-online-footer">
+                    <div class="qq-online-dashed">
+                        <p>工作时间：周一至周五，9:00-21:00</p>
+                        <p style="text-align:center;">（节假日除外）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+         <div class="second_li secnd_li secet">
+            <a href="index.html" target="_blank" class="seaf">
+                <i class="ic9"></i>
+            </a>
+            <span class="hint_text setd" style="display: none;right: 34px;">
+                <i>帮助中心</i>
+            </span>
+        </div>
+    <div class="secnd_li seced">
+        <a href="" target="_blank">
+            <span class="shend"></span>
+        </a>
+        <div class="heak" style="display: none">
+            <img src="http://www.meilipa.com/Content/images/wxfl_shangjia.png">
+        </div>
+    </div>
+    <div class="secnd_li secft">
+        <a href="http://www.meilipa.com/other/appdownload" target="_blank">
+            <span class="shend"></span>
+        </a>
+        <div class="heack" style="display:none">
+            <img src="http://www.meilipa.com/Content/images/linla.png">
+        </div>
+    </div>
+    <div class="second_li secnd_li secet">
+        <a href="index.html" target="_blank" class="seaf">
+            <span class="shend"></span>
+        </a>
+        <span class="hint_text setd" style="display: none;right: 34px;">
+            <i>意见反馈</i>
+        </span>
+    </div>
+    <div class="footef"></div>
+    <div class="second_li secnd_li secent">
+        <a href="javascript:" onclick="$('body, html').animate({ scrollTop: 0 }, 200);" class="sheed">
+            <span class="shend"></span>
+        </a>
+        <span class="hint_text seed" style="display: none;right: 34px;">
+            <i>返回顶部</i>
+        </span>
+    </div>
+</div>
+
+<script>
+    $(".shead").mouseover(function () {
+        $(".sited").css("display", "block");
+    });
+    $(".shead").mouseout(function () {
+        $(".sited").css("display", "none");
+    });
+    $(".shed").mouseover(function () {
+        $(".sted").css("display", "block");
+    });
+    $(".shed").mouseout(function () {
+        $(".sted").css("display", "none");
+    });
+    $(".seced").mouseover(function () {
+        $(".heak").show();
+    });
+    $(".seced").mouseout(function () {
+        $(".heak").hide();
+    });
+    $(".seaf").mouseover(function () {
+        $(this).parent().find(".setd").css("display", "block");
+    }).mouseout(function () {
+        $(this).parent().find(".setd").css("display", "none");
+    });
+    $(".qq-online-parent").mouseover(function () {
+        $(this).parent().find(".qq-online-box2").css("display", "block");
+        //$(this).parent().find(".qq-online-box2").css("background", "green");
+    }).mouseout(function () {
+        $(this).parent().find(".qq-online-box2").css("display", "none");
+        //$(this).parent().find(".qq-online-box2").css("background", "red");
+    });
+    $(".sheed").mouseover(function () {
+        $(this).find(".seed").css("display", "block");
+    }).mouseout(function () {
+        $(this).find(".seed").css("display", "none");
+    });
+    $(".secft").mouseover(function () {
+        $(".heack").show();
+    });
+    $(".secft").mouseout(function () {
+        $(".heack").hide();
+    });
+</script>
+<div class="shangjia_index">
+     <div class="header">
+        <div class="header_main">
+            <div class="header_bottom">
+                <a href="./index.html" target="_blank" style="float: left;">
+                    <img src="./Content/images/user_logoone.png" height="80" border="0" usemap="#Map" />
+                </a>
+                <div class="float_left">
+                    <a href="./index.html" style="font-family: 微软雅黑; font-weight: bold;color: #ffffff">管理中心首页</a>
+
+                </div>
+            </div>
+            <!--header_bottom-->
+        </div>
+        <!--header_main-->
+    </div>
+    <div id="SuperSlide" class="SuperSlide" style="display: block;width: 1190px; height: 90px; margin: 20px auto;overflow: hidden;">
+        <div class="bd">
+            <ul id="getImgNotice">
+                    <!-- <li style="background: ">
+                        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3002504856&amp;site=qq&amp;menu=yes" onclick="clickNumber(45)" target="_blank" style="transition: transform 3s linear; transform: scaleX(1.1) scaleY(1.1);">
+                            <img src="http://image.meilipa.com/upload/Banner/2018/5/11/c6be680a-f667-44a2-ac35-c33a0b139790" style="width: 1190px; height: 90px;" />
+                        </a>
+                    </li>
+                    <li style="background: ">
+                        <a href="http://www.meilipa.com/AnnounceGongGao?sk_id=34" onclick="clickNumber(38)" target="_blank" style="transition: transform 3s linear; transform: scaleX(1.1) scaleY(1.1);">
+                            <img src="http://image.meilipa.com/upload/Banner/2018/3/9/9bd36abd-d132-4940-ba09-33f44cbd1724" style="width: 1190px; height: 90px;" />
+                        </a>
+                    </li>
+                    <li style="background: ">
+                        <a href="http://www.meilipa.com/AnnounceGongGao?sk_id=35" onclick="clickNumber(39)" target="_blank" style="transition: transform 3s linear; transform: scaleX(1.1) scaleY(1.1);">
+                            <img src="http://image.meilipa.com/upload/Banner/2018/3/9/c7006afa-6301-4f28-9a16-00db6f2b12e9" style="width: 1190px; height: 90px;" />
+                        </a>
+                    </li>
+                    <li style="background: ">
+                        <a href="http://www.meilipa.com/JPinShopissueBis/AddOrEdit" onclick="clickNumber(35)" target="_blank" style="transition: transform 3s linear; transform: scaleX(1.1) scaleY(1.1);">
+                            <img src="http://image.meilipa.com/upload/Banner/2018/1/22/425f5134-331f-410b-95fb-f6255cb3efa7" style="width: 1190px; height: 90px;" />
+                        </a>
+                    </li> -->
+            </ul>
+        </div>
+        <a class="superprev" href="javascript:void(0)"><i></i></a>
+        <a class="supernext" href="javascript:void(0)"><i></i></a>
+    </div>
+<script type="text/javascript">
+    $.ajax({
+            url: "http://api.feizhugou.com/activity/getImgNotice",
+            type: "GET",
+            dataType: "json",
+            async: true,
+            headers: {
+                'Accept': 'aplication/json',
+            },
+            success: function(e) {
+                console.log(e)
+                console.log(e.data)
+                for(var i=0;i<e.data.length;i++){
+                    $('#getImgNotice').append(' <li style="background: "><a  target="_blank" href="'+e.data[i].adv_link+'" style="transition: transform 3s linear; transform: scaleX(1.1) scaleY(1.1);"><img src="'+e.data[i].adv_code+'"  style="width: 1190px; height: 90px;" /></a></li>')    
+                }
+            }
+        })
+    $(function () {
+        jQuery(".SuperSlide").slide({ mainCell: ".bd ul", autoPlay: true, effect: "fade", interTime: 3000, delayTime: 1000 });
+    });
+</script>
+    <!--shangjia_top-->
+    <div class="clearfix contant">
+        <div class="main clearfix" style="width:1195px; margin-bottom:30px;overflow: hidden;">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2845119976&site=qq&menu=yes">
+            </a>
+            <div class="shangjia_left clearfix hdn-left" style="border-right:1px solid #e7e8eb;height:100%;padding-bottom:10000px;margin-bottom:-10000px;">
+                <div style="width:100%; display:block;margin: 0 auto;">
+                    <div class="left_bott">
+                        <ul>
+                            
+                            <!--<li class="left_titi" onclick="location.href = '/bisindex'" style="height: 30px;background: #fff; margin-left: -25px;"><strong style="display: block; color: #ff464e; line-height: 30px; border-left: 5px solid #ff464e; padding-left: 20px;">管理中心首页</strong></li>
+                            -->
+                            <li style="cursor: pointer; margin: 22px 0 10px 0;height: 42px;" class="left_titi">
+                                <a href="./AddOrEdit.html" target="_blank" class="invite-btn">发布试用活动</a>
+                            </li>
+
+                            <li id="4" class="left_titi"><strong><i class="iconfont icon-liwuhuodong"></i>试用活动管理<i class="iconfont icon-Toboottom il5 ft_up_down"></i></strong></li>
+                            <li parentid="4"><a href="./JPinShopissueBis.html?ptype=1&atype=5" id="openWindows31" target="_self">淘宝活动</a></li>
+                            <li parentid="4"><a href="./JPinShopissueBis.html?ptype=1&atype=5" id="openWindows32" target="_self">天猫活动</a></li>
+                            <li parentid="4"><a href="./JPinShopissueBis.html?ptype=2&atype=5" id="openWindows34" target="_self">京东活动</a></li>
+                            <li class="line"></li>
+                            <li style="cursor: pointer; margin: 22px 0 10px 0;height: 42px;" class="left_titi">
+                                <a href="./addnew1.html" target="_blank" class="invite-btn">发布复购活动</a>
+                            </li>
+                            <li id="5" class="left_titi"><strong><i class="iconfont icon-liwuhuodong"></i>复购活动管理<i class="iconfont icon-Toboottom il5 ft_up_down"></i></strong></li>
+                            <li parentid="5"><a href="./ReBisiness.html?ptype=1&atype=5" id="openWindows31" target="_self">流量活动</a></li>
+                            <li parentid="5"><a href="./ReBisiness.html?ptype=1&atype=5" id="openWindows32" target="_self">垫付活动</a></li>
+                            <li class="line"></li>
+                            <li id="6" class="left_titi"><strong><i class="iconfont icon-shouji1"></i>运营工具<i class="iconfont icon-Toboottom il5 ft_up_down"></i></strong></li>
+                            <li parentid="6"><a href="./AddOrEdit.html" id="openWindows35" target="_self">猜你喜欢<em class="bisindex_new"></em></a></li>
+                            <li parentid="6"><a href="./AddOrEdit.html" id="openWindows36" target="_self">手淘首页<em class="bisindex_new"></em></a></li>
+                            <li class="line"></li>
+                            <li id="7" class="left_titi"><strong><i class="iconfont icon-shop"></i>店铺解析<i class="iconfont icon-Toboottom il5 ft_up_down"></i></strong></li>
+                            <li parentid="7"><a id="openWindows30" target="_self" title="即将上线" onclick="myAlert('功能即将上线')">权重计划<em class="bisindex_notice"></em></a></li>
+                            <li parentid="7"><a id="openWindows30" target="_self" title="即将上线" onclick="myAlert('功能即将上线')">数据答疑<em class="bisindex_notice"></em></a></li>
+                            <li parentid="7"><a id="openWindows30" target="_self" title="即将上线" onclick="myAlert('功能即将上线')">效果PK<em class="bisindex_notice"></em></a></li>
+                            <li class="line"></li>
+                            
+                            <li id="10" class="left_titi ">
+                                <strong><i  class="iconfont icon-zhanghuxinxi"></i>账户信息</strong>
+                                <!--<img class="ft_up_down" src="/Content/images/ft_up.png" />-->
+                                <i class="iconfont icon-Toleft il5 ft_up_down" style="color:rgb(102,102,102);"></i>
+                            </li>
+                            <li parentid="10" style="display:none;">
+                                <a href="./BoundShopBis.html" id="openWindows18" target="_self">店铺管理</a>
+                            </li>
+                            <li parentid="10" style="display:none;">
+                                <a href="javascript:" id="openWindows6" target="_self" onclick="HasTxianNum('./drawapply.html', './drawaccount.html')">提现/账户明细</a>
+                            </li>
+                            <li parentid="10" style="display:none;">
+                                <a href="./drawaccount.html" id="openWindows7" target="_self">我的提现账号</a>
+                            </li>
+                            <li parentid="10" style="display:none;">
+                                <a href="./security.html" id="openWindows8" target="_blank">账户安全</a>
+                            </li>
+                            <li parentid="10" style="display:none;">
+                                <a href="./Recharge.html" id="openWindows17" target="_self">账户充值</a>
+                            </li>
+                            <li class="line"></li>
+                            
+                            
+                            <li id="11" class="left_titi ">
+                                <strong style="width: 77px;display: block;float: left;white-space: nowrap;line-height: 38px;"><i class="iconfont icon-VIP1" style="color:rgb(102,102,102);"></i>VIP通道</strong>
+                                <i class="iconfont icon-Toboottom il5 ft_up_down" style="color:rgb(102,102,102);"></i>
+                            </li>
+                                <li parentid="11">
+                                    <a onclick="becomeVip()" id="openWindows20" target="_self">成为VIP</a>
+                                </li>
+                                <li parentid="11">
+                                    <a href="./VIPDetailNew.html" target="_blank">了解VIP</a>
+                                </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <!--left-->
+            </div>
+            <div class="shangjia_right elg-width">
+                
+<link rel="stylesheet" type="text/css" href="./Scripts/Validform/style.css"/>
+<link rel="stylesheet" type="text/css" href="./Scripts/jquery.uploadify-v2.1.0/uploadify.css"/>
+<link rel="stylesheet" type="text/css" href="./Content/fancybox/jquery.fancybox.css"/>
+
+<script type="text/javascript" src="./Scripts/jquery.form.js"></script>
+<script type="text/javascript" src="./Scripts/Validform/Validform_v5.3.2.js"></script>
+<script type="text/javascript" src="./Scripts/jquery.uploadify-v2.1.0/swfobject.js"></script>
+<script type="text/javascript" src="./Scripts/jquery.uploadify-v2.1.0/jquery.uploadify.v2.1.0.min.js"></script>
+<script type="text/javascript" src="./PageScript/uploadimage.js"></script>
+<script type="text/javascript" src="./PageScript/Common.js"></script>
+<script type="text/javascript" src="./Scripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="./Scripts/My97DatePicker/WdatePicker.js"></script>
+
+<script src="./Scripts/Code/jquery.qrcode.js"></script>
+<script src="./Scripts/Code/qrcode.js"></script>
+<script src="./Scripts/Code/utf.js"></script>
+<link href="./Scripts/layer-v2.1/layer/skin/layer.css" rel="stylesheet" />
+<script src="./Scripts/layer-v2.1/layer/layer.js"></script>
+<link rel="stylesheet" type="text/css" href="./Content/themes/addJPinShop.css"/>
+
+<script type="text/javascript" src="./PageScript/addJPinShop.js"></script>
+
+<script>
+    
+    var isVip = localStorage.getItem("isVip");
+    var skType = '0';
+    var vipType = '-1';
+    var JPinNumArr = '';
+    var JPinDayArr = '';
+    var sk_act_priority = '0';
+    var paramObj = ''.split("&quot;").join('"');
+    if (paramObj) {
+        paramObj = JSON.parse(paramObj);
+    }
+    var copyEdit = paramObj && !"0";
+</script>
+<style>
+    .alt-bg {
+        color: #666;
+        background-color: rgba(0,0,0,0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+    .tphp{
+        margin-right: 16px
+    }
+    .alt-bg {
+        color: #666;
+        background-color: rgba(0,0,0,0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    .zt-alt {
+        position: absolute;
+        height: 320px;
+        width: 391px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto auto;
+        z-index: 100000;
+        background-color: #fff;
+    }
+
+        .zt-alt > span {
+            margin: -45px auto 29px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            font-size: 45px;
+            display: block;
+            height: 90px;
+            width: 90px;
+            background-color: #ff464e;
+            border-radius: 45px;
+            line-height: 90px;
+        }
+
+        .zt-alt h2 {
+            font: 25px nomal;
+            text-align: center;
+        }
+
+        .zt-alt p em {
+            color: #ff464e;
+        }
+
+        .zt-alt p {
+            padding: 30px 70px;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: justify;
+        }
+
+        .zt-alt .btn {
+            width: 165px;
+            float: left;
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            background-color: #ff464e;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .zt-alt .btn:hover {
+                background-color: #CC473B;
+            }
+
+            .zt-alt .btn.gray {
+                background-color: #ccc;
+            }
+
+                .zt-alt .btn.gray:hover {
+                    background-color: #bbb;
+                }
+
+        .zt-alt .w330 {
+            width: 330px;
+            margin: 0 auto;
+        }
+
+    .submit.gray {
+        background: #eee;
+    }
+</style>
+
+<div class="fine">
+    <!-- action="/JPinShopissueBis/AddOrEditSubmit" -->
+    <form  id="form" method="post">
+        <div class="onepage">
+            <h2 class="title">发布免费试用</h2>
+
+            <div class="slide-item">
+                <div class="l-title">
+                    <span>1</span>填写商品信息
+                    <em class="open-slide">修改</em> <i class="iconfont icon-zhengque"></i>
+                </div>
+                <div class="step step-1">
+                    <div class="item">
+                        <span class="label"><span>*</span>商品名称：</span>
+                        <div class="item-con">
+                            <input type="text" id="goodsname" class="w560" datatype="*" name="goodsname" errormsg="请填写信息" maxlength="18" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label"><span>*</span>商品链接：</span>
+                        <div class="item-con">
+                            <input type="text" id="sk-link" class="w560" datatype="*" name="sk-link" errormsg="请填写信息" maxlength="" />
+                        </div>
+                        <div class="item-con ">
+                            <a class="btn btn-red" id="slide-btn">点击获取商品信息<i class="iconfont icon-open"></i></a>
+                        </div>
+                    </div>
+                    <div class="attached">
+                        <div class="wrap-upic f-cb">
+                            <div class="item">
+                                <span class="label vt"><span>*</span>商品主图：</span>
+                                <div class="item-con" id="img-con">
+                                    <img class="pic act"  />
+                                    <img class="pic"  />
+                                    <img class="pic"  />
+                                    <img class="pic"  />
+                                    <p>默认第1个为主图，点击图片可切换主图</p>
+                                </div>
+                                <input type="hidden" id="sk_logo_pic" name="sk_logo_pic" value="" />
+                                <input type="hidden" id="currentImg" name="sk_img_index" value="0" />
+                                <input type="hidden" id="tbshopname" name="sk_tb_shopname" />
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label" style="width: 140px"><span>*</span>单品实际成交价格:</span>
+                        <div class="item-con">
+                            <input type="text" id="itemprice" class="w560" datatype="*" name="sitemprice" errormsg="请填写信息" maxlength="18" placeholder="用户拍下时的付款价格，如不同等级买号看到商品价格不同，取最大值"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label" style="width: 140px"><span>*</span>每单拍：</span>
+                        <div class="item-con">
+                            <input style="width: 200px" type="text" id="itemnum" class="w560" datatype="*" name="itemnum" errormsg="请填写信息" maxlength="18"  />
+                            <span>每单总金额  <span style="color: #fa0101;" id="mdpmoney">0</span> 元　【不含运费】</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label" style="width: 160px"><span>*</span>手机搜索页面展示价格：</span>
+                        <div class="item-con">
+                            <input  type="text" id="showPrice" class="w560" datatype="*" name="sk_activity_name" errormsg="请填写信息" maxlength="18" placeholder="务必亲自在手机端搜索，确认价格准确" />
+                        </div>
+                        <span>元</span>
+                    </div>
+                     <div class="item">
+                        <span class="label vt" style="width:110px;">商品是否包邮：</span>
+                        <div class="item-con" >
+                        <input type="radio" name="postage"  value="1" />商品不包邮<span style="color: red">商家每单额外支出10元作为运费押金，任务完成后剩余运费押金将全部退还给商家</span>                                  
+                        <input type="radio" name="postage"  value="2" />商品包邮                               
+                        </div>
+                    </div>
+                 <div class="slide-btn btn-red btn">
+                    确定
+                </div>
+            </div>
+        
+
+    <div class="slide-item">
+        <div class="l-title">
+            <span>2</span>设置如何找到商品
+            <em class="open-slide">修改</em> <i class="iconfont icon-zhengque"></i>
+        </div>
+        <div class="key-word">
+
+            <div class="item">
+                        <span class="label vt" style="width:160px;">定位目标商品排序方式：</span>
+                        <div class="item-con">
+                            <input type="radio" name="sortrorder"  value="1" />销量                                  
+                            <input type="radio" name="sortrorder"  value="2" />综合
+                            <input type="radio" name="sortrorder"  value="2" />综合直通车
+                            <span>（强烈建议销量排序，商品位置更稳定更好找）</span>
+                        </div>
+            </div>
+            <div class="item">
+                <span class="label" style="width: 160px"><span>*</span>商品现有<span>收货</span>人数约</span>
+                <div class="item-con">
+                    <input type="text" id="takedelivernum" class="w560" datatype="*" name="position" errormsg="请填写信息" maxlength="18" placeholder="此处为手机淘宝销量优先搜索列表页显示的收货人数" />
+                    <span>人</span>
+                </div>
+            </div>
+            <div class="item list-word">
+                    <span class="label vt">价格区间：</span>
+                    <div class="item-con">
+                        <!-- <input type="hidden" name="sk_age" id="sk_age" /> -->
+                        <input type="text" id="sk_age0" name="minprice" id="minprice" class="w50" datatype="num2" maxlength="2" value="" /> -
+                        <input type="text" id="sk_age1" name="maxprice" id="maxprice" class="w50" datatype="num2" maxlength="2" value="" />
+                        <span>元</span>
+                        <span class="gray">如果商品不好找，强烈建议添加价格区间、商品所在地方便用户找到你的商品。</span>
+                    </div>
+            </div>
+            <div class="p-r" style="margin-top: 10px">
+                <span class="select-input"></span>
+                <span class="title">商品所在地：</span>
+                <input class="upaddress" type="hidden" id="goodsaddress" name="goodsaddress" value="">
+                <div class="address-wrap">
+                    <input class="upaddress" type="hidden" value="">
+                    <div class="goodsaddress f-fl" id="goodsaddressshow" title="全国">
+                        <span class="">全国</span>
+                        <span class="up-down-trian f-db" style="background: url(&quot;/images/updowntriangle.png&quot;) 0px 0px no-repeat;"></span>
+                </div>
+                <div id="alladdress" class="alladdress" style="display: none;">
+                        <div class="coverborder"></div>
+                        <div class="hotcity">
+                            <table>
+                            <tbody>
+                                <tr>
+                                <td width="16.66%"><a href="javascript:void(0)">北京</a></td>
+                                <td width="16.66%"><a href="javascript:void(0)">上海</a></td>
+                                <td width="16.66%"><a href="javascript:void(0)">广州</a></td>
+                                <td width="16.66%"><a href="javascript:void(0)">深圳</a></td>
+                                <td width="16.66%"><a href="javascript:void(0)">杭州</a></td>
+                                <td width="16.66%"><a href="javascript:void(0)">海外</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:void(0)">江浙沪</a></td>
+                                    <td><a href="javascript:void(0)">珠三角</a></td>
+                                    <td><a href="javascript:void(0)">港澳台</a></td>
+                                    <td><a href="javascript:void(0)"><!--京津冀--></a></td>
+                                    <td><a href="javascript:void(0)"><!--东三省--></a></td>
+                                    <td><a href="javascript:void(0)"><!--江浙沪皖--></a></td>
+                                </tr>
+                                    </tbody></table>
+                                </div>
+                                <div class="provincity">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td width="12.5%"><a href="javascript:void(0)">长沙</a></td>
+                                                <td width="12.5%"><a href="javascript:void(0)">长春</a></td>
+                                                <td width="12.5%"><a href="javascript:void(0)">成都</a></td>
+                                                <td width="12.5%"><a href="javascript:void(0)">重庆</a></td>
+                                                <td width="12.5%"><a href="javascript:void(0)">大连</a></td>
+                                                <td width="12.5%"><a href="javascript:void(0)">东莞</a></td>
+                                                <td width="12.5%"><a href="javascript:void(0)">福州</a></td>
+                                                <td width="12.5%"><a href="javascript:void(0)">中山</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0)">贵阳</a></td>
+                                                <td><a href="javascript:void(0)">合肥</a></td>
+                                                <td><a href="javascript:void(0)">郑州</a></td>
+                                                <td><a href="javascript:void(0)">济南</a></td>
+                                                <td><a href="javascript:void(0)">昆明</a></td>
+                                                <td><a href="javascript:void(0)">宁波</a></td>
+                                                <td><a href="javascript:void(0)">南昌</a></td>
+                                                <td><a href="javascript:void(0)">武汉</a></td>
+                                            </tr>
+                                            <tr>
+                                                    <td><a href="javascript:void(0)">南京</a></td>
+                                                    <td><a href="javascript:void(0)">青岛</a></td>
+                                                    <td><a href="javascript:void(0)">泉州</a></td>
+                                                    <td><a href="javascript:void(0)">沈阳</a></td>
+                                                    <td><a href="javascript:void(0)">苏州</a></td>
+                                                    <td><a href="javascript:void(0)">天津</a></td>
+                                                    <td><a href="javascript:void(0)">温州</a></td>
+                                                    <td><a href="javascript:void(0)">无锡</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0)">西安</a></td>
+                                                <td><a href="javascript:void(0)">厦门</a></td>
+                                                <td><a href="javascript:void(0)">石家庄</a></td>
+                                                <td colspan="2"><a href="javascript:void(0)" style="padding-left:8px;">哈尔滨</a></td>
+                                                                    <!--<td><a href="javascript:void(0)">金华</a></td>
+                                                                    <td><a href="javascript:void(0)">佛山</a></td>
+                                                                    <td><a href="javascript:void(0)">嘉兴</a></td>-->
+                                                </tr>
+                                                </tbody></table>
+                                                </div>
+                                                <div class="province">
+                                                <table>
+                                                    <tbody><tr>
+                                                    <td width="12.5%"><a href="javascript:void(0)">安徽</a></td>
+                                                    <td width="12.5%"><a href="javascript:void(0)">福建</a></td>
+                                                    <td width="12.5%"><a href="javascript:void(0)">甘肃</a></td>
+                                                    <td width="12.5%"><a href="javascript:void(0)">广东</a></td>
+                                                    <td width="12.5%"><a href="javascript:void(0)">广西</a></td>
+                                                    <td width="12.5%"><a href="javascript:void(0)">贵州</a></td>
+                                                    <td width="12.5%"><a href="javascript:void(0)">海南</a></td>
+                                                    <td width="12.5%"><a href="javascript:void(0)">河北</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="javascript:void(0)">河南</a></td>
+                                                    <td><a href="javascript:void(0)">湖北</a></td>
+                                                    <td><a href="javascript:void(0)">湖南</a></td>
+                                                    <td><a href="javascript:void(0)">江苏</a></td>
+                                                    <td><a href="javascript:void(0)">江西</a></td>
+                                                    <td><a href="javascript:void(0)">吉林</a></td>
+                                                    <td><a href="javascript:void(0)">辽宁</a></td>
+                                                    <td><a href="javascript:void(0)">宁夏</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="javascript:void(0)">青海</a></td>
+                                                    <td><a href="javascript:void(0)">山东</a></td>
+                                                    <td><a href="javascript:void(0)">山西</a></td>
+                                                    <td><a href="javascript:void(0)">陕西</a></td>
+                                                    <td><a href="javascript:void(0)">云南</a></td>
+                                                    <td><a href="javascript:void(0)">四川</a></td>
+                                                    <td><a href="javascript:void(0)">西藏</a></td>
+                                                    <td><a href="javascript:void(0)">新疆</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="javascript:void(0)">浙江</a></td>
+                                                    <td><a href="javascript:void(0)">澳门</a></td>
+                                                    <td><a href="javascript:void(0)">香港</a></td>
+                                                    <td><a href="javascript:void(0)">台湾</a></td>
+                                                    <td><a href="javascript:void(0)">内蒙古</a></td>
+                                                    <td colspan="2"><a href="javascript:void(0)" style="padding-left:8px;">黑龙江</a></td>
+                                                </tr>
+                                                </tbody>
+                                                        </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="hint" id="seladdhint">　</span>
+                                            </div>
+            <div class="item">
+                <span class="label" style="width: 160px"><span>*</span>订单留言</span>
+                <div class="item-con">
+                    <input type="text" id="message" class="w560" datatype="*" name="position" errormsg="请填写信息" maxlength="18" placeholder="用户拍下商品所需要填写的买家留言；出于安全考虑不建议大批量使用" />
+                    <span>人</span>
+                </div>
+            </div>
+            <script type="text/javascript">
+               (function(){
+                initShowAllAddress = function(){
+                    var $addressPanel  =  $('.alladdress');
+                    var $address       =  $('.goodsaddress');
+                    var $upaddress     =  $('.upaddress');
+                    var $addresswrap   =  $('.address-wrap');
+                    
+                    $address.mouseenter(function(){
+                        $addressPanel.show();
+                        $(this).find('.up-down-trian').css('background', 'url(images/updowntriangle.png) 0 -7px no-repeat');
+                    });
+                    $addresswrap.mouseleave(function(){
+                        $addressPanel.hide();
+                        $address.find('.up-down-trian').css('background', 'url(images/updowntriangle.png) 0 0 no-repeat');
+                    });
+
+                    $addressPanel.delegate('a', 'click', function(){
+                        addressText = $(this).text();
+                        $upaddress.attr('value', addressText);
+                        $address.find('span:first').text(addressText);
+                        $address.attr('title', addressText);
+                        console.log(addressText)
+
+                    });
+                    console.log($address)
+                };
+                initShowAllAddress();
+            })()
+            </script>
+            <!-- 所在地选择 -->
+            <link rel="stylesheet" type="text/css" href="Content/themes/V2.0/global.exp.css">
+            <link rel="stylesheet" type="text/css" href="Content/themes/V2.0/global.min.css">
+            <link rel="stylesheet" type="text/css" href="Content/themes/V2.0/module.css">
+            <link rel="stylesheet" type="text/css" href="Content/themes/V2.0/releasetask.css">
+             <div class="item">
+                    <span class="label vt" style="width: 120px"><span>*</span>开始与结束时间：</span>
+                    <div class="item-con">
+                        <input type="text" class="w150" datatype="*" nullmsg="请选择" placeholder="活动开始时间" id="begindate" name="sk_begindate" onclick=" WdatePicker({ minDate: '2017-11-30', maxDate: '#F{$dp.$D(\'enddate\')||\'2030-10-01\'}', dateFmt: 'yyyy-MM-dd', onpicked: function () { document.getElementById('enddate').click(); timeChange(); }})" value="2018-06-04">
+                        -
+                        <input type="text" class="w150" datatype="*" nullmsg="请选择" placeholder="活动结束时间" id="enddate" name="sk_enddate" onclick="WdatePicker({ minDate: '#F{$dp.$D(\'begindate\')||\'2030-10-01\'}', dateFmt: 'yyyy-MM-dd', onpicked: function () { timeChange(); }})" value="2018-06-08">
+                    </div>
+                </div>
+            <div class="item">
+                <span class="label" style="width: 120px"><span>*</span>发布间隔： 每</span>
+                <div class="item-con">
+                    <input type="text" style="width: 200px" class="w560" datatype="n"  name="intervaltime" value="" id="intervaltime" />
+                </div>
+                <span class="label">分钟，发出</span>
+                <div class="item-con">
+                    <input type="text" style="width: 200px" class="w560" datatype="n"  name="intervalnum" value="" id="intervalnum"  />
+                    <span class="label">单</span>
+                </div>
+            </div>
+        </div>
+        <div class="slide-btn btn-red btn">
+                    确定
+        </div>
+    </div>
+
+
+
+     <div class="slide-item">
+        <div class="l-title">
+            <span>3</span>选择任务类型和单数
+            <em class="open-slide">修改</em> <i class="iconfont icon-zhengque"></i>
+        </div>
+                    <div class="sel-type-wrap">
+                        <input id='realse_num_temp_common' value = '0' type="hidden">
+                                        <input type="hidden" id="commonflowprice" value="0.6"> 
+                                        <input type="hidden" id="favflowprice" value="1.5">
+                                        <div class="type-select common-type ">
+                                            <div class="type-sel-bar spct-wrap f-pr">
+                                                <input type="hidden" name="comgooditemnum" id="comgooditemnum" value="1"> 
+                                                <input class="type-check" type="checkbox" id="isaddgoodcom" name="isaddgoodcom" onchange="changeState(1)" checked="true" value="0"> 
+                                                普通好评任务 ( 即用户确认收货后评价自由发挥，不能有额外要求 ) 
+                                            </div>
+                                            <div class="type-ipt-panel" id="isaddgoodcomcontent" style="display: block;">
+                                                <div class="com-type-ipt-arr">
+                                                    <div class="type-ipt-wrap">
+                                                        <p class="sk-num f-pr"><span class="must-input"></span>搜索关键词1 <input class="ipt search-keyword" name="com_sk_1" id="com_sk_1" type="text">　　添加垫付 <input class="ipt f-tar" name="com_sk_num_1" id="com_sk_num_1" type="text"> 单</p>
+                                                        <div class="flow-num spct-wrap f-pr">
+                                                            添加浏览：<input class="ipt f-tar flow-num-ipt" name="com_flow_num_1" id="com_flow_num_1" type="text" maxlength="5"> 个 (<span class="flow-price">+0.6 元/个</span>)　
+                                                            其中 <input type="checkbox" name="com_favflow_1_1" id="com_favflow_1_1" value="1"> 收藏商品 
+                                                                 <input type="checkbox" name="com_favflow_3_1" id="com_favflow_3_1" value="1"> 收藏店铺 
+                                                                 <input type="checkbox" name="com_favflow_2_1" id="com_favflow_2_1" value="1"> 加购物车　
+                                                                 设置 <input class="ipt f-tar fav-flow-num-ipt" name="com_favflow_num_1" id="com_favflow_num_1" maxlength="5"> 个 (<span class="flow-price">+1.5 元/个</span>)
+                                                            <img class="promptips" src="Content/images/icon/promptips.png">
+                                                            <div class="pop-prompt-box prompt-flow" style="display: none;">
+                                                                <div class="prompt-ct-wrap">
+                                                                    <h3>设置搜索关键词匹配流量</h3>
+                                                                    <div class="prompt-ct">
+                                                                        平台会根据你设置的关键词发布浏览或浏览收藏、加购任务，全网唯一真实的手机人肉流量（每个浏量都有用户截图凭证），单独流量0.6元/个，增加收藏、加购的单选或多选均1.5元/个
+                                                                    </div>
+                                                                </div>
+                                                                <img class="triangle" src="/images/bluetri_down.png">
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-sk">
+                                                    <a class="striking" id="com-add-sk" href="javascript: void(0)">+增加搜索关键词</a>
+                                                </div>
+                                                <div class="additional_comment_panel_toggle">
+                                                    <span>追加评论</span>
+                                                    <input type="checkbox" value="0" id="additional_comment_panel_toggle" name="additional_comment_panel_toggle" onclick="ifcheckshow('#additional_comment_panel_toggle','#additional_comment_detail_panel')">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="step step-additional_commnet" id='additional_comment_detail_panel' style="display:none">
+                                            <h3 >追加评论</h3>
+                                             <div class="spct-wrap select-task-type" id="id_additional_comment_type_select">
+                                                <ul>
+                                                <span class="must-input" style="*top: 2px;">
+                                                </span>
+                                                <span class="title">
+                                                选择追加评论类型：
+                                                </span>
+                                                <br/>
+                                                    <li>
+                                                        <br/>
+                                                        <input class="common-type seltype" type="radio" value="1" id="isaddgoodaddcom" name="task_type_add_com"  >
+                                                        普通<a style="color:#06c1ae">追加评论</a>任务
+                                                            (买手确认收货添加评价之后指定时间添加追加评价，评价自由发挥，不能有额外要求)
+                                                    </li>
+                                                    <li>
+                                                        <input class="word-type seltype" type="radio" value="2" id="isaddwordaddcom" name="task_type_add_com">
+                                                        指定关键词<a style="color:#06c1ae">追加评论</a>任务
+                                                            (买手确认收货后，使用商家提供的好评关键字，组合成一句通顺的追加评论)
+                                                    </li>
+                                                    <li>
+                                                        <input class="picture-type seltype" type="radio" value="3" id="isaddimgaddcom" name="task_type_add_com">
+                                                        指定图片<a style="color:#06c1ae">追加好评任务</a>
+                                                            (买手确认收货后，使用商家提供的图片，给予图片+文字好评)
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="error-tips">
+                                                任务类型未选择！
+                                            </div>
+                                            <div class="spct-wrap commontype-wrap task-type f-pr" id="add_comment_common_comment_div">
+                                                <ul>
+                                                    <li>
+                                                        <span class="must-input">
+                                                        </span>
+                                                        <span class="title">
+                                                            <a style="color:#06c1ae">普通追加好评任务</a>　添加
+                                                        </span>
+                                                        <input class="ipt f-tar order_num" id="add_comment_tasknum_one" name="add_comment_tasknum_one"
+                                                        value="0" maxlength="4">
+                                                        单
+                                                        <span style="color:red">
+                                                                1元/单
+                                                            </span>
+                                                        <img class="promptips" src="/static/image/web/home/promptips.png" id="id_tip_5">
+                                                        <span class="prompt" style="padding-left: 12px;color: #737272;">
+                                                            即买手确认收货后评价自由发挥，不能有额外要求
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                                <div class="error-tips" id="tasknum_one_error">
+                                                    普通好评数未填写！
+                                                </div>
+                                                <div class="pop-prompt-box prompt-commontype" style="display: none;" id="id_tip_con_5">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>
+                                                            普通好评任务
+                                                        </h3>
+                                                        <div class="prompt-ct">
+                                                            即买手确认收货后评价自由发挥，不能有额外要求
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/static/image/web/home/bluetri_down.png">
+                                                </div>
+                                            </div>
+                                            <div class="spct-wrap keywordtype-wrap task-type f-pr" id='keyword_add_comment_div' style="display:none;">
+                                                <ul>
+                                                    <li class="p-r">
+                                                        <span class="must-input" style="*top: 10px;">
+                                                        </span>
+                                                        <span class="title">
+                                                            指定关键词好评任务　添加
+                                                        </span>
+                                                        <input class="ipt f-tar order_num" id="add_comment_tasknum_two" name="add_comment_tasknum_two" value="2"
+                                                        maxlength="4" >
+                                                        单
+                                                        <span>
+                                                            ( 指定好评关键字任务佣金 +
+                                                            <span style="color:red">
+                                                                2元/单
+                                                            </span>
+                                                            )
+                                                        </span>
+                                                        <img class="promptips" src="/static/image/web/home/promptips.png" id="id_tip_6">
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li style="margin-bottom: 0px;padding-bottom: 1em;border-bottom: 1px dashed #b4b6b7;">
+                                                        <span class="must-input" style="*top: 0px;">
+                                                        </span>
+                                                        设置指定关键词：建议至少设3个关键字，最多可设置5个关键字
+                                                    </li>
+                                                </ul>
+                                                <div class="all-keyword">
+                                                    <ul class="f-cb" style="margin-left: 30px;">
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_1" name="add_comment_wz_keyword_1" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_2" name="add_comment_wz_keyword_2" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_3" name="add_comment_wz_keyword_3" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_4" name="add_comment_wz_keyword_4" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r" style="margin-right: 0px;">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_5" name="add_comment_wz_keyword_5" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="error-tips" id="tasknum_two_error">
+                                                    关键词未填写！
+                                                </div>
+                                                <div class="pop-prompt-box prompt-keywordtype" style="display:none;" id="id_tip_con_6">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>
+                                                            指定关键字追加好评任务
+                                                        </h3>
+                                                        <div class="prompt-ct">
+                                                            选择此服务将有助于提升评价质量并优化您商品评价映像关键词（请根据您发布任务的商品设定几个关键字作为买手的评价范围独自发挥撰写评价，例如“手感面料很舒服，款式也很漂亮，包装很讲究，物流很快，性价比高”等...
+                                                            注意：请不要填写完整的评价内容，避免所有买手评价商品的内容一模一样）
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/static/image/web/home/bluetri_down.png">
+                                                </div>
+                                            </div>
+                                            <div class="spct-wrap picturetype-wrap task-type f-pr" id='add_comment_piccomment_div' style="display:none;">
+                                                <ul>
+                                                    <li>
+                                                        <span class="must-input" style="*top: 10px;">
+                                                        </span>
+                                                        <span class="title">
+                                                            指定好评图片任务：添加
+                                                        </span>
+                                                        <input class="ipt f-tar order_num" id="add_comment_tasknum_three" name="add_comment_tasknum_three"
+                                                        value="3" maxlength="4">
+                                                        单
+                                                        <span>
+                                                            ( 指定追加好评关键字任务佣金 +
+                                                            <span style="color:red">
+                                                                3元/单
+                                                            </span>
+                                                            )
+                                                        </span>
+                                                        <img class="promptips" src="/static/image/web/home/promptips.png" id="id_tip_7">
+                                                    </li>
+                                                </ul>
+                                                <div class="pop-prompt-box prompt-picturetype" style="display: none;" id="id_tip_con_7">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>
+                                                            指定好评图片任务
+                                                        </h3>
+                                                        <div class="prompt-ct">
+                                                            此服务是通过商家提供“买家秀图片”给做任务的买手，买手确认好评的时候，将把这张买家秀图片一起提交。以达到优化评价，提高转化率的目的。注意：买家秀图片最少一张最多三张，图片商品规格必须与输入的商品规格一致，以避免乌龙~
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/static/image/web/home/bluetri_down.png">
+                                                </div>
+                                                <input id='additional_comment_num' value = '0' type="hidden">
+                                                <div class="upic-wrap" >
+                                                    <div id="additional_comment_pic_panel">
+
+                                                    </div>
+                                                    <div class="error-tips" id="tasknum_three_error_11">
+                                                        图片未上传！
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="type-select keyword-type ">
+                                            <div class="type-sel-bar spct-wrap f-pr">
+                                                <input type="hidden" name="kwgooditemnum" id="kwgooditemnum" value="1">
+                                                <input class="type-check" type="checkbox" id="isaddwordcom" name="isaddwordcom" onchange="changeState(2)" value="0"> 
+                                                指定文字好评任务 <span> ( 文字好评任务佣金 + <span style="color:red">1元/单</span> ) </span> 
+                                                <img class="promptips" src="Content/images/icon/promptips.png">
+                                                <div class="pop-prompt-box prompt-keywordtype" style="display: none;">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>指定文字好评任务</h3>
+                                                        <div class="prompt-ct">
+                                                            选择此服务将有助于提升评价质量，请填写完整的文字评价内容，为了使评价更接近于用户的真实评价，避免多个评价内容重复相同，因此每个文字好评任务对应一条文字好评内容；一个关键词一次性最多可添加5条文字好评任务
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/images/bluetri_down.png">
+                                                </div>
+                                            </div>
+                                            <div class="type-ipt-panel" id="isaddwordcomContent">
+                                                <div class="kw-type-ipt-arr">
+                                                    <div class="type-ipt-wrap type-ipt-sk">
+                                                        <p class="sk-num f-pr"><span class="must-input"></span>搜索关键词1 <input class="ipt search-keyword" name="kw_sk_1" id="kw_sk_1" type="text">　　
+                                                        添加垫付 
+                                                        <select class="kw-num" name="kw_sk_num_1" id="kw_sk_num_1">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select> 
+                                                         单
+                                                        </p>
+                                                        <div class="flow-num spct-wrap f-pr">
+                                                            添加浏览：<input class="ipt f-tar flow-num-ipt" name="kw_flow_num_1" id="kw_flow_num_1" type="text" maxlength="5"> 个 (<span class="flow-price">+0.6 元/个</span>)　
+                                                            其中 <input type="checkbox" name="kw_favflow_1_1" id="kw_favflow_1_1" value="1"> 收藏商品 
+                                                                 <input type="checkbox" name="kw_favflow_3_1" id="kw_favflow_3_1" value="1"> 收藏店铺 
+                                                                 <input type="checkbox" name="kw_favflow_2_1" id="kw_favflow_2_1" value="1"> 加购物车　
+                                                                 设置 <input class="ipt f-tar fav-flow-num-ipt" name="kw_favflow_num_1" id="kw_favflow_num_1" maxlength="5"> 个 (<span class="flow-price">+1.5 元/个</span>)
+                                                            <img class="promptips" src="Content/images/icon/promptips.png" style=""> 
+                                                            <div class="pop-prompt-box prompt-flow" style="display: none;">
+                                                                <div class="prompt-ct-wrap">
+                                                                    <h3>设置匹配流量和关键词分布</h3>
+                                                                    <div class="prompt-ct">
+                                                                        平台会根据你设置的关键词发布浏览或浏览收藏、加购任务，全网唯一真实的手机人肉流量（每个浏量都有用户截图凭证），单独流量0.6元/个，增加收藏、加购的单选或多选均1.5元/个
+                                                                    </div>
+                                                                </div>
+                                                                <img class="triangle" src="/images/bluetri_down.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-sk">
+                                                    <a class="striking" id="kw-add-sk" href="javascript: void(0)">+增加搜索关键词</a>
+                                                </div>
+                                                <div class="type-ipt-wrap" id="wrap-kwtype-opt">
+                                                    <p class="com-kw-tt"><span class="must-input"></span>设置指定文字好评内容</p>
+                                                    <div class="com-kw-ct-ipt-wrap">
+                                                        <div><img src='Content/images/icon/pic_type_up_1.png' alt=""> <span class="ipt-tt">设置第1单的文字</span></div>
+                                                        <div>
+                                                            <textarea class="wz_keyword_ct" name="wz_keyword_ct_1" id="wz_keyword_ct_1" cols="95" rows="5" placeholder="可填写完整的评价内容，最多999字"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="additional_comment_panel_toggle">
+                                                    <span>追加评论</span>
+                                                    <input type="checkbox" value="0" id="additional_comment_word_panel_toggle" name="additional_comment_panel_toggle" onclick="ifcheckshow('#additional_comment_word_panel_toggle','#additional_comment_word_detail_panel')">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="step step-additional_commnet" id='additional_comment_word_detail_panel' style="display:none">
+                                            <h3 >追加评论</h3>
+                                             <div class="spct-wrap select-task-type" id="id_additional_comment_type_select">
+                                                <ul>
+                                                <span class="must-input" style="*top: 2px;">
+                                                </span>
+                                                <span class="title">
+                                                选择追加评论类型：
+                                                </span>
+                                                <br/>
+                                                    <li>
+                                                        <br/>
+                                                        <input class="common-type seltype" type="radio" value="1" id="wordisaddgoodaddcom" name="word_task_type_add_com"  >
+                                                        普通<a style="color:#06c1ae">追加评论</a>任务
+                                                            (买手确认收货添加评价之后指定时间添加追加评价，评价自由发挥，不能有额外要求)
+                                                    </li>
+                                                    <li>
+                                                        <input class="word-type seltype" type="radio" value="2" id="wordisaddgoodaddcom" name="word_task_type_add_com">
+                                                        指定关键词<a style="color:#06c1ae">追加评论</a>任务
+                                                            (买手确认收货后，使用商家提供的好评关键字，组合成一句通顺的追加评论)
+                                                    </li>
+                                                    <li>
+                                                        <input class="picture-type seltype" type="radio" value="3" id="wordisaddgoodaddcom" name="word_task_type_add_com">
+                                                        指定图片<a style="color:#06c1ae">追加好评任务</a>
+                                                            (买手确认收货后，使用商家提供的图片，给予图片+文字好评)
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="error-tips">
+                                                任务类型未选择！
+                                            </div>
+                                            <div class="spct-wrap commontype-wrap task-type f-pr" id="word_add_comment_common_comment_div">
+                                                <ul>
+                                                    <li>
+                                                        <span class="must-input">
+                                                        </span>
+                                                        <span class="title">
+                                                            <a style="color:#06c1ae">普通追加好评任务</a>　添加
+                                                        </span>
+                                                        <input class="ipt f-tar order_num" id="word_add_comment_tasknum_one" name="add_comment_tasknum_one"
+                                                        value="1" maxlength="4">
+                                                        单
+                                                        <span style="color:red">
+                                                                1元/单
+                                                            </span>
+                                                        <img class="promptips" src="/static/image/web/home/promptips.png" id="id_tip_5">
+                                                        <span class="prompt" style="padding-left: 12px;color: #737272;">
+                                                            即买手确认收货后评价自由发挥，不能有额外要求
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                                <div class="error-tips" id="tasknum_one_error">
+                                                    普通好评数未填写！
+                                                </div>
+                                                <div class="pop-prompt-box prompt-commontype" style="display: none;" id="id_tip_con_5">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>
+                                                            普通好评任务
+                                                        </h3>
+                                                        <div class="prompt-ct">
+                                                            即买手确认收货后评价自由发挥，不能有额外要求
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/static/image/web/home/bluetri_down.png">
+                                                </div>
+                                            </div>
+                                            <div class="spct-wrap keywordtype-wrap task-type f-pr" id='word_keyword_add_comment_div' style="display:none;">
+                                                <ul>
+                                                    <li class="p-r">
+                                                        <span class="must-input" style="*top: 10px;">
+                                                        </span>
+                                                        <span class="title">
+                                                            指定关键词好评任务　添加
+                                                        </span>
+                                                        <input class="ipt f-tar order_num" id="word_add_comment_tasknum_two" name="add_comment_tasknum_two" value="2"
+                                                        maxlength="4" >
+                                                        单
+                                                        <span>
+                                                            ( 指定好评关键字任务佣金 +
+                                                            <span style="color:red">
+                                                                2元/单
+                                                            </span>
+                                                            )
+                                                        </span>
+                                                        <img class="promptips" src="/static/image/web/home/promptips.png" id="id_tip_6">
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li style="margin-bottom: 0px;padding-bottom: 1em;border-bottom: 1px dashed #b4b6b7;">
+                                                        <span class="must-input" style="*top: 0px;">
+                                                        </span>
+                                                        设置指定关键词：建议至少设3个关键字，最多可设置5个关键字
+                                                    </li>
+                                                </ul>
+                                                <div class="all-keyword">
+                                                    <ul class="f-cb" style="margin-left: 30px;">
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="word_add_comment_wz_keyword_1" name="add_comment_wz_keyword_1" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="word_add_comment_wz_keyword_2" name="add_comment_wz_keyword_2" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="word_add_comment_wz_keyword_3" name="add_comment_wz_keyword_3" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="word_add_comment_wz_keyword_4" name="add_comment_wz_keyword_4" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r" style="margin-right: 0px;">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="word_add_comment_wz_keyword_5" name="add_comment_wz_keyword_5" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="error-tips" id="tasknum_two_error">
+                                                    关键词未填写！
+                                                </div>
+                                                <div class="pop-prompt-box prompt-keywordtype" style="display:none;" id="id_tip_con_6">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>
+                                                            指定关键字追加好评任务
+                                                        </h3>
+                                                        <div class="prompt-ct">
+                                                            选择此服务将有助于提升评价质量并优化您商品评价映像关键词（请根据您发布任务的商品设定几个关键字作为买手的评价范围独自发挥撰写评价，例如“手感面料很舒服，款式也很漂亮，包装很讲究，物流很快，性价比高”等...
+                                                            注意：请不要填写完整的评价内容，避免所有买手评价商品的内容一模一样）
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/static/image/web/home/bluetri_down.png">
+                                                </div>
+                                            </div>
+                                            <div class="spct-wrap picturetype-wrap task-type f-pr" id='word_add_comment_piccomment_div' style="display:none;">
+                                                <ul>
+                                                    <li>
+                                                        <span class="must-input" style="*top: 10px;">
+                                                        </span>
+                                                        <span class="title">
+                                                            指定好评图片任务：添加
+                                                        </span>
+                                                        <input class="ipt f-tar order_num" id="word_add_comment_tasknum_three" name="add_comment_tasknum_three"
+                                                        value="3" maxlength="4">
+                                                        单
+                                                        <span>
+                                                            ( 指定追加好评关键字任务佣金 +
+                                                            <span style="color:red">
+                                                                3元/单
+                                                            </span>
+                                                            )
+                                                        </span>
+                                                        <img class="promptips" src="/static/image/web/home/promptips.png" id="id_tip_7">
+                                                    </li>
+                                                </ul>
+                                                <div class="pop-prompt-box prompt-picturetype" style="display: none;" id="id_tip_con_7">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>
+                                                            指定好评图片任务
+                                                        </h3>
+                                                        <div class="prompt-ct">
+                                                            此服务是通过商家提供“买家秀图片”给做任务的买手，买手确认好评的时候，将把这张买家秀图片一起提交。以达到优化评价，提高转化率的目的。注意：买家秀图片最少一张最多三张，图片商品规格必须与输入的商品规格一致，以避免乌龙~
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/static/image/web/home/bluetri_down.png">
+                                                </div>
+                                                <input id='additional_comment_num' value = '0' type="hidden">
+                                                <div class="upic-wrap" >
+                                                    <div id="additional_comment_pic_panel">
+
+                                                    </div>
+                                                    <div class="error-tips" id="tasknum_three_error_11">
+                                                        图片未上传！
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="type-select pic-type ">
+                                            <div class="type-sel-bar spct-wrap f-pr">
+                                                <input type="hidden" name="picgooditemnum" id="picgooditemnum" value="1">
+                                                <input class="type-check" type="checkbox" id="isaddimgcom" name="isaddimgcom" onchange="changeState(3)" value="0"> 
+                                                指定图文好评任务<span> ( 图文好评任务任务佣金 + <span style="color:red">3元/单</span> ) </span>
+                                                <img class="promptips" src="Content/images/icon/promptips.png"> 
+                                                <div class="pop-prompt-box prompt-picturetype" style="display: none;">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>指定好评图文任务</h3>
+                                                        <div class="prompt-ct">
+                                                            此服务是通过商家提供“买家秀图片”给做任务的用户，用户确认好评的时候，将把这张买家秀图片一起提交。以达到优化评价，提高转化率的目的。注意：买家秀图片最少一张最多三张，图片商品规格必须与输入的商品规格一致，以避免乌龙~
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/images/bluetri_down.png">
+                                                </div>
+                                            </div>
+                                            <div class="type-ipt-panel" id="isaddimgcomContent">
+                                                <div  class="pic-type-ipt-arr">
+                                                    <div class="type-ipt-wrap"> 
+                                                        <p class="sk-num f-pr">
+                                                            <span class="must-input"></span>搜索关键词1 <input class="ipt search-keyword" name="pic_sk_1" id="pic_sk_1" type="text">　　
+                                                            添加垫付 
+                                                            <select class="pic-num" name="pic_sk_num_1" id="pic_sk_num_1">
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                            </select> 
+                                                            单
+                                                        </p>
+                                                        <div class="flow-num spct-wrap f-pr">
+                                                            添加流量：<input class="ipt f-tar flow-num-ipt" name="pic_flow_num_1" id="pic_flow_num_1" type="text"> 个 (<span class="flow-price">+0.6 元/个</span>)　
+                                                            其中 <input type="checkbox" name="pic_favflow_1_1" id="pic_favflow_1_1" value="1"> 收藏商品 
+                                                                 <input type="checkbox" name="pic_favflow_3_1" id="pic_favflow_3_1" value="1"> 收藏店铺 
+                                                                 <input type="checkbox" name="pic_favflow_2_1" id="pic_favflow_2_1" value="1"> 加购物车　
+                                                                 设置 <input class="ipt f-tar fav-flow-num-ipt" name="pic_favflow_num_1" id="pic_favflow_num_1"> 个 (<span class="flow-price">+1.5 元/个</span>)
+                                                            <img class="promptips" src="Content/images/icon/promptips.png"> 
+                                                            <div class="pop-prompt-box prompt-flow" style="display: none;">
+                                                                <div class="prompt-ct-wrap">
+                                                                    <h3>设置匹配流量和关键词分布</h3>
+                                                                    <div class="prompt-ct">
+                                                                        平台会根据你设置的关键词发布浏览或浏览收藏、加购任务，全网唯一真实的手机人肉流量（每个浏量都有用户截图凭证），单独流量0.6元/个，增加收藏、加购的单选或多选均1.5元/个
+                                                                    </div>
+                                                                </div>
+                                                                <img class="triangle" src="/images/bluetri_down.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-sk">
+                                                    <a class="striking" id="pic-add-sk" href="javascript: void(0)">+增加搜索关键词</a>
+                                                </div>
+                                                <div class="type-ipt-wrap">
+                                                    <p class="pic-type-tt"><span class="must-input"></span>设置图文好评内容</p>
+                                                    <div class="pic-type-wrap" id="wrap-pictype-opt">
+                                                        <div class="pic-type-panel">
+                                                            <div class="pic-type-pp f-pr"><img class="pic-up-tip" src="Content/images/icon/pic_type_up_1.png">设置第1单的图片</div>
+                                                            <div class="pic-type-rule"><span class="must-input"></span>上传照片中商品的规格：<input class="ipt pic-rule" name="pic_rule_1" id="pic_rule_1" type="text" placeholder="如颜色，尺码"> <span class="prompt">规格设置一定要与图片上商品规格保持一致</span></div>
+                                                            <div class="pic-type-upic f-cb">
+                                                                <div class="f-fl"><span class="must-input" style="*top: 0px;"></span><span class="sub-title"> 选择图片：</span></div>
+                                                                <div class="f-fl f-pr">
+                                                                    <div class="f-cb img-wrap">
+                                                                        <img class="f-fl tphp " id="showpic_11_1" src="Content/images/default_upic.png" width="143px" height="143px">
+                                                                        <input type="hidden" name="pic_11_1" id="pic_11_1" value="">
+                                                                        <div id="delete-11-1" style="position:absolute;left:132px;display:none;">
+                                                                            <a href="javascript:void(0)" onclick="deletepic(11, 1)"><img src="./Content/images/error_tag.png"></a>
+                                                                        </div>
+                                                                        <img class="f-fl tphp " id="showpic_11_2" src="Content/images/default_upic.png" width="143px" height="143px">
+                                                                        <input type="hidden" name="pic_11_2" id="pic_11_2" value="">
+                                                                        <div id="delete-11-2" style="position:absolute;left:292px;display:none;">
+                                                                            <a href="javascript:void(0)" onclick="deletepic(11, 2)"><img src="./Content/images/error_tag.png"></a>
+                                                                        </div>
+                                                                        <img class="f-fl tphp " id="showpic_11_3" src="Content/images/default_upic.png" width="143px" height="143px">
+                                                                        <input type="hidden" name="pic_11_3" id="pic_11_3" value="">
+                                                                        <div id="delete-11-3" style="position:absolute;left:452px;display:none;">
+                                                                            <a href="javascript:void(0)" onclick="deletepic(11, 3)"><img src="./Content/images/error_tag.png"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="f-cb wrap-upbtn">
+                                                                        <div class="btn-upfile f-fl">
+                                                                            <div class="new-contentarea">
+                                                                                <a href="javascript:void(0)" class="upload-img"><label for="upload-file"></label></a>
+                                                                                <input type="file" class="upic_11" onchange="return FileUpload_onselect(this,11)">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hint f-fl">最多可添加3张图片，每组照片拍摄的角度，背景不能一样 </div>
+                                                                    </div>
+                                                                </div>
+    </div>
+                            <div class="pic-type-cw f-cb">
+                                <p class="f-fl">评价要求：</p>
+                                <div class="f-fl">
+                                    <textarea class="textarea pic-cw" name="pic_cw_1" id="pic_cw_1" placeholder="商家可自定义填写评价的文字要求"></textarea>
+                                </div>
+                            </div>
+                            <div class="additional_comment_panel_toggle">
+                        <span>追加评论</span>
+                        <input type="checkbox" value="0" id="additional_comment_pic_panel_toggle" name="additional_comment_panel_toggle" onclick="ifcheckshow('#additional_comment_pic_panel_toggle','#additional_comment_pic_detail_panel')">
+                    </div>
+                    <div class="step step-additional_commnet" id='additional_comment_pic_detail_panel' style="display:none">
+                                            <h3 >追加评论</h3>
+                                             <div class="spct-wrap select-task-type" id="additional_comment_pic_detail_panel">
+                                                <ul>
+                                                <span class="must-input" style="*top: 2px;">
+                                                </span>
+                                                <span class="title">
+                                                选择追加评论类型：
+                                                </span>
+                                                <br/>
+                                                    <li>
+                                                        <br/>
+                                                        <input class="common-type seltype" type="radio" value="1" id="picisaddgoodaddcom" name="pic_task_type_add_com"  >
+                                                        普通<a style="color:#06c1ae">追加评论</a>任务
+                                                            (买手确认收货添加评价之后指定时间添加追加评价，评价自由发挥，不能有额外要求)
+                                                    </li>
+                                                    <li>
+                                                        <input class="word-type seltype" type="radio" value="2" id="picisaddgoodaddcom" name="pic_task_type_add_com">
+                                                        指定关键词<a style="color:#06c1ae">追加评论</a>任务
+                                                            (买手确认收货后，使用商家提供的好评关键字，组合成一句通顺的追加评论)
+                                                    </li>
+                                                    <li>
+                                                        <input class="picture-type seltype" type="radio" value="3" id="picisaddgoodaddcom" name="pic_task_type_add_com">
+                                                        指定图片<a style="color:#06c1ae">追加好评任务</a>
+                                                            (买手确认收货后，使用商家提供的图片，给予图片+文字好评)
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="error-tips">
+                                                任务类型未选择！
+                                            </div>
+                                            <div class="spct-wrap commontype-wrap task-type f-pr" id="pic_add_comment_common_comment_div">
+                                                <ul>
+                                                    <li>
+                                                        <span class="must-input">
+                                                        </span>
+                                                        <span class="title">
+                                                            <a style="color:#06c1ae">普通追加好评任务</a>　添加
+                                                        </span>
+                                                        <input class="ipt f-tar order_num" id="add_comment_tasknum_one" name="add_comment_tasknum_one"
+                                                        value="1" maxlength="4">
+                                                        单
+                                                        <span style="color:red">
+                                                                1元/单
+                                                            </span>
+                                                        <img class="promptips" src="/static/image/web/home/promptips.png" id="id_tip_5">
+                                                        <span class="prompt" style="padding-left: 12px;color: #737272;">
+                                                            即买手确认收货后评价自由发挥，不能有额外要求
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                                <div class="error-tips" id="tasknum_one_error">
+                                                    普通好评数未填写！
+                                                </div>
+                                                <div class="pop-prompt-box prompt-commontype" style="display: none;" id="id_tip_con_5">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>
+                                                            普通好评任务
+                                                        </h3>
+                                                        <div class="prompt-ct">
+                                                            即买手确认收货后评价自由发挥，不能有额外要求
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/static/image/web/home/bluetri_down.png">
+                                                </div>
+                                            </div>
+                                            <div class="spct-wrap keywordtype-wrap task-type f-pr" id='pic_keyword_add_comment_div' style="display:none;">
+                                                <ul>
+                                                    <li class="p-r">
+                                                        <span class="must-input" style="*top: 10px;">
+                                                        </span>
+                                                        <span class="title">
+                                                            指定关键词好评任务　添加
+                                                        </span>
+                                                        <input class="ipt f-tar order_num" id="add_comment_tasknum_two" name="add_comment_tasknum_two" value="2"
+                                                        maxlength="4" >
+                                                        单
+                                                        <span>
+                                                            ( 指定好评关键字任务佣金 +
+                                                            <span style="color:red">
+                                                                2元/单
+                                                            </span>
+                                                            )
+                                                        </span>
+                                                        <img class="promptips" src="/static/image/web/home/promptips.png" id="id_tip_6">
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li style="margin-bottom: 0px;padding-bottom: 1em;border-bottom: 1px dashed #b4b6b7;">
+                                                        <span class="must-input" style="*top: 0px;">
+                                                        </span>
+                                                        设置指定关键词：建议至少设3个关键字，最多可设置5个关键字
+                                                    </li>
+                                                </ul>
+                                                <div class="all-keyword">
+                                                    <ul class="f-cb" style="margin-left: 30px;">
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_1" name="add_comment_wz_keyword_1" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_2" name="add_comment_wz_keyword_2" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_3" name="add_comment_wz_keyword_3" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_4" name="add_comment_wz_keyword_4" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                        <li class="f-fl p-r" style="margin-right: 0px;">
+                                                            <input class="ipt ipt-keyword add_comment_wz_keyword" id="add_comment_wz_keyword_5" name="add_comment_wz_keyword_5" type="text"
+                                                            maxlength="9">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="error-tips" id="tasknum_two_error">
+                                                    关键词未填写！
+                                                </div>
+                                                <div class="pop-prompt-box prompt-keywordtype" style="display:none;" id="id_tip_con_6">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>
+                                                            指定关键字追加好评任务
+                                                        </h3>
+                                                        <div class="prompt-ct">
+                                                            选择此服务将有助于提升评价质量并优化您商品评价映像关键词（请根据您发布任务的商品设定几个关键字作为买手的评价范围独自发挥撰写评价，例如“手感面料很舒服，款式也很漂亮，包装很讲究，物流很快，性价比高”等...
+                                                            注意：请不要填写完整的评价内容，避免所有买手评价商品的内容一模一样）
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/static/image/web/home/bluetri_down.png">
+                                                </div>
+                                            </div>
+                                            <div class="spct-wrap picturetype-wrap task-type f-pr" id='pic_add_comment_piccomment_div' style="display:none;">
+                                                <ul>
+                                                    <li>
+                                                        <span class="must-input" style="*top: 10px;">
+                                                        </span>
+                                                        <span class="title">
+                                                            指定好评图片任务：添加
+                                                        </span>
+                                                        <input class="ipt f-tar order_num" id="pic_add_comment_tasknum_three" name="add_comment_tasknum_three"
+                                                        value="3" maxlength="4">
+                                                        单
+                                                        <span>
+                                                            ( 指定追加好评关键字任务佣金 +
+                                                            <span style="color:red">
+                                                                3元/单
+                                                            </span>
+                                                            )
+                                                        </span>
+                                                        <img class="promptips" src="/static/image/web/home/promptips.png" id="id_tip_7">
+                                                    </li>
+                                                </ul>
+                                                <div class="pop-prompt-box prompt-picturetype" style="display: none;" id="id_tip_con_7">
+                                                    <div class="prompt-ct-wrap">
+                                                        <h3>
+                                                            指定好评图片任务
+                                                        </h3>
+                                                        <div class="prompt-ct">
+                                                            此服务是通过商家提供“买家秀图片”给做任务的买手，买手确认好评的时候，将把这张买家秀图片一起提交。以达到优化评价，提高转化率的目的。注意：买家秀图片最少一张最多三张，图片商品规格必须与输入的商品规格一致，以避免乌龙~
+                                                        </div>
+                                                    </div>
+                                                    <img class="triangle" src="/static/image/web/home/bluetri_down.png">
+                                                </div>
+                                                <input id='additional_comment_num' value = '0' type="hidden">
+                                                <div class="upic-wrap" >
+                                                    <div id="additional_comment_pic_panel">
+
+                                                    </div>
+                                                    <div class="error-tips" id="tasknum_three_error_11">
+                                                        图片未上传！
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+                    <div class="item">
+                    <span class="label vt" style="width: 120px"><input type="checkbox" id="taskinterval" name="taskinterval">发布时间设置：</span>
+                    <div class="item-con">
+                        <input type="text" class="w150" datatype="*" nullmsg="请选择" placeholder="活动开始时间" id="begindate" name="sk_begindate" onclick=" WdatePicker({ minDate: '2017-11-30', maxDate: '#F{$dp.$D(\'enddate\')||\'2030-10-01\'}', dateFmt: 'yyyy-MM-dd', onpicked: function () { document.getElementById('enddate').click(); timeChange(); }})" value="2018-06-04">
+                        <span>每天任务放出时间从</span>
+                        <input class="ipt f-tar" type="text" style="width: 20px;text-indent: 0" id="starthour" name="starthour" value="13" onchange="settimerelease()" maxlength="2">
+                        <span>点00分到</span>
+                        <input class="ipt f-tar" type="text" style="width: 20px;text-indent: 0" id="endhour" name="endhour" value="23" onchange="settimerelease()" maxlength="2">
+                        <span>点00分，这个时间区间放出</span>
+                        <input class="ipt f-tar" type="text" style="width: 30px;text-indent: 0" id="intestatistics" name="intestatistics" value="" onchange="settimerelease()" maxlength="3">
+                        <span>单</span>
+                        <span style="color: #a3a3a2">（如需要设置发布时间，一定要在前面的勾选框打上“√”，否则时间设置不生效）</span>
+                    </div>
+                    
+                </div>
+                    <div class="slide-btn btn-red btn">
+                    确定
+                </div>
+</div>
+<script type="text/javascript" src="./PageScript/releasetask_new.js"></script>
+<script type="text/javascript" src="./PageScript/task.js"></script>
+<script type="text/javascript" src="./PageScript/global.min.js"></script>
+<div class="slide-item">
+                <div class="l-title">
+                    <span>4</span>商家附加要求                    
+                    <em class="open-slide">修改</em> <i class="iconfont icon-zhengque"></i>
+                </div>
+                 <!-- <div class="item">
+                    <div>如有需要备注可添加图片，最多可添加3张，图片中不要显示店铺名或商品名，避免用户直接搜索！</div>
+                    <div class="item-con">
+                        <img onclick="clickImg(4)" id="up-img4" class="pic"  />
+                        <img onclick="clickImg(5)" id="up-img5" class="pic"  />
+                        <img onclick="clickImg(6)" id="up-img6" class="pic"  />
+                    </div>
+                    <div>
+                        <input style="margin-left: 40px;height: 30px;font-size: 16px;width: 60px;line-height: 30px;border-radius: 4px" type="button" name="" value="删除" onclick="delImg(4)">
+                        <input style="margin-left: 100px;height: 30px;font-size: 16px;width: 60px;line-height: 30px;border-radius: 4px" type="button" name="" value="删除" onclick="delImg(5)"> 
+                        <input style="margin-left: 110px;height: 30px;font-size: 16px;width: 60px;line-height: 30px;border-radius: 4px" type="button" name="" value="删除" onclick="delImg(6)">     
+                    </div>
+                    <input type="hidden" id="sk_logo_pic" name="sk_logo_pic" value="" />
+                    <input type="hidden" id="currentImg" name="sk_img_index" value="0" />
+                    <input type="hidden" id="tbshopname" name="sk_tb_shopname" />
+                </div> -->
+                <div class="user-remark flashtask-remark" style="">
+                                        <div class="f-pr"><span style="position: relative;left: 0px;color: #030303;font-weight: bold;" class="label">备注说明</span><br/><textarea style="width: 800px;height: 50px;left: 0px;" class="remark" id="remark" name="remark" maxlength="300" placeholder="重要！如果对用户有特别的要求，请在备注里注明，用户在做任务时会看到，最多不能超过300字(任务备注只是商家要求，我们只能做到传达给用户但不会强制用户按要求执行)"></textarea></div>
+                                        <p class="remark-over" style="color:red;margin-bottom:18px;visibility:hidden;">超过300个字</p>
+                                    </div>
+                <div class="slide-btn btn-red btn">
+                    确定
+                </div>
+</div>
+
+                
+        </div>     
+
+          <!--   <div class="key-word">
+                <div class="title">
+                    <span>二维码搜索</span>
+                </div>
+                <div class="item">
+                    <span class="label vt"><span>*</span>分配占比：</span>
+                    <div class="item-con">
+                        <input type="text" class="w180 search-rate" datatype="int" value="" placeholder="请输入1或2位整数" /> %
+                        <span class="gray">注：三个占比相加为100</span>
+                    </div>
+                </div>
+                <div class="item list-word">
+                    <span class="label vt"><span>*</span>二维码</span>
+                    <div class="item-con" id="qrcodeTable">
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="key-word" style="display:none">
+                <div class="title">
+                    <span>增值服务</span>
+                        <span style="border:none;margin-left: 30px;">开通会员可以使用以下服务</span>
+                        <a href="/VIP/VIPDetailNew" style="" target="_blank">会员特权</a>
+
+                </div>
+                <div class="item ptText10" style="font-size:14px ; display:">
+                    1、手淘问大家，2、旺旺聊天，3、指定评价，4、晒图评价，5、追评评价+晒图，6、多天追评；
+                </div>
+                <div>
+                    <div class="item" id="ptText5">
+
+                        <span class="label vt">手淘问大家：</span>
+                        <div class="item-con">
+                            <input type="checkbox" name="sk_is_ask" id="sk_is_ask" value="false"><label for="sk_is_ask">（<em class="sevice-ask">2</em>元/份）</label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label vt" id="ptText3">旺旺聊天：</span>
+                        <div class="item-con">
+                            <input type="checkbox" name="sk_is_chat" id="sk_is_chat" value="false" /><label for="sk_is_chat">（2元/份）</label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label vt" style="width:800px;">评价要求设置：（晒图+无需评价 之和不能超过活动发放份数）</span>
+                    </div>
+                    
+                    <div class="item">
+                        <span class="label vt" style="width: 112px;">晒图（含评价）：</span>
+                        <div class="item-con">
+                            <input type="text" class="w180 addPrice addprice2" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" id="sk_print_count" name="sk_print_count" value="0" placeholder="请输入执行人数" /><span>个买家评价时进行晒图（2元/份）</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label vt" style="width: 112px;">无需评价：</span>
+                        <div class="item-con">
+                            <input type="text" class="w180 addPrice addprice2" id="sk_star_count" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" name="sk_star_count" value="0" placeholder="请输入执行人数" /><span>个买家不给与评价，剩余买家照常评价（0元/份）</span>
+                        </div>
+                    </div>
+                        <div class="item">
+                            <span class="label vt" style="width: 112px;">追加评价/晒图：</span>
+                            <div class="item-con">
+                                <input type="checkbox" id="sk_is_addappraise" name="sk_is_addappraise" value="false" />
+                            </div>
+                        </div>
+                        <div id="add-con" style="display: none;">
+                            <div style="margin-left: 36px;">
+                                <div class="item">
+                                    <span class="label vt" style="width: 60px; text-align: right;">2天后：</span>
+                                    <div class="item-con">
+                                        <input type="text" class="w180 addPrice appendnum" placeholder="请输入执行人数" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" id="sk_add1_allot_count" name="sk_add1_allot_count" value="0" /><label for="zj-time1">人执行（2元/份）</label>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <span class="label vt" style="width: 60px; text-align: right;">3天后：</span>
+                                    <div class="item-con">
+                                        <input type="text" class="w180 addPrice appendnum" placeholder="请输入执行人数" id="sk_add2_allot_count" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" name="sk_add2_allot_count" value="0" /><label for="zj-time1">人执行（3元/份）</label>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <span class="label vt" style="width: 60px; text-align: right;">4天后：</span>
+                                    <div class="item-con">
+                                        <input type="text" class="w180 addPrice appendnum" placeholder="请输入执行人数" id="sk_add3_allot_count" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" name="sk_add3_allot_count" value="0" /><label for="zj-time1">人执行（4元/份）</label>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <span class="label vt" style="width: 60px;text-align: right;">5天后：</span>
+                                    <div class="item-con">
+                                        <input type="text" class="w180 addPrice appendnum" id="sk_add4_allot_count" name="sk_add4_allot_count" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" value="0" placeholder="请输入执行人数" /><label for="zj-time1">人执行（5元/份）</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="item">
+                                <span class="label vt" style="text-align: right;">追评晒图：</span>
+                                <div class="item-con">
+                                    <input type="text" class="w180 addPrice pic-num" placeholder="请输入执行人数" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" name="sk_add_print_count" id="sk_add_print_count" value="0" /><label>人执行（1元/份）</label>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>        
+<div class="slide-item">
+                <div class="l-title">
+                    <span>5</span>选择增值服务
+                    <em class="open-slide">修改</em> <i class="iconfont icon-zhengque"></i>
+                        <label style="border:none;margin-left: 30px;">开通会员可以使用以下服务</label>
+                        <a href="./VIPDetailNew.html" class="up" target="_blank">会员特权</a>
+                </div>
+                <div class="key-word" id="renqunbq">
+                     <div id="slide">
+                        <div class="item">
+                            <span class="label" style="width:160px"><span>*</span>加赏任务佣金: 每单加赏</span>
+                            <div class="item-con">
+                                <input type="text" id="addmoney" class="w560" datatype="*" name="addmoney" errormsg="请填写信息" maxlength="18" placeholder="任务没人接或接不完时，建议加赏提升用户积极性，优先接手你的任务" />
+                                <span>元</span>
+                            </div>
+                        </div>
+                        <div id="item">
+                            <div class="item-con mb10">
+                                <span class="label" style="width: 220px"><span>*</span>空包服务(3元/个) 每个包裹重:</span>
+                                 <input type="text" style="width: 200px" id="expressWeight" class="w560" datatype="*" name="expressWeight" errormsg="请填写信息" maxlength="18" />
+
+                                <span class="label ml30">公斤，快递</span>
+                                <select id="expressNo" name="expressNo" class="keyword_sort" datatype=* nullmsg="请选择！">
+                                    <option value="">---</option>
+                                    <option value="申通" selected>申通</option>
+                                    <option value="圆通" >圆通</option>
+                                </select>
+                            </div>
+
+                         </div>
+               
+                </div>
+                <div class="item">
+                    <span class="label vt">买家性别：</span>
+                    <div class="item-con">
+                        <input style="" type="radio" name="sk_sex2" value="1" id="sk_sex4" />男
+                        <input style="" type="radio" name="sk_sex2" value="2" id="sk_sex5" />女
+                    </div>
+                </div>
+                <div class="item list-word">
+                    <span class="label vt">买家年龄：</span>
+                    <input style="" type="radio" name="sk_age" value="1"  id="sk_age1" />18-25
+                    <input style="" type="radio" name="sk_age" value="2"  id="sk_age2" />26-35
+                    <input style="" type="radio" name="sk_age" value="3"  id="sk_age3" />35及以上
+                </div>
+                <div class="limit-user limit-area">
+                     <p>
+                        <input style="margin-left: 6px" class="limchoice" name="islimitarea" id="islimitarea" type="checkbox" value="1"> 地域限制 <input type="hidden" id="limitareas" name="limitareas" value=""><span class="prompt">（+0.5元/单）</span>
+                    </p>
+                        <div class="limit-ipt" style="display: none;">
+                          <p class="seled-lim-area">以下所选地区<span style="font-weight:bold;color:red;">不可接该任务</span>：<span class="showarea"></span></p>
+                        <div class="sel-area-panel">
+                        <p class="area-panel-hd">编辑区域</p>
+                            <ul class="area-panel-bd">
+                                <li class="lst lst-odd">
+                                    <input class="area section" type="checkbox"><span class="area-section"> 华东</span>　　<input class="area" type="checkbox" value="上海"> 上海　<input class="area" type="checkbox" value="江苏"> 江苏　<input class="area" type="checkbox" value="浙江"> 浙江　<input class="area" type="checkbox" value="安徽"> 安徽　<input class="area" type="checkbox" value="江西"> 江西
+                                </li>
+                                <li class="lst lst-even"><input class="area section" type="checkbox"><span class="area-section"> 华北</span>　　<input class="area" type="checkbox" value="北京"> 北京　<input class="area" type="checkbox" value="天津"> 天津　<input class="area" type="checkbox" value="山西"> 山西　<input class="area" type="checkbox" value="山东"> 山东　<input class="area" type="checkbox" value="河北"> 河北　<input class="area" type="checkbox" value="内蒙古"> 内蒙古
+                                </li>
+                                <li class="lst lst-odd"><input class="area section" type="checkbox"><span class="area-section"> 华中</span>　　<input class="area" type="checkbox" value="湖南"> 湖南　<input class="area" type="checkbox" value="湖北"> 湖北　<input class="area" type="checkbox" value="河南"> 河南　
+                                </li>
+                                <li class="lst lst-even"><input class="area section" type="checkbox"><span class="area-section"> 华南</span>　　<input class="area" type="checkbox" value="广东"> 广东　<input class="area" type="checkbox" value="广西"> 广西　<input class="area" type="checkbox" value="福建"> 福建　<input class="area" type="checkbox" value="海南"> 海南
+                                </li>
+                                <li class="lst lst-odd"><input class="area section" type="checkbox"><span class="area-section"> 东北</span>　　<input class="area" type="checkbox" value="辽宁"> 辽宁　<input class="area" type="checkbox" value="吉林"> 吉林　<input class="area" type="checkbox" value="黑龙江"> 黑龙江　
+                                </li>
+                                <li class="lst lst-even"><input class="area section" type="checkbox"><span class="area-section"> 西北</span>　　<input class="area" type="checkbox" value="陕西"> 陕西　<input class="area" type="checkbox" value="新疆"> 新疆　<input class="area" type="checkbox" value="甘肃"> 甘肃　<input class="area" type="checkbox" value="宁夏"> 宁夏　<input class="area" type="checkbox" value="青海"> 青海
+                                </li>
+                                <li class="lst lst-odd"><input class="area section" type="checkbox"><span class="area-section"> 西南</span>　　<input class="area" type="checkbox" value="重庆"> 重庆　<input class="area" type="checkbox" value="云南"> 云南　<input class="area" type="checkbox" value="贵州"> 贵州　<input class="area" type="checkbox" value="西藏"> 西藏　<input class="area" type="checkbox" value="四川"> 四川
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                  </div>
+                 <div class="item list-word">
+                    <div  class="item-con">
+                                <label><input  class="limchoice"  type="checkbox" name="onlyDiamondBuyer" value="1" class="zt-job"  />仅限钻级别的买号可接该任务（+1元/单）</label>
+                        <input type="hidden" name="sk_occupation" id="sk_occupation" />
+                    </div>
+                </div>
+                <div class="item list-word">
+                    <div  class="item-con">
+                                <label><input  class="limchoice"  type="checkbox" name="onlyHuabei" value="1"  class="zt-job"  />仅限开通花呗的买号可接该任务（+2元/单，指已开通花呗的用户，不是指任务要用花呗付款，开通了花呗的买号在淘宝内部被认为是优质的账号，用这些账号很安全，权重高）</label>
+                        <input type="hidden" name="sk_occupation" id="sk_occupation" />
+                    </div>
+                </div>
+                <div class="item list-word">
+                    <div  class="item-con">
+                                <label><input  class="limchoice"  type="checkbox" name="onlyCollectAndAdd"  class="zt-job"  />仅限已收藏，加购该商品的买号可接该任务（+2元/单，先收藏加购物车后再下单的模式，要求必须15天内发过收藏流量并被用户接单，该任务发出后，只有之前接过收藏流量的账号才能接到该任务）</label>
+                        <input type="hidden" name="sk_occupation" id="sk_occupation" />
+                    </div>
+                </div>
+                <div class="item list-word">
+                    <span style="width: 200px" class="label vt">限制买号类目 (+0.5元/单)</span>
+                    <div id="islimittbcategory" class="item-con">
+                                <label><input   type="checkbox" name="typeLimit" value="1"  class="zt-job"  />服装鞋包</label>
+                                <label><input  type="checkbox" name="typeLimit" value="2" class="zt-job"  />手机数码</label>
+                                <label><input  type="checkbox" name="typeLimit" value="3" class="zt-job"  />家用电器</label>
+                                <label><input   type="checkbox" name="typeLimit" value="4" class="zt-job"  />美妆饰品</label>
+                                <label><input  type="checkbox" name="typeLimit"value="5"  class="zt-job"  />母婴用品</label>
+                                <label><input type="checkbox" name="typeLimit" value="6" class="zt-job"  />家居建材</label>
+                                <label><input type="checkbox" name="typeLimit"value="7"  class="zt-job"  />百货食品</label>
+                                <label><input  type="checkbox" name="typeLimit" value="8" class="zt-job"  />运动户外</label>
+                                <label><input  type="checkbox" name="typeLimit"value="9"  class="zt-job"  />文化娱乐</label>
+                                <label><input  type="checkbox" name="typeLimit"value="10  class="zt-job"  />生活服务</label>
+                                <label><input  type="checkbox" name="typeLimit"value="11"class="zt-job"  />汽摩配件</label>
+                                <label><input  type="checkbox" name="typeLimit" value="12" class="zt-job"  />游戏话费</label>
+                        <input type="hidden" name="sk_occupation" id="sk_occupation" />
+                    </div>
+                </div>
+               <!--  <div class="item list-word">
+                    <span class="label vt"><span></span>买家职业：</span>
+                    <div id="buyerOccupation" class="item-con">
+                                <label><input   type="checkbox" name="1"  class="zt-job"  />在校学生</label>
+                                <label><input  type="checkbox" name="2"  class="zt-job"  />职场白领</label>
+                                <label><input  type="checkbox" name="3"  class="zt-job"  />技术蓝领</label>
+                                <label><input   type="checkbox" name="4"  class="zt-job"  />家庭主妇</label>
+                                <label><input  type="checkbox" name="5"  class="zt-job"  />专职司机</label>
+                                <label><input type="checkbox" name="6"  class="zt-job"  />公务员</label>
+                                <label><input type="checkbox" name="7"  class="zt-job"  />医护人员</label>
+                                <label><input  type="checkbox" name="8"  class="zt-job"  />餐饮行业</label>
+                                <label><input  type="checkbox" name="9"  class="zt-job"  />自由职业</label>
+
+                        <input type="hidden" name="sk_occupation" id="sk_occupation" />
+                    </div>
+                </div>
+                    <div class="item">
+                        <span class="label vt">买家淘气值：</span>
+                        <div id="buyerNaughtyValue" class="item-con">
+                                    <label><input type="checkbox" name="1"  class="people-tq"  />501-600</label>
+                                    <label><input type="checkbox" name="2"  class="people-tq"  />601-800</label>
+                                    <label><input type="checkbox" name="3"  class="people-tq"  />801-1000</label>
+                                    <label><input type="checkbox" name="4"  class="people-tq"  />1000以上</label>
+
+                            <input type="hidden" name="sk_tag_popularity" id="sk_tag_popularity" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label vt" style="width:110px;">买家消费层级：</span>
+                        <div class="item-con" id="buyerConsumptionLevel">
+                                    <input type="radio" name="sk_tag_level" id="sk_tag_level1" value="1" />10-50元                                    <input type="radio" name="sk_tag_level" id="sk_tag_level2" value="2" />51-150元                                    <input type="radio" name="sk_tag_level" id="sk_tag_level3" value="3" />151-250元                                    <input type="radio" name="sk_tag_level" id="sk_tag_level4" value="4" />251-350元                                    <input type="radio" name="sk_tag_level" id="sk_tag_level5" value="5" />351-500元                                    <input type="radio" name="sk_tag_level" id="sk_tag_level6" value="6" />500元以上
+                            <input style="margin-left: 20px;" type="radio" name="sk_tag_level" value="0" checked="checked" />无要求
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="slide-btn btn-red btn">
+                    确定
+                </div>
+</div>           
+
+
+            <input type="hidden" id="sk_id" name="sk_id" value="0" />
+            <input type="hidden" id="sk_fromid" name="sk_fromid" value="0" />
+            <input  class="submit btn btn-red" style="height: 60px;width::150px!important;margin-left: 385px;background-color:#ffebe8;border:1px solid #ff464e;cursor:pointer;font-size:20px;border-radius:20px;color:#ff464e" onclick="activitysub()" value="提交" />
+        </div>
+    </form>
+</div>
+
+            </div>
+        </div>
+    </div>
+<form id="pic1"  action="http://api.feizhugou.com/upload"  onsubmit="return onsub(1)" target="_blank"  method="post" enctype="multipart/form-data">
+        <input type="file" id="file1" name="file" onchange="changePics(1)" style="display:none"/>
+        <button id="paybtn1"></button>
+</form>
+<form id="pic2"  action="http://api.feizhugou.com/upload"  onsubmit="return onsub(2)" target="_blank"  method="post" enctype="multipart/form-data">
+        <input type="file" id="file2" name="file" onchange="changePics(2)" style="display:none"/>
+        <button id="paybtn2"></button>
+</form>
+<form id="pic3"  action="http://api.feizhugou.com/upload"  onsubmit="return onsub(3)" target="_blank"  method="post" enctype="multipart/form-data">
+        <input type="file" id="file3" name="file" onchange="changePics(3)" style="display:none"/>
+        <button id="paybtn3"></button>
+</form>
+<form id="pic4"  action="http://api.feizhugou.com/upload"  onsubmit="return onsub(4)" target="_blank"  method="post" enctype="multipart/form-data">
+        <input type="file" id="file4" name="file" onchange="changePics(4)" style="display:none"/>
+        <button id="paybtn4"></button>
+</form>
+<form id="pic5"  action="http://api.feizhugou.com/upload"  onsubmit="return onsub(5)" target="_blank"  method="post" enctype="multipart/form-data">
+        <input type="file" id="file5" name="file" onchange="changePics(5)" style="display:none"/>
+        <button id="paybtn5"></button>
+</form>
+<form id="pic6"  action="http://api.feizhugou.com/upload"  onsubmit="return onsub(6)" target="_blank"  method="post" enctype="multipart/form-data">
+        <input type="file" id="file6" name="file" onchange="changePics(6)" style="display:none"/>
+        <button id="paybtn6"></button>
+</form>        
+<div class="footer">
+    <div class="footer_main">
+        <div class="footer_left">
+            <div class="footer_xy" style="padding-top: 58px;">
+                <!-- <a href="###" target="_blank">联系我们</a><span>|</span>
+                <a href="###" target="_blank">商务合作</a><span>|</span>
+                <a href="###" target="_blank">用户协议</a><span>|</span>
+                <a href="###" target="_blank">帮助中心</a> -->
+            </div>
+            <div class="footer_fl">
+                <span>Copyright © 2017 meili.com</span> 浙ICP备17042206号-1&nbsp;&nbsp;浙公网安备33010302003013号&nbsp;&nbsp;杭州飞猪试用网络科技有限公司
+            </div>
+            <div>
+                <a class="f_t" rel="nofollow" title="试客联盟官网" target="_blank"></a>
+                
+                <a class="f_f"  rel="nofollow" title="试客联盟官网" target="_blank"></a>
+                <a class="f_g" rel="nofollow" title="试客联盟官网" target="_blank"></a>
+            </div>
+        </div>
+        <div class="footer_right" style="float: left; margin-left: 80px;">
+           <!--  <div class="footer-sp1">bussiness@feizhugou.com</div> -->
+            
+        </div>
+        <div style="float: left; margin-top: 0px;margin-left: 80px;">
+            <p style="width: 100px;text-align: center">关注飞猪试用公众号</p>
+            <img style="width: 100px; height: 100px;" src="../shangjia_code.png" />
+        </div>      
+    </div>
+</div>
+
+<a href="http://wpa.qq.com/msgrd?v=3&uin=3003747532&site=qq&menu=yes" target="_blank">
+    <div class="nrtou" id="abc">
+        <img src="/Content/images/shoufw2.png" />
+        <a href="javascript:" class="fork" onclick=" $('#abc').hide();">ｘ</a>
+    </div>
+</a>
+    <link href="./Scripts/Validform/style.css" rel="stylesheet" />
+<script src="http://www.meilipa.com/Scripts/Validform/Validform_v5.3.2.js"></script>
+<script src="./Scripts/jquery.form.js" type="text/javascript"></script>
+<script>
+    function initxhr() {
+                if (window.XMLHttpRequest) {
+                    return new XMLHttpRequest();
+                } else if (window.ActiveXObject) {
+                    return new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+            function deletepic(i, j){
+                if(i < 10){
+                    if(i == 0){
+                        $("#pic").val('');
+                        $("#showpic").attr("src", "images/default_upic.png");
+                        $("#delete-0").hide();
+                    }else{
+                        $("#pic_"+i).val('');
+                        $("#showpic_"+i).attr("src", "images/default_upic.png");
+                        $("#delete-"+i).hide();
+                    }
+                }else{
+                    $("#pic_"+i+"_"+j).val('');
+                    $("#showpic_"+i+"_"+j).attr("src", "images/default_upic.png");
+                    $("#delete-"+i+"-"+j).hide();
+                }
+                // $("#appealimg"+i).val("");
+                // $("#showimg"+i).attr("src", "images/default_upic.png");
+                // $("#delete-"+i).css("display", "none");
+            }
+
+            function FileUpload_onselect(ofile,num) {
+                var filesize = (ofile.files[0].size / 1024).toFixed(2);
+                if(filesize > 3100){
+                    $.prompt("上传图片大小不能超过3M");
+                    reutrn;
+                }
+                // var objUrl = getObjectURL(ofile.files[0]) ;
+                var token = $("#token").val();
+               
+                var key = $("#key").val()+".jpg";
+
+                var keyt = 291063+"-0-"+new Date().getTime()+".jpg";
+                $("#key").val(keyt);
+
+                var xhr = initxhr();
+
+                xhr.open('POST', "http://api.feizhugou.com/upload", true);
+
+                var formData, startDate = new Date().getTime();
+
+                formData = new FormData();
+
+                if (key !== null && key !== undefined) formData.append('key', key);
+
+                formData.append('token', token);
+
+                formData.append('file', ofile.files[0]);
+
+                var taking;
+
+                xhr.upload.addEventListener('loadstart', function(evt){
+                    console.log('loadstart');
+                    var picsrc;//图片路径
+                    
+                    if(num < 10){
+                        if(num == 0){
+                            $("#showpic").attr("src","images/uping.png");
+                        }else{
+                            $("#showpic_"+num).attr("src","images/uping.png");
+                        }
+                    }else{//图片好评图片上传
+                        for(var i=1;i<4;i++){
+                            picsrc = $("#showpic_"+num+"_"+i).attr("src");
+                            if(picsrc.indexOf("default_upic.png") > -1){
+                                $("#showpic_"+num+"_"+i).attr("src","images/uping.png");
+                                break;
+                            }
+                        }
+                    }
+                });
+
+                xhr.upload.addEventListener('error', function(evt){
+                    console.log('error');
+                    var picsrc;//图片路径
+                    if(num < 10){
+                            if(num == 0){
+                                $("#showpic").attr("src","images/upfail.png");
+                                setTimeout(function(){
+                                    $("#showpic").attr("src","images/default_upic.png");
+                                }, 2000);
+                            }else{
+                                $("#showpic_"+num).attr("src","images/upfail.png");
+                                setTimeout(function(){
+                                    $("#showpic_"+num).attr("src","images/default_upic.png");
+                                }, 2000);
+                            }
+                    }else{
+                        for(var i=1;i<4;i++){
+                            picsrc = $("#showpic_"+num+"_"+i).attr("src");
+                            if(picsrc.indexOf("uping.png") > -1){
+                                $("#showpic_"+num+"_"+i).attr("src","images/default_upic.png");
+                                setTimeout(function(){
+                                    $("#showpic_"+num+"_"+i).attr("src","images/default_upic.png");
+                                }, 2000);
+                                break;
+                            }
+                        }
+                    }
+                });
+
+                xhr.upload.addEventListener("progress", function(evt) {
+                    if (evt.lengthComputable) {
+                        var nowDate = new Date().getTime();
+                        taking = nowDate - startDate;
+                        var x = (evt.loaded) / 1024;
+                        var y = taking / 1000;
+                        var uploadSpeed = (x / y);
+                        var formatSpeed;
+                        if (uploadSpeed > 1024) {
+                            formatSpeed = (uploadSpeed / 1024).toFixed(2) + "Mb\/s";
+                        } else {
+                            formatSpeed = uploadSpeed.toFixed(2) + "Kb\/s";
+                        }
+                        var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+                        
+                        //$.showUploadProgress(percentComplete);
+                    }
+                }, false);
+    
+                xhr.onreadystatechange = function(response) {
+                    if (xhr.readyState == 4 && xhr.status == 200 && xhr.responseText != "") {
+                        var blkRet = JSON.parse(xhr.responseText);
+                        console && console.log(blkRet);
+                        //上传成功
+                        var sppath = "http://api.feizhugou.com/upload"+key;
+                        
+                        if(num < 10){
+                            if(num == 0){
+                                $("#pic").val(sppath);
+                                $("#showpic").attr("src",blkRet.data);
+                                $("#delete-0").show();
+                            }else{
+                                $("#pic_"+num).val(sppath);
+                                $("#showpic_"+num).attr("src",blkRet.data);
+                                $("#delete-"+num).show();
+                            }
+                        }else{
+                            for(var i=1;i<4;i++){
+                                var picsrc = $("#showpic_"+num+"_"+i).attr("src");
+                                if(picsrc.indexOf("uping.png") > -1){
+                                    $("#pic_"+num+"_"+i).val(sppath);
+                                    $("#showpic_"+num+"_"+i).attr("src",blkRet.data);
+                                    $("#delete-"+num+"-"+i).show();
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                function isUpload(){
+                    var showpicsrc = '';
+                    if(num < 10){
+                        if(num == 0){
+                            showpicsrc = $("#showpic").attr("src");
+                        }else{
+                            showpicsrc = $("#showpic_"+num).attr("src");
+                        }
+                    }else{
+                        for(var ii=1;ii<4;ii++){
+                            showpicsrc = $("#showpic_"+num+"_"+ii).attr("src");
+                            if(showpicsrc.indexOf("default_upic.png") > -1){
+                                return true;
+                            }
+                        }
+                    }
+                    if(showpicsrc.indexOf("default_upic.png") > -1){
+                        return true;
+                    }
+                }
+
+                if(isUpload()){
+                    xhr.send(formData);
+                }
+            }
+
+$(document).ready(function(){
+    $("input:radio[name=word_task_type_add_com]").click(function(){
+        switch($('input:radio[name="word_task_type_add_com"]:checked').val()){
+        case "1":
+            $('#word_add_comment_common_comment_div').show();
+            $('#word_keyword_add_comment_div').hide();
+            $('#word_add_comment_piccomment_div').hide();
+            $('#word_add_comment_tasknum_one').val('0');
+            break;
+        case "2":
+            $('#word_add_comment_common_comment_div').hide();
+            $('#word_keyword_add_comment_div').show();
+            $('#word_add_comment_piccomment_div').hide();
+            $('#word_add_comment_tasknum_two').val('0');
+            break;
+        
+        default:case "3":
+            $('#word_add_comment_common_comment_div').hide();
+            $('#word_keyword_add_comment_div').hide();
+            $('#word_add_comment_piccomment_div').show();
+            $('#word_add_comment_tasknum_three').val('0');
+            break;
+            break;
+        }
+    });
+    $("input:radio[name=pic_task_type_add_com]").click(function(){
+        switch($('input:radio[name="pic_task_type_add_com"]:checked').val()){
+        case "1":
+            $('#pic_add_comment_common_comment_div').show();
+            $('#pic_keyword_add_comment_div').hide();
+            $('#pic_add_comment_piccomment_div').hide();
+            $('#pic_add_comment_tasknum_one').val('0');
+            break;
+        case "2":
+            $('#pic_add_comment_common_comment_div').hide();
+            $('#pic_keyword_add_comment_div').show();
+            $('#pic_add_comment_piccomment_div').hide();
+            $('#pic_add_comment_tasknum_two').val('0');
+            break;
+        case "3":
+            $('#pic_add_comment_common_comment_div').hide();
+            $('#pic_keyword_add_comment_div').hide();
+            $('#pic_add_comment_piccomment_div').show();
+            $('#pic_add_comment_tasknum_three').val('0');
+            break;
+        default:
+            break;
+        }
+    });
+    $("input:radio[name=task_type_add_com]").click(function(){
+        switch($('input:radio[name="task_type_add_com"]:checked').val()){
+        case "1":
+            $('#add_comment_common_comment_div').show();
+            $('#keyword_add_comment_div').hide();
+            $('#add_comment_piccomment_div').hide();
+            $('#add_comment_tasknum_one').val('0');
+            break;
+        case "2":
+            $('#add_comment_common_comment_div').hide();
+            $('#keyword_add_comment_div').show();
+            $('#add_comment_piccomment_div').hide();
+            $('#add_comment_tasknum_two').val('0');
+            break;
+        case "3":
+            $('#add_comment_common_comment_div').hide();
+            $('#keyword_add_comment_div').hide();
+            $('#add_comment_piccomment_div').show();
+            $('#add_comment_tasknum_three').val('0');
+            break;
+        default:
+            break;
+        }
+    });
+    $('#add_comment_tasknum_three').bind('input propertychange', function() {
+        if(parseInt($('#add_comment_tasknum_three')[0].value)>parseInt($('#com_sk_num_1')[0].value)){
+            layer.msg("追加评论任务数量不能大于发单数量!");
+            $('#add_comment_tasknum_three')[0].value = $('#realse_num_temp_common')[0].value;
+        }
+        $('#additional_comment_num')[0].value = $('#add_comment_tasknum_three')[0].value;
+        
+        var add_comment_pics_panel = '';
+        for(var i=1;i<parseInt($('#add_comment_tasknum_three')[0].value)+1;i++){
+            add_comment_pics_panel+='<h4 class="upictitle">上传第'+i+'单的图片</h4>';
+            add_comment_pics_panel+='<div class="upfindpic"  style="margin-top:20px;" id="id_up_add_comment_pic_'+i+'">';
+
+                add_comment_pics_panel+='<div class="find-pic-wrap f-cb f-pr">';
+                for(var j=1;j<6;j++){
+                    add_comment_pics_panel+='<img class="f-fl upic add_comment_upic_o'+i+'" id="showpic_add_comment_o'+i+'_p'+j+'" src="/static/image/web/home/default_upic.png" width="120px" height="120px"><div class="stepnum" style="left: '+(41+(j-1)*149)+'px;">第'+j+'张</div>';
+                }
+                add_comment_pics_panel+='</div>';
+
+                add_comment_pics_panel+='<div class="f-cb wrap-upbtn">';
+                        for(var j=1;j<6;j++){
+                            add_comment_pics_panel+='<div class="btn-upfile f-fl mgr5em "> <div class="new-contentarea"><a href="javascript:void(0)" class="upload-img"><label for="upload-file"></label></a> <input type="file" class="upic_11" id="good_step_add_comment_o'+i+'_p'+j+'"></div> </div>';
+                        }
+                add_comment_pics_panel+='</div>';
+
+            add_comment_pics_panel+='</div>';
+        }
+        $('#additional_comment_pic_panel')[0].innerHTML = add_comment_pics_panel;
+        for(var j=1;j<parseInt($('#add_comment_tasknum_three')[0].value)+1;j++){
+            for(var i = 1;i<6;i++){
+                laifu.pic_upload('good_step_add_comment_o'+j+'_p'+i,'showpic_add_comment_o'+j+'_p'+i);
+            }
+        }
+    });
+})
+
+     $('.limit-user .limchoice').on('click', function(){
+                var $firadio = $(this).parents('.limit-user').find('input[type="radio"]');
+                if ($(this).is(':checked')) {
+                    $(this).parents('.limit-user').find('.limit-ipt').show();
+                    if ($firadio.length > 0) {
+                        $($firadio[0]).attr('checked', 'checked');
+                    }
+                } else {
+                    $(this).parents('.limit-user').find('.limit-ipt').hide();
+                    if ($firadio.length > 0) {
+                        $firadio.removeAttr('checked');
+                    }
+                }
+            });
+            $('.limit-area .limchoice').on('click', function(){
+                if (!$(this).is(':checked')) {
+                     $showarea.text('');
+                    $('#limitareas').val('');
+                    $('.limit-area input[type="checkbox"]').removeAttr('checked');
+                }
+            });
+            var $showarea = $('.seled-lim-area .showarea');
+            $('.sel-area-panel').delegate('.area', 'click', function(event) {
+                 areas = $showarea.text();
+                if ($(this).is(':checked')) {
+                    if ($(this).hasClass('section')) {
+                        $(this).parents('.lst').find('.area').filter(function(index) {
+                            return !$(this).hasClass('section') && !$(this).is(':checked');
+                        }).each(function(index, el) {
+                            if (areas.length != 0) {
+                                areas += '、' + $(this).val();
+                            } else {
+                                areas += $(this).val();
+                            }
+                            $(this).attr('checked', 'checked');
+                        });
+                    } else {
+                        if (areas.length != 0) {
+                            areas += '、' + $(this).val();
+                        } else {
+                            areas += $(this).val();
+                        }
+                        $(this).attr('checked', 'checked');
+                    }
+                } else {
+                    if ($(this).hasClass('section')) {
+                        $(this).parents('.lst').find('.area').filter(function(index) {
+                            return !$(this).hasClass('section') && $(this).is(':checked');
+                        }).each(function(index, el) {
+                            if (areas.indexOf($(this).val()) == 0) {
+                                if (areas === $(this).val()) {
+                                    areas = '';
+                                } else {
+                                    areas = areas.replace($(this).val()+'、', '');
+                                }
+                            } else {
+                                areas = areas.replace('、' + $(this).val(), '');
+                            }
+                            $(this).removeAttr('checked'); 
+                        });
+                    } else {
+                        if (areas.indexOf($(this).val()) == 0) {
+                            if (areas === $(this).val()) {
+                                areas = '';
+                            } else {
+                                areas = areas.replace($(this).val()+'、', '');
+                            }
+                        } else {
+                            areas = areas.replace('、' + $(this).val(), '');
+                        }
+                        $(this).removeAttr('checked'); 
+                    }
+                }
+                $showarea.text(areas);
+               arealimit = areas.split('、');
+                $('#limitareas').val(areas);
+            });
+    $(function () {
+        initUserRegist();
+    });
+    function onsub(e){
+        console.log(e)
+            $('#pic'+e).ajaxSubmit(function(data){ 
+                console.log(data)
+                if(data.code==1000){
+                    console.log('图片上传方法')
+                }else{
+                    console.log('图片上传方法')
+                }             
+
+            }); 
+        return false;
+    }
+     function clickImg(e){
+        console.log(123)
+        var clickId = Number(e)
+        var clickchangeId = '#file'+e;
+         $(clickchangeId).click();
+     }
+     function delImg(e){
+        var imgcheckId = '#up-img'+e;
+        $(imgcheckId).removeAttr("src");
+        console.log(imgcheckId)
+     }
+    function changePics(e){
+         var r= new FileReader();
+              f=document.getElementById('file'+e).files[0];
+               var picsId = Number(e)
+              r.readAsDataURL(f);
+              r.onload=function (e) {
+                var src1 = ''+ this.result;
+                var picdata = '#up-img'+picsId;
+                var picbtn ='#paybtn' +picsId;
+                $(picdata).attr('src',src1);
+                  $(picbtn).click();
+              };
+     } 
+</script>
+<style>
+    .msg-tip-lf .tip-txt {
+        margin-bottom: 0;
+    }
+    .Validform_right,.Validform_wrong {
+        line-height: 20px;
+    }
+</style>
+<div class="tchs" id="logindialog" style="display: none;">
+    <div id="dialog_log_qiandao" class="dialog-wrapper dialog_log_qiandao" style="width: 416px;">
+        <span class="red">
+            登录/注册
+            <a href="javascript:void(0)" title="关闭窗口" onclick="$('#logindialog').hide()">
+                <span class="close"></span>
+            </a>
+        </span>
+        <div class="diginfo" style="border: none">
+            <div class="log-cont">
+                <ul class="clickTitle">
+                    <li onclick="tab(this,0)" class="active"><i class="icon-1"></i> 用户登录</li>
+                    <li onclick="window.open('http://www.meilipa.com/Regist/UserRegister')"><i class="icon-2"></i> 用户注册</li>
+                </ul>
+                <div class="tabcont">
+                    <div class="tab">
+                        <form id="act_form" style=" width: 288px; margin: 0 auto;" method="POST">
+                            <div class="mb-20 msg-input">
+                                <input type="text" id="username" placeholder="请输入邮箱/手机号/用户名" title="邮箱/手机号/用户名" onkeydown=keyLogin(event)>
+                                <input type="password" class="pwd" id="password" placeholder="请输入密码" autocomplete="off" disableautocomplete="" onkeydown=keyLogin(event)>
+                            </div>
+                            <div class="btn">
+                                <input id="submitbtn" type="button" class="btn-input" value="立即登录" title="登 录" onclick="loginSubmit(1, location.href)">
+                            </div>
+                            <div class="clearfix msg-tip" style="height: 52px;">
+                                <div class="msg-tip-lf">
+                                    <p id="error" class="err-txt" style="display:none;">请输入密码</p>
+                                    <p class="tip-txt">使用其他账号登录</p>
+                                </div>
+                                <a class="msg-tip-rt" href="http://www.meilipa.com/Security/FindPassword?usertype=1">
+                                    <p>忘记密码？</p>
+                                </a>
+                                <div class="jiao"></div>
+                            </div>
+                        </form>
+                        <div class="qq-login">
+                            <a href="javascript:" onclick="qqLogin()">
+                                <div class="qq-icon"></div>
+                            </a>
+                            <a href="javascript:" onclick="WxLogin()">
+                                <div class="qq-icon wx-icon"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab" style="display: none;padding-bottom: 10px;">
+                        <form id="regform" action="/CommonBase/UserRegisterSubmit" style="width: 288px;margin: 0 auto;" method="POST">
+                            <div class="phoneno msg-input" style="position: relative;margin-bottom: 10px;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input id="uname" type="text" name="sk_name" placeholder="用户名" class=" textfield" datatype="username" ajaxurl="/CommonBase/CheckUserNameExist">
+                            </div>
+                            <div class="phoneno msg-input" style="position: relative;margin-bottom: 10px;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input type="password" name="sk_password" placeholder="密码" class="textfield" datatype="*6-16">
+                            </div>
+                            <div class="phoneno msg-input" style="position: relative;margin-bottom: 10px;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input type="password" class="textfield" placeholder="重复密码" datatype="*6-16" recheck="sk_password">
+                            </div>
+                            <div class="phoneno msg-input" style="position: relative; margin-bottom: 10px;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input id="qq" type="text" name="sk_qq" placeholder="QQ号" datatype="*4-15" class=" textfield">
+                            </div>
+                           
+                            <div class="phoneno" style="position: relative;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 26px;">*</i>
+                                <span class="phone">来源：</span>
+                                <select name="sk_from" datatype="*" class="textfield" style="width: 140px;height: 30px">
+                                    <option value=""></option>
+                                    <option value="百度搜索">百度搜索</option>
+                                    <option value="360搜索">360搜索</option>
+                                    <option value="搜狗搜索">搜狗搜索</option>
+                                    <option value="问答【百度知道、百度文库、百度经验】">问答【百度知道、百度文库、百度经验】</option>
+                                    <option value="朋友介绍">朋友介绍</option>
+                                    <option value="QQ空间、微博、微信等分享">QQ空间、微博、微信等分享</option>
+                                    <option value="其他网站">其他网站</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                                <span>正确填写<i style="color: #f3564d;">送20金币</i></span>
+                            </div>
+                            <div id="isphone" class="phoneno clearfix" style="position: relative; margin: 10px 0 8px 0;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input id="zt-mobile" type="text" name="sk_mobile" class=" textfield" style="width: 150px" datatype="m" ajaxurl="/CommonBase/CheckTelExistUser" placeholder="11位手机号码">
+                                <span id="zt-ispan" style="margin: 0 0 0 0;padding-top: 7px;padding-bottom: 11px;padding-left: 15px;padding-right: 15px " class="submit">发送验证码</span>
+                            </div>
+                             <div class="phoneno clearfix" style="position: relative;margin: 10px 0 8px 0;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 26px;">*</i>
+                                <span class="phone" style="line-height: 30px;float: left">填写验证码：</span>
+                                <input type="text" name="code" datatype="*" style="float: left; width: 70px; height: 25px; border: 1px solid #c9caca; margin-right: 10px; line-height: 25px;">
+                            </div>
+                           
+                            <div class="checkbox" style="margin-bottom: 10px;">
+                                <input id="checkbox" type="checkbox" checked="checked" disabled="disabled">
+                                <label for="checkbox">我已仔细阅读并同意接受<a href="http://www.meilipa.com/Regist/UserAgreement" style="color: #007db7" target="_blank">《用户使用协议》</a>。</label>
+                            </div>
+                            <div class="submit" id="regsubmitbtn" onclick="$('#regform').submit()">提交</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    function ifcheckshow(a,b){
+      if($(a)[0].checked){
+        $(b).show();
+      }else{
+        $(b).hide();
+      }
+    }
+    function tab(Nav, Num) {
+        if (Nav.className == "active") return;//为了提高效率
+        $(Nav).addClass('active').siblings().removeClass();
+        $(Nav).parent().next().find(".tab").eq(Num).show().siblings().hide();
+    };
+    function dateAdd(startDate) {
+        startDate = new Date(startDate);
+        
+        startDate = +startDate + 1000*60*60*24;
+        startDate = new Date(startDate);
+        var nextStartDate = startDate.getFullYear()+"-"+(startDate.getMonth()+1)+"-"+startDate.getDate();
+        return nextStartDate;
+    };
+
+    
+     function activitysub(){ //点击按钮的时候提交
+        // shopName=:$("#username").val()
+        // var a = $("#act_form").serialize();
+        // console.log(a)
+        var searchURL = window.location.search;
+        searchURL = searchURL.substring(1, searchURL.length);
+        var actid = searchURL.split("&")[0].split("=")[1];
+        if (typeof(actid) == "undefined") {
+            var type = 1;
+        }else{
+           var type = 2;
+        }
+        console.log(searchURL);
+        // e.stopPropagation();
+        // e.preventDefault();
+        
+        /*if( $("#sk_no_appraise_chart").is(':checked')){
+            if ($("#sk_no_contact_chat").is(':checked')) {
+                behavior = ""
+            }else{
+                behavior = "1"
+            }
+        }else{
+            if ($("#sk_no_contact_chat").is(':checked')) {
+                behavior = "2"
+            }else{
+                behavior = "1/2"
+            }
+        };
+        if( $("#sk_is_useCreditCard").is(':checked')){
+            if ($("#sk_is_useTokio").is(':checked')) {
+                paymentMethod = ""
+            }else{
+                paymentMethod = "1"
+            }
+        }else{
+            if ($("#sk_is_useTokio").is(':checked')) {
+                paymentMethod = "2"
+            }else{
+                paymentMethod = "1/2"
+            }
+        };
+
+        if($("#sk_sex4").is(':checked')){
+            buyerSex=$('#sk_sexstr1').val()+':'+$('#sk_sexstr2').val();;
+        }
+        if($("#sk_sex3").is(':checked')){
+            buyerSex="";
+        }
+
+        if($("#sk_age0").val()<15||$("#sk_age0").val()>60){
+            myAlert("买家年龄范围错误")
+            buyerAge=""
+            return false
+        }else if($("#sk_age1").val()<15||$("#sk_age1").val()>60){
+            myAlert("买家年龄范围错误")
+            buyerAge=""
+            return false
+        }else{
+            buyerAge=$("#sk_age0").val()+":"+$("#sk_age1").val()
+         }
+         if (("#sk_commodity_type")) {}
+        console.log()
+        if($("#sk_clinch_price").val() <= 0){
+            myAlert("宝贝下单价应大于0")
+        }*/
+        buyerOccupation=""
+        // 买家职业
+        $("#buyerOccupation input:checkbox:checked").each(function() {
+            console.log($("#buyerOccupation input:checkbox:checked").length)
+            buyerOccupation += $(this).init().context.name + ",";
+            // console.log($(this).init().context.name)
+            //  console.log($(this).html())
+        });
+        // 买家淘气值
+        buyerNaughtyValue=""
+        $("#buyerNaughtyValue input:checkbox:checked").each(function() {
+            console.log("运行")
+            console.log($("#buyerNaughtyValue input:checkbox:checked").length)
+            buyerNaughtyValue += $(this).init().context.name + ",";
+            // console.log($(this).init().context.name)
+            //  console.log($(this).html())
+        });
+        // 买家消费层级
+        var buyerConsumptionLevel = $('#buyerConsumptionLevel input[name="sk_tag_level"]:checked ').val();
+        console.log(buyerConsumptionLevel)
+        
+        /*var basicInfo = {
+
+            'shopName': $("#sk_shop_name").val(), //店铺名称
+            'activityTitle': $("#sk_activity_name").val(), //活动标题
+            'treasure_url': $("#sk-link").val(), //宝贝链接
+            'treasure_class': $("#sk_commodity_type").find("option:selected").text(), //宝贝分类
+            'treasure_price': parseFloat($("#sk_clinch_price").val()), //宝贝价格
+            'qq': $("#actqq").val(), //QQ号
+            'behavior':behavior , //用户行为 
+            'paymentMethod':paymentMethod,
+            'begin': $("#begindate").val(), //开始时间
+            'data': $(".table").serializeObject(), //每日发放份数与转化率json格式数组，
+            // 'keywords': $("#keywords").val(), //关键词
+            // 'keyword_proportion':parseFloat($("#keyword_proportion").val()), //关键词占比
+            // 'keyword_sort': $("#keyword_sort").val(), //  关键词排序
+            // 'keyword_price': parseFloat($("#keyword_price").val())/100, //一口价
+            // 'newPassword': $("#newPassword").val(), //   淘口令
+            // 'newPassword_proportion': parseFloat($("#newPassword_proportion").val())/100, //淘口令占比
+
+        };*/
+        var daynum = [];
+        $(".day-num").each(function(){
+            daynum.push(parseInt($(this).val()))
+        });
+        var daynum1 = [];
+        $(".day-num1").each(function(){
+            daynum1.push(parseFloat($(this).val())/100)
+        });
+        var begdata = $("#begindate").val()
+        console.log(begdata);
+        // console.log(daynum1);console.log(daynum);
+
+        var dateInfo = [];
+        // var totaldaynum = 0
+        for(var i = 0;i<daynum.length;i++){
+            var begdata = dateAdd(begdata);
+            // totaldaynum = daynum[i] + totaldaynum;
+            dateInfo.push({"copies":daynum[i],"percent":daynum1[i],"date":begdata})
+        }
+        
+
+        var keywords = [];
+        $(".keywords").each(function(){
+            if ($(this).val() == ''||null||undefined) {
+                myAlert("关键词不能为空");
+                return false
+            }
+            keywords.push($(this).val())
+        });
+        var keyword_sort = [];
+        $(".keyword_sort").each(function(){
+            keyword_sort.push($(this).find("option:selected").text())
+        });
+        var newPassword = $("#newPassword").val();
+        console.log(newPassword);
+        var searchInfo = {
+            'keywords':keywords,
+            'keyword_proportion': parseFloat($(".search-rate1").val())/100,
+            'keyword_sort':keyword_sort,
+            'keyword_price':$("#sk_one_price").val(),
+            'newPassword_proportion':parseFloat($(".search-rate2").val())/100,
+            'newPassword':newPassword
+        };
+        console.log(searchInfo);
+        let imgs = [];
+        let imgsishead = [];
+        for (var i = 0 ;i<4 ; i++){
+            imgs.push($("#img-con img")[i].src);
+            imgsishead.push($("#img-con img").eq(i).hasClass("act") ? 1 : 0 )
+         }
+
+         console.log(imgsishead)
+       var actimgurl = $(".img .act").src;
+       // var imgurl = 
+        var img =  [{
+               'goodsMasterPic':imgs[0],
+                "isHead": imgsishead[0]
+            },
+            {
+                'goodsMasterPic':imgs[1],
+                "isHead": imgsishead[1]
+            }, {
+                'goodsMasterPic':imgs[2],
+                "isHead": imgsishead[2]
+            },
+             {
+               'goodsMasterPic':imgs[3],
+                "isHead": imgsishead[3]
+            }];
+        console.log($(".com-type-ipt-arr").children().length)
+        var commonPraise = [];//普通好评
+        var keywordsArray =[];
+        var keywordsNum1 = 0 ;
+        var keywordsNum2 = 0 ;
+        var keywordsTime3 = 0;
+        for (var i = 1;i< $(".com-type-ipt-arr").children().length + 1 ; i++){
+            var keywordsArrayItem = {
+                    'keyword':$("#com_sk_" + i + "").val() ,
+                    "paymentNum":$("#com_sk_num_" + i + "").val()*1,
+                    "viewNum":$("#com_flow_num_" + i + "").val()*1,
+                    "goodsCollectNum":$("#com_favflow_1_" + i + "").is(':checked') ? $("#com_favflow_num_" + i + "").val()*1 : 0,
+                    "shopCollectNum":$("#com_favflow_2_" + i + "").is(':checked') ? $("#com_favflow_num_" + i + "").val()*1 : 0,
+                    "addCartNum":$("#com_favflow_3_" + i + "").is(':checked') ? $("#com_favflow_num_" + i + "").val()*1 : 0,
+                // "addPraiseType":$("#com_sk_" + i + "").val(),
+                // "addCommonPraise":$("#com_sk_" + i + "").val(),
+                // "addWordsPraise":$("#com_sk_" + i + "").val(),
+                // "addImagePraise":$("#com_sk_" + i + "").val(),
+            }
+            keywordsArray.push(keywordsArrayItem);
+            keywordsNum1 = keywordsNum1 + $("#com_flow_num_" + i + "").val()*1;
+            keywordsNum2 = keywordsNum2 + $("#com_favflow_3_" + i + "").val()*1;
+            keywordsTime3 = keywordsTime3 + keywordsArrayItem.goodsCollectNum +keywordsArrayItem.goodsCollectNum + keywordsArrayItem.goodsCollectNum ;
+
+        }
+        var commonPraise = [{
+            "keywordsArray":keywordsArray,
+            "addPraiseType":$("input[name=task_type_add_com]:checked").val(),
+             "addCommonPraise":$("input[name=task_type_add_com]:checked").val() == 1 ? {'addTradeNum' : $("#add_comment_tasknum_one").val()} : null ,
+             "addWordsPraise":$("input[name=task_type_add_com]:checked").val() == 2 ?
+             {  'addTradeNum' : $("#add_comment_tasknum_two").val() ,
+                'keywordOne': $("#add_comment_wz_keyword_1").val(),
+                'keywordTwo': $("#add_comment_wz_keyword_2").val(),
+                'keywordThree': $("#add_comment_wz_keyword_3").val(),
+                'keywordFour': $("#add_comment_wz_keyword_4").val(),
+                'keywordFive': $("#add_comment_wz_keyword_5").val() 
+            }: null ,
+            "addImagePraise":$("input[name=task_type_add_com]:checked").val() == 3 ? {'addTradeNum' : $("#add_comment_tasknum_one").val()} : null ,
+        }]
+        console.log(commonPraise)
+
+
+
+        var wordsPraiseKeywordsArrayItem = [];//文字好评
+        var wordsPraiseKeywordsArray = [];
+        var wordsPraiseNum1 = 0;
+        var wordsPraiseNum2 = 0;
+
+        for (var i = 1;i< $(".com-kw-ct-ipt-wrap").length + 1 ; i++){
+            var wordsPraiseKeywordsArrayItem = {
+                    'keyword':$("#kw_sk_" + i + "").val() ,
+                    "paymentNum":$("#kw_sk_num_" + i + "").val()*1,
+                    "viewNum":$("#kw_flow_num_" + i + "").val()*1,
+                    "goodsCollectNum":$("#kw_favflow_1_" + i + "").is(':checked') ? $("#kw_favflow_num_" + i + "").val()*1 : 0,
+                    "shopCollectNum":$("#kw_favflow_2_" + i + "").is(':checked') ? $("#kw_favflow_num_" + i + "").val()*1 : 0,
+                    "addCartNum":$("#kw_favflow_3_" + i + "").is(':checked') ? $("#kw_favflow_num_" + i + "").val()*1 : 0,
+                    
+                // "addPraiseType":$("#com_sk_" + i + "").val(),
+                // "addCommonPraise":$("#com_sk_" + i + "").val(),
+                // "addWordsPraise":$("#com_sk_" + i + "").val(),
+                // "addImagePraise":$("#com_sk_" + i + "").val(),
+            }
+            wordsPraiseNum1 = wordsPraiseNum1 + ($("#kw_flow_num_" + i + "").val()*1)*($("#kw_sk_num_" + i + "").val()*1);
+            wordsPraiseNum2 = wordsPraiseNum2 + ($("#kw_favflow_num_" + i + "").val()*1)*($("#kw_sk_num_" + i + "").val()*1);
+            for(var j = 0 ;j < $("#kw_sk_num_" + i + "").val(); j++){
+                console.log(i + "++++++" +j)
+                wordsPraiseKeywordsArrayItem.textContent = $("#wz_keyword_ct_" + (i + j)+"").val();
+                wordsPraiseKeywordsArray.push(wordsPraiseKeywordsArrayItem)
+                console.log(wordsPraiseKeywordsArrayItem)
+                console.log(wordsPraiseKeywordsArray)
+            }
+        }
+        console.log(wordsPraiseKeywordsArray)
+        var wordsPraise = [{
+            "keywordsArray":wordsPraiseKeywordsArray,
+            "addPraiseType":$("input[name=word_task_type_add_com]:checked").val(),
+             "addCommonPraise":$("input[name=word_task_type_add_com]:checked").val() == 1 ? {'addTradeNum' : $("#word_add_comment_tasknum_one").val()} : null ,
+             "addWordsPraise":$("input[name=word_task_type_add_com]:checked").val() == 2 ?
+             {  'addTradeNum' : $("#word_add_comment_tasknum_two").val() ,
+                'keywordOne': $("#word_add_comment_wz_keyword_1").val(),
+                'keywordTwo': $("#word_add_comment_wz_keyword_2").val(),
+                'keywordThree': $("#word_add_comment_wz_keyword_3").val(),
+                'keywordFour': $("#word_add_comment_wz_keyword_4").val(),
+                'keywordFive': $("#word_add_comment_wz_keyword_5").val() 
+            }: null ,
+            "addImagePraise":$("input[name=word_task_type_add_com]:checked").val() == 3 ? {'addTradeNum' : $("#word_add_comment_tasknum_one").val()} : null ,
+        }]
+
+
+        var imageTextPraiseKeywordsArrayItem = [];//图文好评
+        var imageTextPraiseKeywordsArray = [];
+        for (var i = 1;i< $(".com-kw-ct-ipt-wrap").length + 1 ; i++){
+            var imageTextPraiseKeywordsArrayItem = {
+                    'keyword':$("#pic_sk_" + i + "").val() ,
+                    "paymentNum":$("#pic_sk_num_" + i + "").val()*1,
+                    "viewNum":$("#pic_flow_num_" + i + "").val()*1,
+                    "goodsCollectNum":$("#pic_favflow_1_" + i + "").is(':checked') ? $("#pic_favflow_num_" + i + "").val()*1 : 0,
+                    "shopCollectNum":$("#pic_favflow_2_" + i + "").is(':checked') ? $("#pic_favflow_num_" + i + "").val()*1 : 0,
+                    "addCartNum":$("#pic_favflow_3_" + i + "").is(':checked') ? $("#pic_favflow_num_" + i + "").val()*1 : 0,
+                    
+                // "addPraiseType":$("#com_sk_" + i + "").val(),
+                // "addCommonPraise":$("#com_sk_" + i + "").val(),
+                // "addWordsPraise":$("#com_sk_" + i + "").val(),
+                // "addImagePraise":$("#com_sk_" + i + "").val(),
+            }
+            for(var j = 0 ;j < $("#pic_sk_num_" + i + "").val(); j++){
+
+                imageTextPraiseKeywordsArrayItem.goodsSpecifications = $("#pic_rule_" + (i + j)+"").val();
+                imageTextPraiseKeywordsArrayItem.commentRequirement = $("#pic_cw_" + (i + j)+"").val();
+                imageTextPraiseKeywordsArray.push(imageTextPraiseKeywordsArrayItem)
+            }
+        }
+        var imageTextPraise = [{
+            "keywordsArray":imageTextPraiseKeywordsArray,
+            "addPraiseType":$("input[name=pic_task_type_add_com]:checked").val(),
+            "addCommonPraise":$("input[name=pic_task_type_add_com]:checked").val() == 1 ? {'addTradeNum' : $("#pic_add_comment_tasknum_one").val()} : null ,
+             "addWordsPraise":$("input[name=pic_task_type_add_com]:checked").val() == 2 ?
+             {  'addTradeNum' : $("#pic_add_comment_tasknum_two").val() ,
+                'keywordOne': $("#pic_add_comment_wz_keyword_1").val(),
+                'keywordTwo': $("#pic_add_comment_wz_keyword_2").val(),
+                'keywordThree': $("#pic_add_comment_wz_keyword_3").val(),
+                'keywordFour': $("#pic_add_comment_wz_keyword_4").val(),
+                'keywordFive': $("#pic_add_comment_wz_keyword_5").val() 
+            }: null ,
+            "addImagePraise":$("input[name=pic_task_type_add_com]:checked").val() == 3 ? {'addTradeNum' : $("#pic_add_comment_tasknum_one").val()} : null ,
+        }]
+        var typeLimit = [];
+        $("input[name='typeLimit']:checked").each(function(index,item){
+            typeLimit.push($(this).val());
+        })
+
+        var incrementService = [{
+            'commission':$("#addmoney").val(),
+            'prcelWeight':$("#expressWeight").val(),
+            'express':$("#expressNo").val(),
+             'areaLimit':typeof(areaLimit)=='undefined'?  ["全国"] :areaLimit,
+            'ageLimit':$("input[name='sk_age']:checked").val(),
+            'sexLimit':$("input[name='sk_sex2']:checked").val(),
+            'onlyDiamondBuyer':$("input[name='onlyDiamondBuyer']").val(),
+            'onlyHuabei':$("input[name='onlyHuabei']").val(),
+            'onlyCollectAndAdd':$("input[name='onlyCollectAndAdd']").val(),
+            'typeLimit': typeLimit,
+
+        }]
+        console.log(typeLimit)
+        // var payMoney = 
+
+
+        //增值服务数组
+        
+
+        console.log(wordsPraiseKeywordsArray);
+        var data = {
+            'activityType':1,//activityType,
+            'taskType':1,//taskType,
+             'shopId':5,
+            'platformCharge':1,
+            'refundCharge':1,
+            'goodsName':$("#goodsname").val(),
+            'goodsUrl': $("#sk-link").val(), //宝贝链接
+           'imgs':img,//   商品图片数组
+            'goodsPrice': parseFloat($("#itemprice").val()), //际成交价格
+            'beatNum':$("#itemnum").val()*1,//每单拍的件数
+           'showPrice':parseFloat($("#showPrice").val()),//  手机搜索展示价格
+           //'otherGoods':$("#")//附加商品数组
+           'isPost':$("input[name='postage']").val()*1,//是否包邮
+           'goodsSort':$("input[name='sortrorder']").val()*1,//排序方式
+           'nowNumOfRecipients':$("#takedelivernum").val(),//现有收货人数
+           'priceRangeOne':parseFloat($("#sk_age0").val()),//价格区间1
+           'priceRangeTwo':parseFloat($("#sk_age1").val()),//价格区间2
+           'goodsLocation':typeof(addressText) == 'undefined' ? ['全国'] : addressText,//商品所在地
+           'orderMessage':$("#message").val(),//   订单留言
+           'typeAndNum':{
+                'commonPraise':$("#isaddgoodcom").val() ?commonPraise: null,
+                'wordsPraise':$("#isaddwordcom").val() ? wordsPraise : null,
+                'imageTextPraise':$("#isaddimgcom").val() ?imageTextPraise: null
+            },
+           'date':$("#begindate").val(),//开始日期
+           'beginTime':$("#starthour").val()+":00:00",//  开始时间
+           'endTime':$("#endhour").val()+":00:00",//    结束时间
+           'copies':$("#intestatistics").val()*1,// 每日发放单数
+           'incrementService':incrementService,//   增值服务数组
+           'remark':$("#remark").val(),// 备注说明
+            'payMoney':600
+           
+           
+         
+            };
+        console.log(data);
+        var token = localStorage.getItem("token");
+        console.log(token);
+        var totalnum = $("#all-num").val();
+        // localStorage.setItem()
+
+        // if ($(this).hasClass("gray")) {
+        //     return false;
+        // };
+        $.ajax({
+            type: 'POST',
+            url: "http://api.feizhugou.com/activity/addRepurchase",
+            data: data,
+            async:true,
+            headers: {
+                'Accept': 'aplication/json',
+                'Authorization': '' + token
+            },
+            async: true,
+            success: function(e) {
+                console.log("success");
+                console.log(e)
+                if (e.code == 1000) {location.href = './JPinShopissueBis.html?ptype=1&atype=5'}
+                    else{
+                        myAlert(e.msg)
+                    }
+                
+            },
+            dataType: "json"
+        });
+    };
+</script>
+
+
+
+    <a class="totop" id="back-to-top" style="display: none" />
+</body>
+</html>
+<div style="display: none">
+     
+</div>

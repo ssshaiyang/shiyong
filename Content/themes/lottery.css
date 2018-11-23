@@ -1,0 +1,71 @@
+* { font-family: Microsoft YaHei; font-size: 12px; margin: 0px; padding: 0px; }
+
+body { /*background-color: #FFEF48;*/font-family: Microsoft YaHei; margin-left: auto; margin-right: auto; width: 100%; }
+
+.bj_one { background-color: #ffef48; font-family: Microsoft YaHei; }
+
+.bj_one .bj_two { background-image: url(/Content/images/beijh.jpg); background-position: center top; background-repeat: no-repeat; font-family: Microsoft YaHei; height: 1230px; padding-top: 345px; width: 100%; }
+
+.bj_one .bj_two .zp { background-color: #fff778; border: 10px solid #fee030; font-family: Microsoft YaHei; height: 332px; margin-left: auto; margin-right: auto; width: 960px; }
+
+.bj_one .bj_two .zp .zpz { float: left; font-family: Microsoft YaHei; height: 330px; width: 300px; }
+
+.zp .zpz .zpz_one { color: #82431a; font-family: Microsoft YaHei; font-size: 30px; margin-left: 32px; margin-top: 26px; width: 200px; }
+
+.zp .zpz .zpz_two { background-color: #cb9544; color: #FFF; font-family: Microsoft YaHei; font-size: 16px; font-weight: bold; height: 30px; line-height: 30px; margin-left: 32px; margin-top: 12px; text-indent: 30px; width: 240px; }
+
+.zp .zpz .zpz_three { background: url(/Content/images/fenxiang.jpg); font-family: Microsoft YaHei; height: 32px; margin-left: auto; margin-right: auto; margin-top: 9px; width: 130px; }
+
+.zpz_three a { display: block; height: 32px; width: 130px; }
+
+.zp .zpz .zpz_four { background-color: #cb9544; color: #FFF; font-family: Microsoft YaHei; font-size: 16px; font-weight: bold; height: 30px; line-height: 30px; margin-left: 32px; margin-top: 12px; text-indent: 88px; width: 240px; }
+
+.zp .zpz .zpz_five { background-color: #fff999; font-family: Microsoft YaHei; height: 130px; margin-left: 32px; width: 240px; }
+
+
+
+.zp .zpz .zpz_five .zpz_f { font-family: Microsoft YaHei; height: 112px; margin-left: auto; margin-right: auto; padding-top: 15px; width: 203px; }
+
+.zpz_f ul { list-style-type: none; }
+
+.zpz_f ul li { color: #a95322; font-size: 14px; line-height: 18px; }
+
+.bj_one .bj_two .zp .wheel { float: left; font-family: Microsoft YaHei; height: 330px; width: 470px; }
+
+.bj_one .bj_two .zp .zpy { float: left; font-family: Microsoft YaHei; height: 330px; width: 190px; }
+
+.zp .zpy .zpy_one { font-family: Microsoft YaHei; height: 240px; margin-left: 25px; margin-top: 45px; width: 120px; }
+
+.zp .zpy .zpy_one .zpy_tow { color: #82431a; font-family: Microsoft YaHei; font-size: 16px; font-weight: bold; text-align: center; }
+
+.zp .zpy .zpy_one .zpy_three { background-color: #ff6427; border-radius: 3px; color: #ffeb45; font-family: Microsoft YaHei; font-size: 20px; font-weight: bold; height: 40px; line-height: 40px; margin-top: 12px; text-align: center; }
+
+.zp .zpy .zpy_one .Rule { border: 3px solid #bd8531; color: #bd8531; cursor: pointer; font-family: Microsoft YaHei; font-size: 20px; font-weight: bold; height: 40px; line-height: 40px; margin-top: 31px; text-align: center; width: 115px; }
+
+.zp .zpy .zpy_one .Rule a { color: #bd8531; font-family: Microsoft YaHei; font-size: 20px; font-weight: bold; text-decoration: none; }
+
+.bj_one .bj_two .Explain { font-family: Microsoft YaHei; margin-left: auto; margin-right: auto; margin-top: 63px; width: 960px; }
+
+.bj_one .bj_two .Explain h1 { color: #82431a; font-family: Microsoft YaHei; font-size: 30px; }
+
+.bj_one .bj_two .Explain h2 { color: #82431a; font-family: Microsoft YaHei; font-size: 14px; margin-top: 24px; }
+
+.bj_one .bj_two .cj { font-family: Microsoft YaHei; height: 30px; line-height: 20px; margin-left: auto; margin-right: auto; margin-top: 33px; width: 960px; }
+
+.bj_one .bj_two .cj p { color: #82431a; font-family: Microsoft YaHei; font-size: 14px; }
+
+.bj_one .bj_two .sm { font-family: Microsoft YaHei; height: 90px; line-height: 20px; margin-left: auto; margin-right: auto; margin-top: 34px; width: 960px; }
+
+.bj_one .bj_two .sm p { color: #82431a; font-family: Microsoft YaHei; font-size: 14px; }
+
+.bj_one .bj_two .tju { border: 5px solid #ecdb2f; font-family: Microsoft YaHei; height: 388px; margin-left: auto; margin-right: auto; margin-top: 77px; width: 960px; }
+
+.bj_one .bj_two .zp .wheel { border-color: transparent; border-radius: 50%; font-family: Microsoft YaHei; position: relative; top: -75px; }
+
+/*.lottery_bg{background:url(../images/lottery/beijh.jpg) center 0 no-repeat;height:700px;background-color:#ffef48;padding-top:350px;}
+.lottery_bg .lottery_box{position:relative;height:280px;border:solid #fee030 10px;padding:35px;background:#fff778;}*/
+.wheel #disk{width:465px;height:465px;background:url(/Content/images/disk1.png) no-repeat;}
+.wheel #disk2{position:absolute;top:35px;left:36px;width:392px;height:394px;background:url(/Content/images/disk2.png) no-repeat;}
+.wheel #z1{position:absolute;top:0;left:0;width:465px;height:465px;background:url(/Content/images/z1.png) no-repeat;}
+.wheel #z2{position:absolute;top:0;left:0;width:465px;height:465px;background:url(/Content/images/z2.png) no-repeat;}
+.wheel #start{width:120px;height:120px;position:absolute;top:175px;left:175px;cursor:pointer;}

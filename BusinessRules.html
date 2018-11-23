@@ -1,0 +1,724 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <title>帮助中心--飞猪试用商家管理规则</title>
+    
+    <meta name="keywords" content="试客网,试客联盟,试客之家,试客联盟网,试客联盟中心,免费试用,试用网,免费试用网,免费试用平台,试客,飞猪试用,试客平台,飞猪试用" />
+    <meta name="description" content="欢迎来免费飞猪试用试用网:飞猪试用—是全国领先的免费试用网和试客网,深得试客信赖的免费试用中心网站,是免费试用网和试客网站的首选,飞猪试用免费试用网为试客提供最优质和实用的优秀免费试用商品." />
+    <link rel="stylesheet" type="text/css" href="./Content/themes/base.css?70752855b2b4becb890ee28904769cae"/>
+<link rel="stylesheet" type="text/css" href="./Content/themes/index.css?feb7fa97c3a9e7c848d170ff2bc1480c"/>
+<link rel="stylesheet" type="text/css" href="./Content/pagination/css/pagination.css?4983b5c10bde10c615b150678bdca342"/>
+<link rel="stylesheet" type="text/css" href="./Content/fancybox/jquery.fancybox.css?cd3adc6dae37113b897d5c08f529c611"/>
+<link rel="stylesheet" type="text/css" href="./Content/themes/credit.css?e613b01c757ca8560e322db13cfcd94a"/>
+<link rel="stylesheet" type="text/css" href="./Content/font/iconfont.css?b0d1dc6721ac2a1f9b75ab0b55683aa5"/>
+
+    <script type="text/javascript" src="./Scripts/jquery-1.8.3.js?3abcbdff1ad084b023234ea421c4042e"></script>
+<script type="text/javascript" src="./Scripts/jquery.pagination.js?15b292e84183853f7571abd19f950921"></script>
+<script type="text/javascript" src="./Scripts/jquery.fancybox.pack.js?402cc442860bd19fc48250d6b786b9d9"></script>
+<script type="text/javascript" src="./PageScript/Common.js?36568842f8c551531d9920f22039b2c2"></script>
+<script type="text/javascript" src="./Scripts/credit.js?5ee8324cbb0bee7d17c2f221650050fc"></script>
+<script type="text/javascript" src="./Scripts/jquery.form.js?bebb42d88be1e4d7a69944748522a581"></script>
+
+    
+    
+    <script>
+        var userId = 0;
+        var userOrBisId=295089;
+    </script>
+</head>
+<body>
+    
+
+
+
+<style>
+    .header_top{width: 1075px;}
+</style>
+
+
+
+<div id="lingla-hd" style="background: #F2F2F2; width: 100%; height: 35px; border-bottom: 1px solid #e2e2e2;">
+    <div class="header_top" style="margin-left: auto; margin-right: auto;">
+            <div class="header_leftt">
+                    <div class="top_pm">
+                        <div class="op-menu">
+                            <a href="./index.html" target="_blank" class="top-nickname"><i class="top-down"></i></a>
+                            <div class="top-toggle" style="left: 0;">
+                                <!-- <a href="/JPinShopIssueBis" target="_blank"><i style="background: url(./Content/images/bis_bg_head_icon2.png); width: 15px; height: 15px; margin-top: -2px;"></i>活动管理</a>
+                                <a href="/ShopissueOfTaskBis/TaskManageList" target="_blank"><i style="background: url(./Content/images/bis_bg_head_icon3.png); width: 15px; height: 15px; margin-top: -5px;"></i>有奖竞猜</a> -->
+                                <a style="border: none;" href="/commonbase/logout">
+                                    <i style="background: url(//www.meilipa.com./Content/images/nav5.png); width: 15px; height: 15px; margin-top: -2px;">
+                                    </i>退出
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <span class="color_fg" style="float:left;">|</span>
+                <!--top_pm-->
+                <!-- <div class="top_ml">
+                    <dl>
+                        <dd>
+                            <a class="xin_po" href="/bisremind" target="_blank">提醒(<strong>0</strong>)</a>
+                        </dd>
+                    </dl>
+                </div>
+                <span class="color_fg" style="float: left">|</span> -->
+                <!--top_ml-->
+               <!--  <div class="top_left">
+                    <a href="/Regist/about" target="_blank" class="on-service">在线客服</a>
+                </div> -->
+                <!--top_ml-->
+                <!-- <div class="shou_btn">
+                    <em>&nbsp;&nbsp;收藏</em>
+                    <div class="shou_toggle"><span>Ctrl</span>或<span>Cmd+D</span>收藏本站</div>
+                </div> -->
+            </div>
+        <!--header_left-->
+        <!-- <div class="header_right">
+            <a href="/" title="试客联盟官网">飞猪试用首页</a><span class="color_fg">|</span>
+            <a href="/other/appdownload" target="_blank"><i class="top-icon-ph"></i>手机客户端</a><span class="color_fg">|</span>
+            <a href="/invitation/NewInvitation" target="_blank">分享赚钱<span style="color: #ed594f; font-weight: bold;">月入4000</span></a><span class="color_fg">|</span>
+                <a href="javascript:" onclick="login()">做问卷送金币</a>
+                <span class="color_fg">|</span>
+            <a href="/help/index" target="_blank">帮助中心</a><span class="color_fg">|</span>
+            <span class="wzdh">
+                <a href="/help/index" target="_blank" class="sbdjx" id="naviatetext">网站导航</a>
+                <div class="oneto" id="naviate">
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="//jing.meilipa.com">免费试用</a>
+                        </p>
+                        <p>
+                            <a href="//jing.meilipa.com" target="_blank">试用专区</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="/invitation/NewInvitation">站内活动</a>
+                        </p>
+                        <p>
+                            <a href="/invitation/NewInvitation" target="_blank">邀请有奖</a>&nbsp;&nbsp;<a href="/lottery" target="_blank">金币抽奖</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p style="padding-top: 8px;">
+                            <a href="/help/MerchantApply" target="_blank">商家报名</a>&nbsp;&nbsp;
+                            <a href="/Feedback" target="_blank">意见反馈</a>
+                        </p>
+                    </div>
+                </div>
+            </span>
+        </div> -->
+    </div>
+</div>
+
+
+<style>
+    .nav ul li a {
+        padding: 0 27px;
+    }
+</style>
+<div class="yonghu_top">
+    <div id="header" class="header">
+        <div class="header_main">
+            <!--header_top-->
+            <div class="header_center">
+                <a href="/">
+                    <div class="qn-logo">
+                    </div>
+                </a>
+                <div class="lanrenzhijia showtrytype">
+                    <div id="img">
+                        <a href="//www.meilipa.com/Regist/CreditCertification" target="_blank">
+                            <img src="//www.meilipa.com./Content/images/mediare.jpg" width="186" height="22" alt="" border="0" style="display: none;">
+                        </a>
+                        <a href="//www.meilipa.com/Regist/CreditCertification" target="_blank">
+                            <img src="//www.meilipa.com./Content/images/mediasan.jpg" width="186" height="22" alt="" border="0" style="display: none;">
+                        </a>
+                        <a href="//www.meilipa.com/Regist/CreditCertification" target="_blank">
+                            <img src="//www.meilipa.com./Content/images/mediasi.jpg" width="186" height="22" alt="" border="0" style="display: none;">
+                        </a>
+                        <a href="//www.meilipa.com/Regist/CreditCertification" target="_blank">
+                            <img src="//www.meilipa.com./Content/images/mediayi.jpg" width="186" height="22" alt="" border="0" style="display: none;">
+                        </a>
+                    </div>
+                </div>
+                <a href="/Invitation/NewInvitation" target="_blank" class="qn-lg-right"></a>
+                <div id="logo_right" class="logo_right">
+                    <div class="kl">
+                        <i class="iconfont icon-search"></i>
+                        <input id="searchText" name="" type="text" class="pl" value="" onkeydown=' keySearch(event); ' placeholder="搜索试用品" />
+                        <span id="inputsearch" class="fl p-red" onclick=" searchGoods()">搜索</span>
+                    </div>
+                    <!--kl-->
+                </div>
+                <!--logo_right-->
+            </div>
+            <!--header_center-->
+            <!--nav-->
+        </div>
+        <div id="nav" class="nav" style="font-family: 微软雅黑;">
+            <div class="main">
+
+                <!--qiandaog-->
+                <ul>
+                    <li class="showtrytype"><div class="fication"><i></i>试用品分类</div></li>
+                    <li><a href="/" class="" target="_blank">首页</a></li>
+                    <li>
+                        <a href="//jing.meilipa.com" class="jpSwip " target="_blank">
+                            美丽好货
+                            <span class="ntp-hot">
+                                <img src="./Content/images/new.gif" class="png_bg" />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="//jing.meilipa.com/home/GoldConvert" target="_blank">
+                            金币兑换
+                        </a>
+                    </li>
+                    <li>
+                        <a href="//jing.meilipa.com/home/SecKill" target="_blank">
+                            限量秒杀
+                            <span class="ntp-hot" style="top:-23px;left: 44px;">
+                                <img src="./Content/images/icon/hit.gif" class="png_bg" />
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="//jing.meilipa.com/home/peopleHit" target="_blank">
+                            新人必中
+                            <span class="ntp-hot" style="top:-23px;left: 44px;">
+                                <img src="./Content/images/icon/hit.gif" class="png_bg" />
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="//www.meilipa.com/invitation/NewInvitation" class="" target="_blank">
+                            邀请有礼
+                        </a>
+                    </li>
+                </ul>
+                <div class="qiandaodiv">
+                        <div class="qiandao">
+                            <a id="signbtn" href="javascript:" title="使用金币可以直接通过试用资格" onclick="signin()">签到领金币</a>
+                        </div>
+                    
+                    <div class="qian">
+                        <div class="qiand">
+                            <div class="qian_left">
+                                <div style="height: 30px; line-height: 30px; margin-left: 14px;">
+                                    <h2 style="font-size: 28px; display: inline-block;">5</h2>&nbsp;金币
+                                  
+                                </div>
+                                <ul class="qian_w">
+                                    <li class="qian_t ">
+                                        <div>
+                                            <span>+5</span>
+                                        </div>
+                                        <p>1天</p>
+                                    </li>
+                                    <li class="qian_t">
+                                        <div>
+                                            <span>+10</span>
+                                        </div>
+                                        <p>2天</p>
+                                    </li>
+                                    <li class="qian_t">
+                                        <div>
+                                            <span>+15</span>
+                                        </div>
+                                        <p>3天</p>
+                                    </li>
+                                    <li class="qian_t">
+                                        <div>
+                                            <span>+20</span>
+                                        </div>
+                                        <p>4天</p>
+                                    </li>
+                                    <li class="qian_t qian_l" style="width:41px;">
+                                        <div>
+                                            <span>+20</span>
+                                        </div>
+                                        <p>5天</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="qian_right">
+                                <div class="qian_s" onclick="signin()">点击签到</div>
+                                <div class="qian_v">
+                                    <i></i>
+                                    <span>5</span><em>金币</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qianbi">
+                            <ul>
+                                <a href="//www.meilipa.com/Lottery" target="_blank"><li class="qian_dd"><i></i></li></a>
+                                <a href="//www.meilipa.com/VIP/UserVip" target="_blank"><li class="qian_ff"><i></i></li></a>
+                                <a href="//www.meilipa.com/invitation/NewInvitation" target="_blank"><li class="qian_gg" style="margin-top: 13px;margin-right: 20px;margin-left: 32px;"><div class="qian_gg_body"></div></li></a>
+                            </ul>
+                            <ul class="fote" style="margin-top: 20px; border-top: 1px solid #dddddd;width: 458px;">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sj_apply" style="margin-right:10px;">
+                    <a href="/help/MerchantApply4" target="_blank">商家报名</a>
+                </div>
+            </div>
+        </div>
+
+        <!--header_main-->
+    </div>
+    <!--header-->
+</div>
+<script>
+    var jpSwip = 0;
+    setInterval(function () {
+        jpSwip++;
+        jpSwip = jpSwip == 22 ? 0 : jpSwip;
+        $(".jpSwip").css("background-position", "center -" + jpSwip * 45 + "px");
+    }, 100);
+</script>
+
+<style>
+    #write h1 {
+        font-size: 18px;
+        padding: 20px 0;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    #write {
+        background: #fff;
+        padding: 0 20px 40px;
+        text-align: justify;
+        line-height: 24px;
+        color: #505050;
+        font-size: 14px;
+    }
+
+        #write .md-header-anchor {
+            padding: 10px 0;
+            font-size: 16px;
+            display: block;
+        }
+
+        #write table tr * {
+            border-bottom: 1px solid #eee;
+            border-left: 1px solid #eee;
+            padding: 5px;
+        }
+
+        #write table {
+            border-top: 1px solid #eee;
+            border-right: 1px solid #eee;
+            text-align: left;
+        }
+</style>
+<div class="contant">
+    <div class="clearfix main">
+        
+<link rel="stylesheet" type="text/css" href="./Content/help/css/base.css?fc25901a797eb69790d6d0a0f9dbd153"/>
+<link rel="stylesheet" type="text/css" href="./Content/help/css/help.css?c901263ce16b93017bdaeac12ab04363"/>
+
+<style>
+    .top_ml {
+        background: 0;
+        padding-left: 0px;
+        height: 35px;
+        line-height: 35px;
+        margin-left: 0;
+        float: left;
+        width: 100px;
+    }
+</style>
+<script type="text/javascript">
+    window.onload = function () {
+        if ("business_rules" == "business_rules" || "business_rules" == "VIP" || "business_rules" == "VIPAdvert") {
+            $("#business_rules").css("color", "rgb(195, 27, 27)");
+        } else {
+            document.getElementById("business_rules").classList.add("rtf");
+        }
+    }
+</script>
+<div class="mian_her">
+    <div class="mian_her"><a href="/" target="_self">首页</a><span>></span><a href="/help/index" target="_self">帮助中心</a><span>></span>商家中心</div><!--mian_her-->
+</div>
+<div class="mian_left clearfix">
+    <div class="mi_ler">
+        <a id="user" href="javascript:void(0)" onclick="javascript: window.parent.location.href = '/help/Registered'">用户中心</a>
+        <a id="merchant" class="seled" href="javascript:void(0)" onclick="javascript: window.parent.location.href = '/help/SjRegistered'" style="border-left: 1px solid #dcdcdc;">商家中心</a>
+    </div>
+    <!--mi_ler-->
+    <div class="left_tppa">
+        <strong>商家登录与注册</strong>
+    </div>
+    <!--left_tpp-->
+    <div class="left_ree">
+        <ul>
+            <li><a href="javascript:void(0)" id="sj_registered" onclick="javascript: window.parent.location.href = '/help/SjRegistered'" target="_self">如何注册</a></li>
+            <li><a href="javascript:void(0)" id="sj_login" onclick="javascript: window.parent.location.href = '/help/SjLogin'" target="_self">如何登录</a></li>
+        </ul>
+    </div>
+    <!--left_re-->
+    <div class="left_tppa">
+        <strong>商家新手上路</strong>
+    </div>
+    <!--left_tpp-->
+    <div class="left_ree">
+        <ul>
+            <li><a href="javascript:void(0)" id="what_trial" onclick="javascript: window.parent.location.href = '/help/WhatTrial'" target="_self">什么是试用</a></li>
+            <li><a href="javascript:void(0)" id="release_trial" onclick="javascript: window.parent.location.href = '/help/ReleaseTrial'" target="_self">如何发布试用</a></li>
+            
+            <li><a href="javascript:void(0)" id="try_rules" onclick="javascript: window.parent.location.href = '/help/TryRules'" target="_self">飞猪试用试用产品发布规则</a></li>
+        </ul>
+    </div>
+    <!--left_re-->
+    <div class="left_tppa">
+        <strong>商家流程</strong>
+    </div>
+    <!--left_tpp-->
+    <div class="left_ree">
+        <ul>
+            <li><a href="javascript:void(0)" id="trial_qualification" onclick="javascript: window.parent.location.href = '/help/TrialQualification'" target="_self">发布试用需要什么资格</a></li>
+            <li><a href="javascript:void(0)" id="activity_time" onclick="javascript: window.parent.location.href = '/help/ActivityTime'" target="_self">试用活动的时间为多长</a></li>
+            <li><a href="javascript:void(0)" id="security" onclick="javascript: window.parent.location.href = '/help/Security'" target="_self">什么是试用担保金</a></li>
+            <li><a href="javascript:void(0)" id="security_issue" onclick="javascript: window.parent.location.href = '/help/SecurityIssue'" target="_self">何时发放试用担保金</a></li>
+            <li><a href="javascript:void(0)" id="review_report" onclick="javascript: window.parent.location.href = '/help/ReviewReport'" target="_self">何时审核试用报告</a></li>
+            <li><a href="javascript:void(0)" id="trial_reports" onclick="javascript: window.parent.location.href = '/help/TrialReports'" target="_self">如何验收试用报告</a></li>
+        </ul>
+    </div>
+    <!--left_re-->
+    <div class="left_tps">
+        <a href="javascript:void(0)" id="business_rules" onclick="javascript: window.parent.location.href = '/help/BusinessRules'" target="_self"><strong>飞猪试用商家服务协议</strong></a>
+    </div>
+    <div class="left_tps">
+        <a href="/help/shopList"><strong>商家违规处罚条款</strong></a>
+    </div>
+    <!--left_tps-->
+    <div class="left_tps">
+        <a href="javascript:void(0)" id="VIP" onclick="javascript: window.parent.location.href = '/help/VIP'" target="_self"><strong>VIP会员服务协议</strong></a>
+    </div>
+     <div class="left_tps">
+        <a href="javascript:void(0)" id="VIPAdvert" onclick="javascript: window.parent.location.href = '/help/VIPAdvert'" target="_self"><strong>会员广告服务协议</strong></a>
+    </div>
+</div>
+<div class="imgloli" id="abc">    
+    <a href="/Regist/about" target="_blank"><img src="./Content/images/youyiwen.png" /></a>
+    <a href="#" class="fork" onclick="$('#abc').hide();">ｘ</a>
+</div>
+        <div class="mian_right">
+            <div class="clearfix zhu_ces">
+                <div class="rh_z">飞猪试用商家服务协议</div><!--rh_z-->
+                <div class="rt_yhd">
+                    <div id='write' class='is-node'>
+                        <h1><a name='header-n0' class='md-header-anchor'></a>飞猪试用商家服务协议</h1><p>欢迎您注册成为飞猪试用商家会员，在注册前请您仔细阅读以下服务条款。</p><p>1、本协议内容包括以下条款及本网站已经发布的或将来可能发布的各类规则。所有规则为本协议不可分割的一部分，与协议正文具有同等法律效力。本协议是您与本网站共同签订的，适用于您在本网站的全部活动。在您注册成为用户时，您已经阅读、理解并接受本协议的全部条款及各类规则，并承诺遵守中国的各类法律规定，如有违反而导致任何法律后果的发生，您将以自己的名义独立承担所有相应的法律责任。</p><p>2、本网站有权根据需要不时地修改本协议或根据本协议制定、修改各类具体规则并在本网站相关系统板块发布，无需另行单独通知您。您应不时地注意本协议及具体规则的变更，若您在本协议及具体规则内容公告变更后继续使用本服务的，表示您已充分阅读、理解并接受修改后的协议和具体规则内容，也将遵循修改后的协议和具体规则使用本网站的服务；同时就您在协议和具体规则修订前通过本网站进行的交易及其效力，视为您已同意并已按照本协议及有关规则进行了相应的授权和追认。若您不同意修改后的协议内容，您应停止使用本网站的服务。</p><p>3、您通过自行或授权有关方根据本协议及本网站有关规则、说明操作确认本协议后，本协议即在您和本网站之间产生法律效力。本协议不涉及您与本网站的其他用户之间因网上交易而产生的法律关系或法律纠纷，但您在此同意将全面接受和履行与本网站其他 用户在本网站签订的任何电子法律文本，并承诺按该等法律文本享有和/或放弃相应的权利、承担和/或豁免相应的义务。</p><h2><a name='header-n18' class='md-header-anchor'></a>协议细则：</h2><h3><a name='header-n19' class='md-header-anchor'></a>一、注册须知</h3><p>1、商家注册帐号时应认真填写用户名，一个商家帐号对应一个用户名，用户名注册成功后无法修改。一旦加入飞猪试用VIP会员，不得退款。商家填写的商家名称及商家店铺名称应遵守《中华人民共和国相关法律法规》，不允许包含违法、涉嫌侵犯他人权利或干扰飞猪试用运营秩序等相关信息。</p><p>2、注册商家帐号应使用店铺相关负责人的QQ、电话来注册。商家有义务妥善保管及正确使用账号与密码，因未尽上述义务导致帐号信息泄露、密码遗失、账号被盗等情况引起的经济纠纷或损失由商家自行承担。</p><p>3、用户不应将其帐号、密码转让、出售或出借予他人使用，如果飞猪试用发现使用者并非帐号注册者本人，飞猪试用有权停止继续服务。如用户发现其帐号遭他人非法使用，应立即通知飞猪试用。因黑客行为或用户违反本协议规定导致帐号、密码遭他人非法使用的，由用户本人承担因此导致的损失和一切法律责任，不承担任何责任。</p><p>4、飞猪试用有权对平台各项服务条款及使用规则等进行调整。用户在使用相关服务时,应关注平台的最新动向并遵守平台的服务条款及使用规则。</p><h3><a name='header-n28' class='md-header-anchor'></a>二、服务项目及收费条款</h3><p>1、可发布平台</p><p>（1）支持发布任务的平台有淘宝、天猫、京东</p><p>（2）第一个店铺免费，如需新增绑定店铺，商家需另外支付800元</p><p>2、任务类型及发布渠道</p><p>（1）爆款打造/维护，新品提升综合权重，组团开奖实时转化，高客单精准打造爆款，新人必中任务</p><p>（2）自然搜索渠道、手机淘宝、淘口令渠道、无线端搜索渠道</p><h3><a name='header-n41' class='md-header-anchor'></a>三、服务内容</h3><p>1、飞猪试用服务的具体内容由飞猪试用根据实际情况提供；除非本服务协议另有其它明示规定，飞猪试用所推出的新产品、新功能、新服务，均受到本服务协议之规范。 <br /></p><p>2、鉴于网络服务的特殊性，用户须同意飞猪试用有权不经事先通知，随时变更、中断或终止部分或全部的服务（包括收费服务）。飞猪试用不担保网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作担保。 </p><p>3、飞猪试用需定期或不定期地对提供用户服务的平台或相关的设备进行检修或者维护，如因此类情况而造成网络服务（包括收费网络服务）在合理时间内的中断，飞猪试用无需为此承担任何责任。飞猪试用保留不经事先通知为维修保养、升级或其它目的暂停本服务任何部分的权利。</p><h3><a name='header-n48' class='md-header-anchor'></a>四、使用规则</h3><p>1、用户在使用飞猪试用服务时，必须遵守《中华人民共和国相关法律法规》的规定，用户应同意将不会利用飞猪试用平台进行任何违法或不正当的活动，包括但不限于下列行为∶</p><p>（1）上载、展示、张贴、传播或以其它方式传送含有下列内容之一的信息：</p><p>① 反对宪法所确定的基本原则的；</p><p>② 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p><p>③ 损害国家荣誉和利益的； </p><p>④ 煽动民族仇恨、民族歧视、破坏民族团结的；</p><p>⑤ 破坏国家宗教政策，宣扬邪教和封建迷信的；</p><p>⑥ 散布谣言，扰乱社会秩序，破坏社会稳定的；</p><p>⑦ 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</p><p>⑧ 侮辱或者诽谤他人，侵害他人合法权利的；</p><p>⑨ 含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其它道德上令人反感的内容；</p><p>（2） 含有中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的其它内容的；</p><p>①不得为任何非法目的而使用网络服务系统；</p><p>（3）不利用飞猪试用服务从事以下活动： </p><p>①未经允许，进入计算机信息网络或者使用计算机信息网络资源的；</p><p>②未经允许，对计算机信息网络功能进行删除、修改或者增加的；</p><p>③未经允许，对进入计算机信息网络中存储、处理或者传输的数据和应用程序进行删除、修改或者增加的； </p><p>④故意制作、传播计算机病毒等破坏性程序的；</p><p>⑤其他危害计算机信息网络安全的行为。</p><p>（4）用户违反本协议或相关的服务条款的规定，导致或产生的任何第三方主张的任何索赔、要求或损失，包括合理的律师费，飞猪试用有权视用户的行为性质，采取包括但不限于删除用户发布信息内容、暂停使用许可、终止服务、限制使用、回收飞猪试用帐号、追究法律责任等措施。对恶意注册飞猪试用帐号或利用飞猪试用帐号进行违法活动、捣乱、骚扰、欺骗、其他用户以及其他违反本协议的行为，飞猪试用有权回收其帐号。同时，飞猪试用会视司法部门的要求，协助调查。</p><p>①用户须对自己在使用飞猪试用服务过程中的行为承担法律责任。用户承担法律责任的形式包括但不限于：对受到侵害者进行赔偿，以及在飞猪试用首先承担了因用户行为导致的行政处罚或侵权损害赔偿责任后，用户应给予飞猪试用等额的赔偿。</p><p>②用户不得对本服务任何部分或本服务之使用或获得，进行复制、拷贝、出售、转售或用于任何其它商业目的。</p><p>③商家会员在活动过程中应遵守规则。飞猪试用不认可商家私下通过旺旺、QQ等方式私下与用户达成的所有约定，如出现用户纠纷，飞猪试用以《飞猪试用商家规则》为依据处理，商家承担所有因私下承诺造成的所有后果。</p><p>④飞猪试用仅作为用户提供商品购买渠道及信息交流平台，所有产品均由商家用户直接提供，商家有权利和义务对发布任务的产品负责，杜绝一切非正规渠道来源的产品。因产品本身及用户的个体差异而有所不同，如用户会员在使用过程中出现不适，商家有义务对商品出现的问题承担全部责任。</p><p>⑤飞猪试用有权对违反飞猪试用《商家规则》的商家进行对应的处罚。</p><h3><a name='header-n99' class='md-header-anchor'></a>五、通告</h3><p>所有发给用户的通告都可通过重要页面的公告或电子邮件或常规的信件传送。服务条款的修改、服务变更、或其它重要事件的通告都会以此形式进行。</p><h3><a name='header-n102' class='md-header-anchor'></a>六、信息内容的所有权</h3><p>飞猪试用所有知识产权、网站中的信息内容或作为服务内容的信息、数据库、所有网站设计、文字和图表、软件、照片、录像、音乐、声音及其前述组合，以及所有软件编译、相关源代码和软件 (包括小应用程序和脚本) 均为飞猪试用的财产。不得意图非法获得该知识产权。未经飞猪试用书面允许，不得为商业目的复制、更改、拷贝、发送或使用飞猪试用的任何材料或内容，如因用户的行为而给飞猪试用造成损害，飞猪试用有权视情节严重，将通过法律途径追索经济和法律责任。</p><h3><a name='header-n105' class='md-header-anchor'></a>七、其他</h3><p>1、本协议的订立、执行和解释及争议的解决均应适用《中华人民共和国法律》</p><p>2、如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决。</p><p>3、如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。</p><p>请您在发现任何违反本服务协议以及其他任何单项服务的服务条款、各类公告之情形时，通知飞猪试用。我们将竭诚为您服务！</p><h1><a name='header-n114' class='md-header-anchor'></a>飞猪试用商家规则</h1><h3><a name='header-n115' class='md-header-anchor'></a>第一章  概述</h3><p>
+                            第一条 为了保障商家和用户的合法权益，制定此规则。
+                            第二条 商家有权利及义务遵循《飞猪试用商家规则》的有关条款。 <br>
+                            第三条 针对商家的违规行为的认定与处理，应基于飞猪试用认定的事实并严格依规执行。 <br>
+                            第四条 商家会员在活动过程中应遵守规则。飞猪试用不认可商家私下通过旺旺、QQ等方式私下与飞猪试用用户达成的所有约定，如出现用户纠纷，飞猪试用以《飞猪试用商家规则》和《飞猪试用商家处罚规则》为依据处理，商家承担所有因私下承诺造成的所有后果。 <br>
+                            第五条 飞猪试用仅作为用户提供商品购买渠道及信息交流平台，所有活动产品均由合作商家直接提供，商家有权利和义务对发布任务的产品负责，杜绝一切非正规渠道来源的活动产品。因产品本身及用户的个体差异而有所不同导致飞猪试用用户在使用过程中出现不适，商家有责任及义务配合飞猪试用用户处理使用商家商品后出现的不适问题。 <br>
+                            第六条 商家同意注册飞猪试用，视为认可并且同意《飞猪试用商家规则》、《飞猪试用商家处罚规则》、《飞猪试用商品发布规范》下的所有条款，同时飞猪试用有权变更本规范并在网站上予以公告，自公告之日起产生的所有问题，按照更新后的条例处理。商家可在网站页面随时关注规则变更条款，买家和（或）卖家不同意相关变更的，可通过法律途径解决争议。 <br>
+                            第七条 飞猪试用通过站内信、QQ、电话、电子邮件、短信或电话等方式向买卖双方发送的相关的提示或通知，构成飞猪试用各项事宜的处理依据及结论的有效组成部分 <br>
+                            第八条《飞猪试用商家规则》和《飞猪试用商家处罚规则》的最终解释权归飞猪试用所有。
+                        </p><h3><a name='header-n125' class='md-header-anchor'></a>第二章  注册</h3><p>
+                            第一条 您在注册帐号或使用本服务的过程中，可能需要填写一些必要的信息。若国家法律法规有特殊规定的，您需要填写真实的身份信息。若您填写的信息不完整，则无法使用本服务或在使用过程中受到限制。 <br>
+                            第二条 一般情况下，您可随时浏览、修改自己提交的信息，但出于安全性和身份识别（如账户申诉或者提现账户修改等服务）的考虑，您可能无法修改注册时提供的初始注册信息及其他验证信息。 <br>
+                            第三条 注册商家帐号应使用店铺相关负责人的QQ、电话、邮箱来注册。商家有义务妥善保管及正确使用账号与密码，因未尽上述义务导致帐号信息泄露、密码遗失、账号被盗等情况引起的经济纠纷或损失由商家自行承担。<br>
+                            第四条 商家注册帐号时应认真填写用户名，一个商家帐号对应一个用户名，用户名注册成功后无法修改。商家填写的商家名称及商家店铺名称应遵守国家法律法规，不允许包含违法、涉嫌侵犯他人权利或干扰飞猪试用运营秩序等相关信息。<br>
+                            第五条 商家应自行保管好商家帐号的登录密码及提现密码。忘记密码可在网站上根据提示进行找回，同时飞猪试用账户一旦注册成功，目前暂不支持注销。
+                        </p><h3><a name='header-n132' class='md-header-anchor'></a>第三章  绑定店铺</h3><p>
+                            第一条 飞猪试用商家会员可以绑定淘宝，天猫，京东店铺 <br>
+                            第二条 商家会员可以免费绑定第一个店铺，如商家需新增绑定其他店铺，需支付800元/个。 <br>
+                            第三条 商家绑定的店铺，除以下情况外，不支持换绑或者解绑：1、绑定后从未发布过活动；2、店铺被天猫或者淘宝永久查封。其他非特殊情况不支持换绑或者解绑店铺。
+                        </p><h3><a name='header-n137' class='md-header-anchor'></a>第四章  发布活动</h3><p>
+                            第一条 商家发布任务，必须遵守《飞猪试用商家规则》、《飞猪试用商品发布规范》和《类目限制》，如不符合此标准，将不予安排上线，并进行相应处罚。飞猪试用展示图商品需与您的实际发货商品一致且符合飞猪试用要求，飞猪试用有权根据网站对图片的要求，修改您活动的飞猪试用展示图片。<br>
+                            第二条 卖家发布活动时，需要按照活动要求，缴纳足够活动保证金和服务费，用于卖家活动的返款和违规的处罚款，保证金不足的，卖家需缴纳足够保证金才能继续在飞猪试用发布活动。<br>
+                            第三条 活动的商品必须设置为包邮，如不符合上线要求，平台有权不予审核上线或者暂停正在进行的活动。<br>
+                            第四条 飞猪试用要求用户不得使用淘宝客链接或者返利方式购买商品，但同时建议商家活动期间，关闭淘宝客推广；<br>
+                            第五条 商家发布活动任务前，应保证有充足的商品进行发放，任务审核上线后，因商品份数不足导致商家发布活动无法正常进行或者造成买家损失的，所有损失和责任需要卖家承担，飞猪试用有权根据《飞猪试用商家处罚规则》进行处罚。<br>
+                            第六条 商家发布活动任务前，应保证活动有效期间内，指定商品的价格不变动，任务审核上线后，因商家价格变动导致活动无法正常进行或者造成买家损失的，所有损失和责任需要卖家承担，飞猪试用有权根据《飞猪试用商家处罚规则》进行处罚。<br>
+                            第七条 商家发布活动前，应保证活动有效期间内，指定的商品和规格不下架，任务审核上线后，因商家商品或者规格下架导致活动无法正常进行或者造成买家损失的，所有损失和责任需要卖家承担，飞猪试用有权根据《飞猪试用商家处罚规则》进行处罚。<br>
+                            第八条 活动有效期是指：活动份数未发放完成且卖家未要求暂停活动的，该活动就一直有效。<br>
+                            第九条 卖家不得在发布活动时提出飞猪试用无法支持或者无法达到的要求（包括但不限于要求买家加卖家QQ或者微信获取评价内容、要求买家晒图评价等），发现类似活动，若还未审核的，飞猪试用驳回卖家活动发布要求；若已经错误审核通过或者审核通过后卖家更改活动要求的，飞猪试用有权暂停卖家的活动。<br>
+                            第十条：您理解并同意，您发布的活动上线后，飞猪试用会根据您提供的活动商品链接，自动抓取您活动商品的宝贝详情页内容在飞猪试用进行展示，您需承诺您的活动商品详情页内容不侵害第三方合法权益，即：您承诺拥有合法的权利和资格向平台上传有关信息并进行推广，且前述行为未对任何第三方合法权益，包括但不限于第三方知识产权、物权等构成侵害，如因其行为导致飞猪试用遭受任何第三方提起的投诉、索赔，诉讼或行政责任，您将承担相应责任并确保飞猪试用免责。
+                        </p><h3><a name='header-n149' class='md-header-anchor'></a>第五章  商品要求</h3><p>
+                            第一条 卖家应该对自己出售的商品承担保证责任，需要保证自己发布的商品符合国家法律法规规定,符合飞猪试用和卖家店铺所在平台的管理要求,不得出售国家法律法规禁止出售，或根据飞猪试用平台和卖家店铺所在平台管理要求禁止出售的商品。 <br>
+                            第二条 卖家的活动商品需要符合卖家店铺所在平台的各项类目和商品标准，因卖家发布的活动商品不符合卖家店铺所在平台的标准导致纠纷的，所有损失和可能存在的风险需要卖家自行承担。 <br>
+                            第三条 卖家发布的活动商品需为质量合格的全新商品，需保证买家可以正常使用且提供售后咨询服务；存在有效期的商品，剩余有效期需在60天以上；发布的活动商品其他要求需符合《飞猪试用商品发布规范》所规定的要求。 <br>
+                            第四条 卖家对商品和售后问题的举证，飞猪试用可要求卖家按照卖家店铺所在平台的处理方式和规则进行处理。
+                        </p><h3><a name='header-n155' class='md-header-anchor'></a>第六章 活动待审核上线</h3><p>
+                            第一条 商家于每日18点前发布的任务，飞猪试用工作人员将在当日审核上线，商家于每日18点后发布的任务，飞猪试用工作人员将在次日审核上线。 <br>
+                            第二条 平台审核商家任务时，会针对任务商品类别、任务页面的图片、份数、价格、任务详情、网页链接等内容进行审核，如不符合上线要求的，飞猪试用有权要求商家按要求修改。 <br>
+                            第三条 飞猪试用的任务页面必须和交易平台的下单页面的宝贝标题、商品主图、产品信息等一致，如出现描述不符，则不予审核上线，发布的活动需要符合《飞猪试用商品发布规范》下的要求。
+                        </p><h3><a name='header-n160' class='md-header-anchor'></a>第七章 商家发货</h3><p>
+                            第一条 飞猪试用用户提交商品订单号后，3天内商家须向飞猪试用用户发货(快递爆仓、会员使用问题旺旺号下单等不可抗力因素除外)。逾期未发货，对于商家无理由延迟发货的违规行为，经核查情况属实的，平台有权根据《飞猪试用商家处罚规则》进行处罚。<br>
+                            第二条 商家须按照活动商品进行发货，飞猪试用用户收到商品与任务商品图片或商家指定的下单页面的商品描述不一致的，或者卖家故意不发货的，经核查属实，平台有权根据《飞猪试用商家处罚规则》进行处罚，并且屏蔽商家正在进行的活动。 <br>
+                            第三条 商家须保证活动商品的商品质量，如飞猪试用用户收到的商品质量出现问题（如售假等出现的后续问题商家自己负责），或商品大小、重量、颜色、质量等与活动商品页面的描述或商家指定的下单页面的商品描述存在严重偏差的(因相机拍照产生的颜色偏差或者快递等非商家因素导致的问题除外)。平台有权根据《飞猪试用商家处罚规则》进行处罚，并且屏蔽商家正在进行的活动。 <br>
+                            第四条 除非飞猪试用有规定，否则淘宝网不支持卖家以任何理由拒绝为中奖用户发货，否则平台将根据《飞猪试用商家处罚规则》进行处罚。
+                        </p><h3><a name='header-n166' class='md-header-anchor'></a>第八章 用户订单审核</h3><p>
+                            第一条 用户下单后，卖家需要及时在活动中奖页面审核买家提供的订单信息，若卖家未审核，则系统会在用户提交报告2天后自动通过并返款；若因卖家未及时审核，导致造成不可挽回的损失的，卖家需自行承担所有责任和损失。 <br>
+                            第二条 若卖家在审核买家订单过程当中，核实买家存在未按任务流程完成任务、提交的订单信息错误的，卖家可以驳回买家提交的订单，并且可以联系飞猪试用商家客服处理用户处罚事宜。 <br>
+                            第三条 卖家驳回买家提交的订单需要提供合理有效的理由，且该理由需要飞猪试用规则可以支持，飞猪试用不支持卖家无理或者根据自己的规则随意驳回买家的订单；若飞猪试用核实卖家无理驳回买家的订单，飞猪试用有权代为通过买家提交的订单，支持买家的返款。 <br>
+                            第四条 您理解并同意：系统自动审核通过的订单，飞猪试用视为卖家认可并且同意买家提供的订单信息等，因此产生的损失，需要您自行承担，且飞猪试用有权根据买家的订单信息进行进一步的售后处理。若买家提交的订单信息错误，但是卖家系统审核通过的，飞猪试用会配合商家追回款项，但若因各种原因无法追回的，商家需要自行承担未审核订单信息产生的损失。
+                        </p><h3><a name='header-n172' class='md-header-anchor'></a>第九章 活动的终止和结算</h3><p>
+                            第一条 活动时间超过商家设置的活动期限但商家设置的活动份数仍未发放完成的，活动商品会继续在飞猪试用站显示，用户抽奖仍然会继续，活动仍然有效；若商家不希望用户继续中奖的，需要在活动到期后，提交结算申请，否则活动默认继续抽奖，若用户中奖，商家需要按照飞猪试用规则正常发货； <br>
+                            第二条 商家不支持在活动进行当中随意终止活动，商家要求中途终止活动的，需要提供有效合理的理由，经飞猪试用判定后决定是否可以暂停；活动暂停后，商家需要保障已中奖用户可以顺利完成领奖。
+                        </p><h3><a name='header-n176' class='md-header-anchor'></a>第十章 款项提现</h3><p>
+                            第一条 您理解并同意：用户申请某个商品，中奖并且按照飞猪试用要求完成所有任务后，即可获得全额返利，您的保证金会进行相应扣除，返款给用户，商品金额支出记录会在您的商家后台显示；商家后台的资金记录和信息为记账作用，仅代表了您的账户的资金往来、明细以及当前所拥有的权益，并非代表实际的资金账户；飞猪试用可根据您的账户的实际情况如实记录您的账户资金的往来情况和最终权益情况。 <br>
+                            第二条 商家可以随时提出提现申请，每天可申请提现一次，每次申请提现金额上不封顶，商家每次提现需收取0.5%提现手续费，手续费最低1元，不足1元的按照1元收取，由飞猪试用系统代收。 <br>
+                            第三条 商家申请提现的，原则上会在3个工作日内到账；因不可抗力因素导致提现无法及时转账到商家提现账户的，飞猪试用不承担责任；不可抗力因素指如洪水、地震、战争、政策变化等不能预见、不能避免并且不能克服的客观情况。 <br>
+                            第四条 商家申请提现前，需绑定正确的支付宝，商家所有提现款项，飞猪试用将通过转账的方式付款到商家所绑定的支付宝当中；因商家支付宝绑定错误、异常或者因支付宝公司问题导致无法转账成功，延误用户提现的，飞猪试用不承担相关责任。 <br>
+                            第五条 飞猪试用通过有限的技术手段和基本常识，判断商家账户存在异常或者风险时，为保证飞猪试用平台的正常经营秩序以及您的权益，有权延长您的账户的提现到账时间、规定每月可提现次数、增加提现门槛、禁止用户提现等。
+                        </p><h3><a name='header-n183' class='md-header-anchor'></a>第十一章 管辖与法律适用</h3><p>
+                            第一条 本协议的成立、生效、履行、解释及纠纷解决，适用中华人民共和国大陆地区法律（不包括冲突法）。<br>
+                            第二条 本协议签订地为中华人民共和国浙江省杭州市西湖区。 <br>
+                            第三条 若您和飞猪试用之间发生任何纠纷或争议，首先应友好协商解决；协商不成的，您同意将纠纷或争议提交本协议签订地（即中国浙江省杭州市西湖区）有管辖权的人民法院管辖。 <br>
+                            第四条 本协议所有条款的标题仅为阅读方便，本身并无实际涵义，不能作为本协议涵义解释的依据。 <br>
+                            第五条 本协议条款无论因何种原因部分无效或不可执行，其余条款仍有效，对双方具有约束力。
+                        </p>
+                        <h1><a name='header-n190' class='md-header-anchor'></a>飞猪试用商家处罚规则</h1>
+                        <figure>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="width: 60px;"><br /></th>
+                                        <th style="width:60px;">  错误分类<br /></th>
+                                        <th>  活动要求<br /></th>
+                                        <th>  不符合活动要求的处罚规定<br /></th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="4">  任务过程<br /></td>
+                                        <td>  商品价格类<br /></td>
+                                        <td>
+                                            1.活动期间，商家不得更改活动商品的价格，活动期间应保证店铺商品价格与飞猪试用价格一致（非活动规格除外）；<br />
+                                            2.商品价格应与同行价格保持一致，禁止恶意提高价格，存在价格虚高的情况，具体由飞猪试用进行核实；<br />
+                                            3.同款商品重复铺货时，应保证同款价格一致，禁止存在同款商品价格存在严重偏差的情况；同一活动商品，30天内活动价格波动不得超过50%。<br />
+                                            4.若卖家参加淘宝或者天猫平台活动，活动当天，会导致价格变动的，商家需要在活动前两天向飞猪试用网工作人员说明并且暂时下架活动，以免造成卖家损失（若该活动有预热期且预热期无法下单的，需在预热期前两天说明），如：商家4.30日参加天天特价活动，活动当天商品降价，商家需要在4.28号联系飞猪试用工作人员暂停活动；<br />
+                                            5.发布同款商品，30天内任务价格与第一次不得相差50%以上（如：同一款连衣裙，第一次发布80元，第二次发布200元）<br />
+                                        </td>
+                                        <td>  每人次扣除50元注：飞猪试用返利给买家的金额以在飞猪试用发布活动时填写的商品金额为准；若商品涨价，买家拍下后飞猪试用有权让卖家退给买家差价或者从卖家保证金账户中扣除给买家多付的差价；若卖家降价，卖家需要自行承担多返款的金额无法追回的风险；<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>  商品运费类<br /></td>
+                                        <td>
+                                            1.商品必须包邮，发布活动时邮费一旦确定，禁止随意修改店铺运费状态，致使与任务运费状态不一致，影响买家下单。<br />
+                                            2.不包邮的任务，邮费金额需符合正常邮费标准，禁止针对中奖的飞猪试用买家恶意虚高运费价格。<br />
+                                            3.未经买家同意，不得给买家发到付件。<br />
+                                        </td>
+                                        <td>  每人次扣除50元；注：如果买家拍下商品包含运费，但是实际按照飞猪试用规则应该包邮的，飞猪试用网有权让卖家退给买家多付的运费或者从卖家保证金账户中扣除给买家多付的运费。<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>  上下架类<br /></td>
+                                        <td>
+                                            1.任务期间，商家不允许随意下 架任务商品，影响买家下单（不可抗力因素除外）；活动期间，商家不得要求随意终止活动；<br />
+                                            2.若商家参加聚划算等在预热期买家无法下单的平台活动，需在活动预热期前两天向飞猪试用工作人员说明并且暂时下架活动，以免在预热期中奖后，买家无法下单。如：5.10日聚划算活动预热，此时买家无法下单，商家需在5.8日联系飞猪试用客服暂停活动；<br />
+                                        </td>
+                                        <td>  每人次扣除50元；<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>  下单类<br /></td>
+                                        <td>
+                                            1、禁止引导飞猪试用用户拍与活动商品无关的商品链接；<br />
+                                            2、禁止引导中奖的飞猪试用用户主动放弃中奖资格<br />
+                                            3、禁止引导飞猪试用用户代拍、代刷其他商品等超出飞猪试用服务范围内的服务4、禁止引导飞猪试用用户拍活动任务商品相关联的套餐<br />
+                                        </td>
+                                        <td>  每人次扣除50元；<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="6">发货过程<br /></td>
+                                        <td>  发货时间<br /></td>
+                                        <td>  飞猪试用用户下单付款后， 商家需在72小时内发货（快递爆仓、不可抗拒因素除外）；商家以买家已中过奖等飞猪试用不予支持的理由拒绝发货的（指定时间内该用户属于不应该中奖的情况或者不应该领奖的情况除外）<br /></td>
+                                        <td rowspan="2">每人次扣除50元；注：若核实商家超过7天未发货或者故意、恶意不发货的等情况，飞猪试用有权直接扣除对应商品的保证金作为处罚。<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>发货快递<br /></td>
+                                        <td>卖家需要保证选择的发货快递可以到买家收件地址，否则导致的损失和费用需要卖家承担<br /></td> 
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">  商品质量<br /></td>
+                                        <td>  商家实际发货商品须与活动商品一致和下单商品一致，禁止拍A发B、发空包、发试用装等给中奖的飞猪试用买家，活动商品需符合《飞猪试用网商品发布规范》<br /></td>
+                                        <td>  永久禁用违规商家飞猪试用商家账号，退还剩余会员费，并永久清退出飞猪试用平台，同时对违规店铺除以终生不得在飞猪试用开通会员、进行营销推广的处罚。<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            1、商家需保证发放产品的质量，商品规格、净含量、质量等不允许与活动商品和卖家店铺页面存在偏差，活动商品需符合《飞猪试用商品发布规范》<br />
+                                            2、禁止引导飞猪试用拍高规格商品，实际发货为低规格商品；<br />
+                                        </td>
+                                        <td>  每人次扣除100元<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>  错发漏发<br /></td>
+                                        <td>
+                                            1.禁止漏发错发商品，如出现漏发错发商品问题，应及时给中奖的飞猪试用用户进行退换货。<br />
+                                            2.因商家或快递原因导致飞猪试用用户收到商品破损，商家需及时向中奖飞猪试用买家进行退换货处理；<br />
+                                            3.退换货运费遵循“谁的责任谁承担的原则”，因卖家原因导致的退换货，来回运费需要卖家承担。<br />
+                                        </td>
+                                        <td>  若卖家不配合处理的，每次扣除50元；注：飞猪试用无法核实双方商品具体情况的，支持买家申请淘宝介入处理，飞猪试用以淘宝处理结果为处理依据；<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>  收货评价<br /></td>
+                                        <td>
+                                            1.禁止私下联系飞猪试用用户强制要求按商家提供的图片和文字进行评价<br />
+                                            2.禁止私下联系飞猪试用用户强制要求给予中奖商品追加评价<br />
+                                            3.商家应在飞猪试用买家确认收货提交试用报告48小时内确认，否则平台自动审核，所产生的后果商家自行承担<br />
+                                        </td>
+                                        <td>  每人次扣除50元；<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">  平台规则<br /></td>
+                                        <td>  私下拉群<br /></td>
+                                        <td>
+                                            1、禁止用任何方式引导飞猪试用买家 加商家私建的QQ、微信群等<br />
+                                            2、在和买家旺旺聊天过程当中，禁止提及飞猪试用、试用等；<br />
+                                        </td>
+                                        <td>  发现一次扣除200元<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>  商家规范<br /></td>
+                                        <td>
+                                            1.任务期间，商家禁止随意要求暂 停进行中的任务（不可抗力因素除外）<br />
+                                            2.任务期间，商家禁止随意要求取消中奖用户的中奖资格（除用户被飞猪试用取消中奖资格的情况除外）<br />
+                                            3.用户下单后，无故联系用户申请退款，取消用户中奖资格；<br />
+                                        </td>
+                                        <td>  每人次扣除50元<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>  任务押金<br /></td>
+                                        <td>  任务上线后，因商品涨价较高，导致商品押金不足以给中奖用户返款  时，应在客服联后24小时内结算<br /></td>
+                                        <td>  每次扣除50元<br /></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>  其他行为<br /></td>
+                                        <td>  其他恶意行为<br /></td>
+                                        <td>  其他恶意行为造成用户或者平台损失的；<br /></td>
+                                        <td>  一经发现，根据情节轻重酌情处罚，直至封号且扣除活动保证金；<br /></td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </figure>
+                    <p>特别说明：</p>
+                        <p> 1、根据买卖双方交易实际情况，为保障双方资金和交易安全，飞猪试用有权根据实际需求暂时或者永久限制用户进行提现。</p>
+                        <p> 2、若商家账户存在交易纠纷未处理完成且拒不处理的，在商家处理完成交易纠纷前，飞猪试用有权拒绝卖家在飞猪试用平台发布任何活动。</p><p>3、卖家存在违规行为的，飞猪试用有权暂停卖家发布的活动，并且结算该活动，不再允许上架。</p><p><br />
+                            4、以上所说的每人次，是指商家的行为所影响的用户人次（即人数），如：同一个问题，影响了到了5个买家，则视为5次违规，扣除5次费用，扣除5次分数；具体举例如下：<br>
+                            举例1：商家的商品下架，导致当天有10个中奖的用户无法领奖或领奖过程受到影响，则扣除10*50=500元，对应分数扣除10次；<br>
+                            举例2：商家的商品下架，活动被暂停，导致当天应该开奖10份但是无法开奖，则扣除10*50=500元，对应分数扣除10次；<br>
+                            举例3：商家商品价格变动，影响了当天10个中奖用户正常下单，导致下单价格与飞猪试用不符或者用户下单出现疑问等情况，则扣除10*50=500元，对应分数扣除10次；<br>
+                            举例4：商家同一款商品，第一次上架200元，共发布10份；30天内第二次上架90元，共发布30份；导致之前中奖的10名用户的下单价格与第二次活动价格相差50%以上，则扣除10*50=500元，分出扣除10次；
+                                                                                                                                                                                                                                                </p><p> </p><p> </p>
+                    <p style="text-align: right"> 杭州美名科技有限公司</p><p style="text-align: right"> 2017年9月13日</p>
+                    </div><br>
+                </div>
+            </div><!--zhu_ces-->
+        </div><!--mian_right-->
+    </div><!--main-->
+</div>
+
+
+<div class="footer">
+    <div class="footer_main">
+        <div class="footer_left">
+            <div class="footer_xy" style="padding-top: 58px;">
+                <a href="//www.meilipa.com/Regist/about" target="_blank">联系我们</a><span>|</span>
+                <a href="//www.meilipa.com/Help/AdvertisingCost" target="_blank">商务合作</a><span>|</span>
+                <a href="//www.meilipa.com/Regist/UserAgreement" target="_blank">用户协议</a><span>|</span>
+                <a href="//www.meilipa.com/help/index" target="_blank">帮助中心</a>
+            </div>
+            <div class="footer_fl">
+                <span>Copyright © 2017 meili.com</span> 浙ICP备17042206号-1&nbsp;&nbsp;浙公网安备33010302003013号&nbsp;&nbsp;杭州美名科技有限公司
+            </div>
+            <div>
+                <a class="f_t" rel="nofollow" title="飞猪试用官网" target="_blank"></a>
+                
+                <a class="f_f" rel="nofollow" href="https://v.pinpaibao.com.cn/cert/site/?site=www.meilipa.com&at=business" title="飞猪试用官网" target="_blank"></a>
+                <a class="f_g" rel="nofollow" href="https://v.pinpaibao.com.cn/cert/site/?site=www.meilipa.com&at=business" title="飞猪试用官网" target="_blank"></a>
+            </div>
+        </div>
+        <div class="footer_right" style="float: right; margin-left: 80px;">
+            <div class="footer-sp1">bussiness@feizhugou.com</div>
+            
+        </div>
+        <div style="float: left; margin-top: 52px;margin-left: 80px;">
+            <p style="width: 100px;text-align: center">关注飞猪试用公众号</p>
+            <img style="width: 100px; height: 100px;" src="/shangjia_code.jpg" />
+        </div>      
+    </div>
+</div>
+
+    <script src="./Scripts/jquery.form.js" type="text/javascript"></script>
+<div class="tchs" id="logindialog" style="display: none;">
+    <div id="dialog_log_qiandao" class="dialog-wrapper dialog_log_qiandao" style="width: 416px;">
+        <span class="red">
+            登录/注册
+            <a href="javascript:void(0)" title="关闭窗口" onclick="$('#logindialog').hide()">
+                <span class="close"></span>
+            </a>
+        </span>
+        <div class="diginfo" style="border: none">
+            <div class="log-cont">
+                <ul class="clickTitle">
+                    <li onclick="tab(this,0)" class="active"><i class="icon-1"></i> 用户登录</li>
+                    <li onclick="window.open('//www.meilipa.com/Regist/UserRegister')"><i class="icon-2"></i> 用户注册</li>
+                </ul>
+                <div class="tabcont">
+                    <div class="tab">
+                        <form style=" width: 288px; margin: 0 auto;" method="POST">
+                            <div class="mb-20 msg-input">
+                                <input type="text" id="username" placeholder="请输入邮箱/手机号/用户名" title="邮箱/手机号/用户名" onkeydown=keyLogin(event)>
+                                <input type="password" class="pwd" id="password" placeholder="请输入密码" autocomplete="off" disableautocomplete="" onkeydown=keyLogin(event)>
+                            </div>
+                            <div class="btn">
+                                <input id="submitbtn" type="button" class="btn-input" value="立即登录" title="登 录" onclick="loginSubmit(1, location.href)">
+                            </div>
+                            <div class="clearfix msg-tip" style="height: 52px;">
+                                <div class="msg-tip-lf">
+                                    <p id="error" class="err-txt" style="display:none;">请输入密码</p>
+                                    <p class="tip-txt" style="margin-bottom:0;">使用其他账号登录</p>
+                                </div>
+                                <a class="msg-tip-rt" href="//www.meilipa.com/Security/FindPassword?usertype=1">
+                                    <p>忘记密码？</p>
+                                </a>
+                                <div class="jiao"></div>
+                            </div>
+                        </form>
+                        <div class="qq-login">
+                            <a href="javascript:" onclick="WxLogin()">
+                                <div class="qq-icon wx-icon"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    <a class="totop" id="back-to-top" style="display: none" />
+</body>
+</html>
+<div style="display: none">
+     
+</div>

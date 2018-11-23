@@ -1,0 +1,134 @@
+.table_vcolor_second div, 
+.table_vcolor_second a, 
+.table_vcolor_second em, 
+.table_vcolor_second span,
+.table_vcolor_second td a,
+.table_vcolor_second td .di,
+.table_vcolor_second td span,
+.abit_style span a
+{
+    color: #666666;
+}
+
+.table_vcolor_second .table_vcolor_first .cd_lxq a, 
+.table_vcolor_second .table_vcolor_first .cd_lxq em, 
+.table_vcolor_second .table_vcolor_first span
+{
+    color: #333333;
+      width: 100px;
+  /*overflow: hidden;*/
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.table_vcolor_first .xi_lts a span:hover, 
+.table_vcolor_first .icon {margin-right: 10px}
+.table_vcolor_second a em:hover,
+.table_vcolor_second a:hover,
+.abit_style span a:hover,
+.xi_lt .cd_lxq span a:hover
+{
+    color: #db2728;
+    text-decoration: none;
+}
+.table_vcolor_second, .table_vline_on, .table_vcolor_second td {border-color: #e8e8e8 !important; border-bottom-width: 0;}
+.t-vline-on {text-align: center;}
+.t-vline-on strong {margin-left: 0;}
+.table_vline_on td {border-right-style: solid; border-right-width: 1px; border-right-color: #dadada; border-bottom-color: #dadada; border-top-color: #dadada !important; border-top-width: 0;}
+.table_vcolor_second .on_click:hover {color: #d12222;}
+.table_vcolor_first .cd_lxq em{color: #999999;}
+.over_color:hover 
+{
+    background: #f9f9f9;
+}
+.table_vcolor_second .taobao_sty {color: #4e87c8; text-decoration: none;}
+
+/* TaskList */
+.yonghu_nv a {cursor: pointer;}
+.yonghu_nv a:hover {text-decoration: none;}
+.bg-index {background: #fff;}
+.tixian_con {border: none;}
+.tx-tl td {text-align: center;}
+.tixian_nv {width: 996px;}
+.tixian_nv span {width: 640px;}
+.cash-opt a {float: left; width: 218px; height: 38px; border: 1px solid #e9e5e3; background: #fff; font: 14px 宋体; text-align: center; line-height: 38px;}
+.cash-opt a.seled {border-bottom-color: #fafafa; border-left: none; background: #fafafa; font-weight: bold; color: #333;}
+.float-left {float: left;}
+.float-right {float: right;}
+.tixian_con .cash-tl {background: #f2f2f4; border-bottom: 1px solid #dadada;border-top:1px solid #dadada;} 
+.cash-slt {width: 1120px;height: 26px; border: 1px solid #e9e5e3; border-top: none; background: #fafafa; padding: 12px;}
+.cash-slt input 
+{
+    height: 25px;
+    color: rgb(170, 170, 170); 
+    border: 1px solid rgb(227, 227, 227); 
+    width: 180px;
+}
+.cash-slt .confirm 
+{
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid rgb(227, 227, 227); 
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+    margin-left: -6px;
+    background: rgb(240, 240, 240);
+    cursor: pointer;
+    display: inline-block;
+}
+.cash-opt .cash-ow {padding-left: 10px; float: left; width: 697px; height: 39px; border-bottom: 1px solid #e9e5e3;}
+.sel option {color: #333;}
+.shou{width:130px;height:25px;line-height:24px;color:#797979;padding-left:3px;font-size:12px;margin:0 5px;}
+
+.table_vcolor_second td .tryrep-tle-lk {color: #4e87c8; text-decoration: none;}
+.table_vcolor_second td .tryrep-tle-lk:hover {color: #e84c3d}
+.table_vcolor_second td,  .table_vcolor_second td span, .table_vcolor_second td a {color: #666;}
+.xiadan .try-yet-del { text-decoration: none; cursor: pointer;}
+.xiadan .try-yet-del:hover { color: #e74c3c; }
+.tryrep-she {width: 96px;}
+.try-table table { border: 1px solid #dadada !important;}
+.table_vcolor_second, .table_vcolor_second td {
+    border-bottom: 1px solid #dadada;    text-align: center;
+}
+.xiadan .cm-giveup
+{
+    background: none;
+    text-decoration: none;
+}
+.xiadan a.ll-kefu
+{
+    width: 130px;
+    background: none;
+    color: #666;
+    text-decoration: none;
+}
+.xiadan a.ll-kefu:hover
+{
+    color: #e74c3c;
+}
+td .ad-opts a.nw-to 
+{
+   margin: 5px 0;
+  display : block;         
+}
+td .ad-opts a.nw-to:hover 
+{
+    color: Red;   
+}
+td .ad-opts a.bt
+{
+    text-decoration: none;
+    color: #fff;
+    height: 26px;
+    line-height: 26px;
+    background: #fd8c16;
+    width: 80px;
+    display: block;
+    cursor: pointer;
+}
+td .ad-opts a:hover 
+{
+    color: #666;        
+}
+.nw-fls .ding span {font-weight: normal;}
+.nw-fls .ding span a:hover {color: #666;}

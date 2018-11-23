@@ -1,0 +1,150 @@
+﻿body 
+{
+    margin-right: auto;
+	margin-left: auto;
+}
+.Methods{ width: 1000px; height: 419px; margin: 22px auto 0 auto;font-family: Microsoft YaHei}
+.theleft{ width: 470px; height: 409px; border: 1px solid #e3e3e3; float: left; background-color: #fcfcfc;margin-left: 20px}
+.theleft h1{ font-size: 20px;color: #3c3d45}
+.theright{width: 470px; height: 409px; border: 1px solid #e3e3e3; float: left; background-color: #fcfcfc;margin-left: 16px}
+.yhzhuc{ width: 400px; height: 285px; /*border: 1px solid #b22222;*/margin: 37px auto 0 auto}
+.hehext{ height: 2px; background-color: #f1eeeb;margin-top: 5px;}
+.hoext{ height: 2px; width: 92px;background-color:#e84c3d}
+.zcyaoq{ font-size: 14px; margin-top: 23px; color: #777777;line-height: 25px;}
+.qqzhdl{ width: 194px; height: 43px; border: 4px solid #fad0ce; 
+         border-radius: 30px; margin: 37px auto 0 auto;
+         background-color: #fff1f0;
+	     background-repeat: no-repeat;
+         background-position: 14px;
+         background-image: url('../images/mrqqh.png');
+         color: #8e6968;
+         cursor: pointer;
+         }
+.linglazc{width: 194px; height: 43px; border: 4px solid #fad0ce; 
+         border-radius: 30px; margin: 37px auto 0 auto;
+         background-color: #fff1f0;
+	     background-repeat: no-repeat;
+         background-position: 32px;
+         background-image: url(/Content/images/hongsling.png);
+         color: #8e6968;
+         cursor: pointer;
+}
+.linglazc:hover{ background-image: url(/Content/images/baiseling.png); 
+                 color: #ffffff;background-color: #fe6e65; border: 4px solid #fe6e65; }
+.linglazc p{font-size: 17px;margin: 10px 0 0 68px;cursor: pointer}
+.qq_xindl{ display: block;/*text-align: center;*/ font-size: 14px;      
+           width: 198px; height: 46px; margin: 8px auto 0 auto;  line-height: 46px; color: #666666;
+    background-image: url(/Content/images/QQ_zhanghtbiao.png); background-repeat: no-repeat;
+      background-position: 34px 10px;}
+.qq_xindl p{margin-left: 64px} 
+.tao_b{display: block;font-size: 14px;width: 198px;height: 46px;margin: 8px auto 0 auto;line-height: 30px;background: url(/Content/images/tao_l.png) no-repeat;color: #666;background-position: 34px 2px;}
+.tao_b p{ margin-left: 64px;}
+.qqzhdl:hover{background-image: url('../images/jgqqh.png');
+                     background-repeat: no-repeat;
+                     background-position: 14px;
+                     color: #ffffff;
+                     background-color: #fe6e65;
+                     border: 4px solid #fe6e65; 
+                     }         
+.qqzhdl p{ font-size: 17px;margin: 10px 0 0 55px;cursor: pointer}
+/*.dlone{margin: 20px auto 0 auto;background-image: url('../images/hongsling.png');background-position: 20px;}
+.dlone:hover{background-image: url('../images/baiseling.png');background-position: 20px;}*/
+.extone{background-color:#40aec5}
+.sjiazc{ border: 4px solid #d9ebee; color: #567175; background-color: #ecfcff;
+         background-image: url('../images/mrsjzc.png');
+           background-position: 35px;
+         }	
+.sjiazc:hover{background-position: 35px;border: 4px solid #40aec5; color: #ffffff; 
+              background-color: #40aec5;
+              background-image: url('../images/jgsjzc.png');
+              }         
+         
+.sjiazc p{font-size: 17px;margin: 10px 0 0 70px;}         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

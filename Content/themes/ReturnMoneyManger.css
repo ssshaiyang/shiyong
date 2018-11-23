@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="renderer" content="webkit">
+	    <meta http-equiv="Expires" CONTENT="0">
+	    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+	    <meta http-equiv="Cache-Control" CONTENT="no-store">
+	    <meta http-equiv="Pragma" content="no-cache">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/zzsc.css" />
+		<style type="text/css">
+			#side-nav { 
+				margin-top: 63px;
+				width:150px; 
+				height: 240px; 
+				background: #fff;
+				border: 1px solid #ddd;
+				box-shadow: 1px 1px 1px #d4d4d4;
+				position:fixed;
+				right:0;
+				background-image: url(/static/image/side_notice.png);
+				background-repeat: no-repeat;
+				background-size: 100% auto; 
+				background-position: 50% 50%;
+			}
+			#side-notice{
+				margin-top: 110px;
+				margin-left: 10px;
+				margin-right: 10px;
+				color: #197db5;
+			}
+			#side-wx { 
+				margin-top: 280px;
+				width:150px; 
+				height: 150px; 
+				background: #fff;
+				border: 1px solid #ddd;
+				box-shadow: 1px 1px 1px #d4d4d4;
+				position:fixed;
+				right:0;
+				background-image: url(/static/image/wx_gzh.png);
+				background-repeat: no-repeat;
+				background-size: 100% auto; 
+				background-position: 50% 50%;
+			}
+		</style>
+		
+<style type="text/css">
+.main {
+  margin-top: 15px;
+  border: 1px solid #ececed;
+  margin-bottom: 16px;
+}
+.refundsearch {
+  margin: 1.5em 22px;
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid #ccc;
+}
+.refundsearch li {
+  margin-right: 1em;
+}
+.select {
+  padding: 4px;
+  border: 1px solid #bebfbf;
+  width: 67px;
+  color: #555;
+}
+.refundsearch .btn-search {
+  position: relative;
+  top: -5px;
+  left: 15px;
+}
+.btn-search {
+  width: 68px;
+  height: 32px;
+  border: 0;
+  background: url(/static/image/web/task/search_btn.png) center center no-repeat;
+  cursor: pointer;
+}
+.otdi {
+  margin: 0 10px;
+  margin-bottom: 30px;
+}
+.otdi .d-h {
+  margin-bottom: 4px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid #ececed;
+  color: #090909;
+}
+.otdi .d-b {
+  margin-bottom: 4px;
+  border: 1px solid #ececed;
+}
+.otdi .d-b > ul {
+  padding: 14px;
+  background-color: #fafbfb;
+}
+.btn-return,.btn-freeze,.btn-platreturn {
+  width: 83px;
+  height: 25px;
+  border: 0;
+  background: url(../images/btn_mask.png) center center no-repeat;
+  cursor: pointer;
+}
+.pag {
+  padding: 10px 0 0 0;
+  margin-bottom: 20px;
+}
+.pag ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.pag li.ch {
+  text-align: center;
+  vertical-align: middle;
+  color: #0055a1;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 20px;
+  line-height: 20px;
+}
+.pag li {
+  list-style: none;
+  display: inline;
+}
+.pag a {
+  padding: 2px 6px 0 6px;
+  text-decoration: none;
+  color: #6f6f6f;
+  text-align: center;
+}
+
+</style>
+
+        
+		<title></title>
+		<script type="text/javascript" src='//cdn.staticfile.org/require.js/2.1.15/require.min.js'></script>
+		<script type="text/javascript">
+		require.config({
+			baseUrl: "/static/js",
+			paths:{
+				'jquery':'http://libs.baidu.com/jquery/1.11.1/jquery.min',
+			}
+		});
+		</script>
+	</head>
+	<body data-user-id='47886' data-task-id='' data-order-id='780999630'>
+	<header>
+		
+<div class="w-1k f-cb">
+<ul class="f-cb f-fr home-header">
+    <li class="f-fl ac-level p-r" id='ac-level'>
+        <div style="min-width: 170px;text-align: right;">
+            <a id="id_user_name" class="tp-nv" href="/home/user">
+            18768119456
+            </a>
+            <img class="tri_down" src="/static/image/web/home/triangle_down.png" style="padding-right:13px;">
+            <a class="logout" id='logout-btn'>
+                <span style="padding-left:17px;">
+                    退出
+                </span>
+            </a>
+        </div>
+    </li>
+    <li class="f-fl">
+        <span class="tp-nv v-bar" style="padding-left:0px;">
+            |
+        </span>
+    </li>
+    <li class="f-fl">
+        <a class="tp-nv" href="/home/capital" title="账户中心">
+            账户：
+            <span class="ye">
+                5012.42
+            </span>
+            金
+        </a>
+        <a class="striking" title="账户充值" href="/home/capital/recharge">
+            充值
+        </a>
+    </li>
+</ul>
+</div>
+
+	</header>
+	
+	<nav class="hd">
+		<div class="nav-div">
+			<a href="/home/notice"><img class="logo" src="/static/image/logo.png"></a>
+			<ul class="nav-menu-list">
+				<li class="nav-menu"><a class="nav-menu-a" href="/home/notice">商家中心</a></li>
+				<li class="nav-menu"><a class="nav-menu-a" href="/messages">商家消息</a></li>
+				<li class="nav-menu"><a class="nav-menu-a" href="/seller_introduce">商家介绍</a></li>
+				<li class="nav-menu"><a class="nav-menu-a" href="/help">常见问题</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<!--div id="side-nav">
+		<div id="side-notice">各位商家：发布任务、买手做任务、充值请求、账号信息、推广等事件如有问题，请联系QQ：13456858680或者加我们微信！</div>
+	</div>
+	<div id="side-wx"></div-->
+	
+	<div id="rightArrow"><a href="javascript:;" title="在线客户"></a></div>
+	<div id="floatDivBoxs">
+		<div class="floatDtt">在线客服</div>
+		<div class="floatShadow">
+			<ul class="floatDqq">
+				<li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=11513414&Site=sc.chinaz.com&Menu=yes"><img src="/static/images/qq.png" align="absmiddle">&nbsp;&nbsp;商家业务合作</a></li>
+				<li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=1550643358&Site=sc.chinaz.com&Menu=yes"><img src="/static/images/qq.png" align="absmiddle">&nbsp;&nbsp;财务充值</a></li>
+				<li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=1790938844&Site=sc.chinaz.com&Menu=yes"><img src="/static/images/qq.png" align="absmiddle">&nbsp;&nbsp;兼职问题解答</a></li>
+                <li style="padding-left:0px;"><a target="_blank" href="tencent://message/?uin=68231374&Site=sc.chinaz.com&Menu=yes"><img src="/static/images/qq.png" align="absmiddle">&nbsp;&nbsp;兼职QQ群</a></li>
+			</ul>
+			<div class="floatDtxt">工作时间</div>
+			<div class="floatDtel"><img src="/static/images/online_phone.jpg" width="155" height="45" alt=""></div>
+			<div style="text-align:center;padding:10PX 0 5px 0;background:#EBEBEB;">
+                <img src="/static/images/jianzhi.png"><br>下载APP(适用于ANDROID和IOS)</div>
+		</div>
+		<div class="floatDbg"></div>
+	</div>
+	
+	<!-- WPA Button Begin>
+	<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDA5NzA3N18yODI5ODRfODAwMDk3MDc3Xw"></script>
+	<!-- WPA Button End -->
+	
+	<div class="bg">
+		<div class="main">
+		
+   <style type="text/css">
+.tm-tab {
+  border-bottom: 3px solid #dee1e2;
+  margin: 16px;
+  color: #8c8c8c;
+  padding-left: 6px;
+}
+.tm-tab .mntab.act:hover {
+  background-color: #3fb7fb;
+  color: #fff;
+}
+.tm-tab .mntab:hover {
+  background-color: #fff;
+}
+.tm-tab .mntab.act {
+  background-color: #3fb7fb;
+  color: #fff;
+}
+.tm-tab .mntab {
+  width: 120px;
+  height: 30px;
+  border: 1px solid #dee1e2;
+  border-bottom: none;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-right: 2px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #f3f4f4;
+}
+</style>
+  <div class="tm-tab f-pr"> 
+   <div class="f-cb"> 
+    <a class="f-fl mntab" href="/home/task/tasks">垫付任务管理</a> 
+    <a class="f-fl mntab" href="/task/return/manage">
+    	垫付任务返款管理
+    	<span id="id_rebate_mange" style="color:red ;font-size: 16px;font-weight: bold;"></span>
+    </a> 
+    <a class="f-fl mntab" href="/task/order/manage">垫付任务订单管理</a> 
+   </div> 
+  </div>
+<script type="text/javascript" src='/static/js/lib/jquery-1.11.3.min.js'></script>
+<script type="text/javascript">
+(function(){
+  var tabs=document.getElementsByClassName('mntab');
+  for(var i=0;i<tabs.length;i++){
+    var tab=tabs[i];
+    if(tab.getAttribute('href')==location.pathname){
+      tab.setAttribute('href','javascript:void(0);');
+      tab.className+=' act';
+    }
+  }
+  
+})();
+
+    var user_phone=document.getElementById("id_user_name").innerText;
+    $.post('/rest_web/users/get/remind/' + user_phone,function(res){
+      if(res.code==0){
+        for(var i=0;i<res.data.length;i++){
+        	if(res.data[i] == 109){
+        		$("#id_rebate_mange").html("!");
+        	}
+        }
+      }
+    });
+</script>
+   <form class="refundsearch" method="POST"> 
+    <ul class="f-cb"> 
+     <li class="f-fl"> 店铺： <select class="select" name="store_id" style="width: 120px;"> <option value="-1">全部</option>
+     
+    <option value="250"> 南极人旗舰店 </option>
+     </select> </li> 
+     <li class="f-fl">买手买号：<input class="buyerww ipt" name="buyerww" value="" style="width: 100px;" /></li> 
+     <li class="f-fl">任务ID：<input class="taskid ipt" name="taskid" value="" style="width: 80px;" /></li> 
+     <li class="f-fl">订单ID：<input class="orderid ipt" name="orderid" value="" style="width: 80px;" /></li> 
+     <li class="f-fl">买手兼职吗ID：<input class="buyeruserid ipt" name="buyeruserid" value="" style="width: 80px;" /></li>
+     <li class="f-fl"><input class="btn-search" id="btn-search" type="button" /></li> 
+    </ul> 
+    <ul class="f-cb"> 
+     <li class="f-fl"> 返款状态： 
+     <select class="select " name="isrefund" style="width: 120px;"> 
+     <option value="-1" selected="selected">全部</option>
+     <option value="0">未返款</option>
+     <option value="1">已返款</option> 
+     </select>
+     </li> 
+    </ul> 
+   </form> 
+   <!-- 操作详情 --> 
+   <div class="otdi"> 
+    <ul class="d-h f-cb"> 
+     <li class="lst lst-1 f-fl" style="width: 190px;">订单信息</li> 
+     <li class="lst lst-2 f-fl" style="width: 180px;">买手信息</li> 
+     <li class="lst lst-4 f-fl" style="width: 160px;">付款时间与截图</li> 
+     <li class="lst lst-3 f-fl" style="width: 230px;">返款信息</li> 
+     <li class="lst lst-6 f-fl">操作</li> 
+    </ul>
+    
+    <div class="d-b"> 
+     <ul class="f-cb"> 
+      <li class="f-fl lst lst-1" style="width: 190px;"> <p style="line-height:20px;">平台：淘宝</p> <p style="line-height:20px;">类型：</p> <p style="line-height:20px;">订单ID：<a class="striking" target="_blank" href="/task/order/detail?order_id=780999630">780999630</a></p> <p style="line-height:20px;">任务ID：<a class="striking" target="_blank" href="/task/task/detail?task_id=5680423">5680423</a></p> <p style="line-height:20px;">商家旺旺号：18768119456</p> </li> 
+      <li class="f-fl lst lst-2 lim-w" style="width: 160px;"> <p style="line-height:20px;">用户ID：47886</p> <p style="line-height:20px;">淘宝号：<span style="color:#46A3FF">淘宝账号小李35</span></p> <p style="line-height:20px;">QQ： *********</p> <p style="line-height:20px;">手机：1**********</a></p> <p style="line-height:20px;"><a class="addblack" href="javascript: void(0)" style="color: #06c1ae;" data-buyer-id="47886">加入黑名单</a></p> </li>
+      <li class="f-fl lst lst-4 lim-w" style="width: 160px;"> <p style="line-height:20px;"><a class="striking" target="_blank" href="/task/order/detail?order_id=780999630">查看订单详情 &gt;&gt;</a></p> <a class="fancybox-effects-d" data-fancybox-group="gallery" href="http://upload.shouzhuanvip.com/FipwSeIjKsUywjkLJJquOBzLlBLr" target="_blank"><img class="pro_img" src="http://upload.shouzhuanvip.com/FipwSeIjKsUywjkLJJquOBzLlBLr" width="60" height="70" /></a> <a class="fancybox-effects-d" data-fancybox-group="gallery" href="http://upload.shouzhuanvip.com/FipwSeIjKsUywjkLJJquOBzLlBLr" target="_blank"><img class="pro_img" src="http://upload.shouzhuanvip.com/FipwSeIjKsUywjkLJJquOBzLlBLr" width="60" height="70" /></a> <br />2018-09-07 10:59:11 </li> 
+      <li class="f-fl lst lst-3 lim-w f-pr" style="width: 220px;"> <p style="line-height:20px;">返款模式：平台返款</p> <p style="line-height:20px;">姓名：<span style="color:#46A3FF"> *****</span></p> <p style="line-height:20px;">银行：<span style="color:#46A3FF">*****</span></p> <p style="line-height:20px;">归属地：<span style="color:#46A3FF">******</span></p> <p style="line-height:20px;">卡号：<span class="separate-num-pre-four" style="color:red;font-size:13px;">*********</span></p> <p style="line-height:20px;">支行：<span style="color:#46A3FF">******</span></p>
+       <div class="beyond24h"></div> </li> 
+      <li class="f-fl lst lst-6">
+              
+                
+
+                        <p style="line-height:20px;"><input class='seller-commit' type="hidden"  value='11'/></p>
+                      
+                              
+                                <p style="line-height:20px; float:left;"><input class="btn-platreturn btn-platreturn-confirm-comment" type="button" data-order-id="780999630" value="返还本金佣金" style="color:white; font-size: 10px;"/></p>
+                              
+                      
+                          
+                            <p style="line-height:20px; float:left;"><input class="btn-freeze" id="freeze_btn_780999630" type="button" data-order-id="780999630" value="冻结并申诉" style="color:white; font-size: 14px;"/></p>
+                          
+                
+              
+             <br>
+             <br>
+              <p style="line-height:20px;">商品总价：￥<span class='money'>11.00</span></p>
+              <p style="line-height:20px;">买手提交：￥<span class='money'>11</span></p>
+              <p style="line-height:20px;">购买单号：<span class='money'>123456</span></p>
+          <!--p style="line-height:30px;">返款金额：<input class="ipt backmoney f-tar" id="backmoney_16183386" value="99" maxlength="7" style="width:50px;" /></p--> <p style="line-height:50px;"></p>
+
+      </li>
+     </ul> 
+    </div>
+    
+   </div> 
+   <style type="text/css">
+.pag {
+  padding: 10px 0px 0px 0px;
+  margin-bottom: 20px;
+}
+.pag ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.pag li {
+  list-style: none;
+  display: inline;
+}
+.pag a {
+  padding: 2px 6px 0px 6px;
+  text-decoration: none;
+  color: #6F6F6F;
+  text-align: center;
+}
+</style>
+
+  <div class="pag f-cb"> 
+   <ul class="pagebar" id="pagebar" data-url="" data-record-total="1" data-record-per-page="10" data-current-page="1" data-page-total="1">
+     共<span class='striking'>1</span>条记录,每页<span class='striking'>10</span>条,当前第<span class='striking'>1</span>页 
+    <li> <a class="first" href="javascript:void(0)"> 首页 </a> </li> 
+    <li> <a class="prev" href="javascript:void(0)"> 上一页 </a> </li> 
+    <li> <a class="next" href="javascript:void(0)"> 下一页 </a> </li> 
+    <li> <a class="last" href="javascript:void(0)"> 末页 </a> </li> 
+    <li> 共<span class='striking'>1</span>页，跳转至 </li> 
+    <li>
+      <select class="select">
+      
+      <option>1</option>
+      
+      </select>
+    </li> 
+   </ul> 
+  </div>
+   
+<style type="text/css">
+.ui-dialog {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    z-index: 1010;
+}
+#addblackdialog {
+    width: 740px;
+    height: 408px;
+    background-color: #f9f7f7;
+    border-radius: 4px;
+    display: none;
+}
+#addblackdialog .dct {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 0.12em;
+    font-size: 16px;
+}
+#addblackdialog .userid {
+    color: #06c1ae;
+}
+#addblackdialog .reason-wrap {
+    margin-left: 72px;
+}
+#addblackdialog .reason {
+    width: 34em;
+    height: 8em;
+    padding: 0.8em;
+    font-size: 15px;
+    color: #737272;
+    border-radius: 4px;
+}
+#addblackdialog .smtopt {
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 26px;
+}
+.btn-bs {
+    width: 136px;
+    height: 40px;
+    border: 0;
+    background: url(/static/image/web/component/bindstore_s.png) center center no-repeat;
+    cursor: pointer;
+    margin-right: 145px;
+}
+.btn-bc {
+    width: 136px;
+    height: 40px;
+    border: 0;
+    background: url(/static/image/web/component/bindstore_c.png) center center no-repeat;
+    cursor: pointer;
+}
+</style>
+<div class="ui-dialog" id="addblackdialog" style="left: 261.5px; top: 74.8px; display: none;"> 
+   <div class="tt">
+    添加黑名单
+   </div> 
+   <div class="dipt-wrap"> 
+    <div class="dct">
+     您是否要将用户 
+     <span class="userid" id='blackid'></span> 添加到黑名单？
+    </div> 
+    <div class="f-cb reason-wrap"> 
+     <div class="f-fl">
+      原因：
+     </div> 
+     <div class="f-fl"> 
+      <textarea class="reason" id='reason' placeholder="最多100字"></textarea> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="smtopt f-cb"> 
+    <input class="sure btn-bs f-fl" id='btn-submit' type="button" value="" /> 
+    <input class="cancel btn-bc f-fl" id='btn-cancel' type="button" value="" /> 
+   </div> 
+  </div>
+<script type="text/javascript">
+require(['jquery','laifu'],function($,laifu){
+  $('#addblackdialog #btn-cancel').bind('click',function(){
+    $('#addblackdialog').hide();
+  });
+  $('#addblackdialog #btn-submit').bind('click',function(){
+    $.post('/rest_web/users/user/lahei/'+laifu.get_user_id(),{
+      buyer_id:$('#addblackdialog #blackid').text(),
+      reason:$('#addblackdialog #reason').val(),
+    },function(res){
+      if(res.code==0){
+        alert('添加成功');
+        $('#addblackdialog').hide();
+      }
+    });
+  });
+  window.addblack=function(blackid){
+    $('#addblackdialog #blackid').text(blackid);
+    $('#addblackdialog').show();
+  }
+});
+</script>
+
+		</div>
+	</div>
+	
+	<footer>
+		<div class="ft-div">
+			<p>浙ICP备16003627号-1</p>
+		</div>
+	</footer>
+	<div class="bg-mask"></div>
+		<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/js/main.js"></script>
+		<script type="text/javascript" src="/static/js/zzsc.js"></script>
+		
+<script type="text/javascript" src="/static/js/component/page_bar.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#btn-search').bind('click',function(){
+    var postdata={};
+    ($('select[name=store_id]').val()>0)&&(postdata.store_id=$('select[name=store_id]').val());
+    ($('input[name=buyerww]').val())&&(postdata.buyer_wangwang=$('input[name=buyerww]').val());
+    ($('select[name=isrefund]').val()>=0)&&(postdata.return_status=$('select[name=isrefund]').val());
+    ($('input[name=taskid]').val())&&(postdata.task_id=$('input[name=taskid]').val());
+    ($('input[name=orderid]').val())&&(postdata.order_id=$('input[name=orderid]').val());
+    ($('input[name=buyeruserid]').val())&&(postdata.buyer_id=$('input[name=buyeruserid]').val());
+    var search='?';
+    for(var i in postdata){
+      search+=i+'='+postdata[i]+'&';
+    }
+    location.search=search;
+  });
+  $('.btn-return').bind('click',function(){
+    var btn=$(this);
+    var oid=btn.data('order-id');
+    var seller_commit=btn.parent().prev().children().val();
+    if (!parseFloat(seller_commit)){
+      alert('请输入正确金额');
+      return;
+    }
+    $.post('/rest_web/tasks/order/returndeliver/'+oid,{'seller_commit':seller_commit},function(res){
+      if(res.code==0){
+        alert('返款成功');
+        btn.hide();
+        btn.parent().prev().children().hide();
+        $('#freeze_btn_'+oid).hide();
+      }else if(res.code==-120){
+      	alert('返款失败,余额不足');
+      }else if(res.code==-135){
+      	alert('返款失败,订单已冻结');
+      }else{
+        alert('返款失败');
+      }
+    });
+  });
+  $('.btn-platreturn-confirm-buy').bind('click',function(){
+    var btn=$(this);
+    var oid=btn.data('order-id');
+    var seller_commit=btn.parent().prev().children().val();
+    if (!parseFloat(seller_commit)){
+      alert('请输入正确金额');
+      return;
+    }
+    $.post('/rest_web/tasks/order/returndeliver/'+oid,{'seller_commit':seller_commit},function(res){
+      if(res.code==0){
+        alert('确认成功');
+        btn.hide();
+        $('#freeze_btn_'+oid).hide();
+      }else if(res.code==-120){
+      	alert('确认失败,余额不足');
+      }else if(res.code==-135){
+      	alert('确认失败,订单已冻结');
+      }else{
+        alert('确认失败');
+      }
+    });
+  });
+
+  $('.btn-platreturn-confirm-comment').bind('click',function(){
+    var btn=$(this);
+    var oid=btn.data('order-id');
+    var seller_commit=btn.parent().prev().children().val();
+    if (!parseFloat(seller_commit)){
+      alert('请输入正确金额');
+      return;
+    }
+    $.post('/rest_web/tasks/order/affirm/'+oid,{'seller_commit':seller_commit},function(res){
+      if(res.code==0){
+        alert('确认成功');
+        btn.hide();
+        $('#freeze_btn_'+oid).hide();
+      }else if(res.code==-120){
+      	alert('确认失败,余额不足');
+      }else if(res.code==-135){
+      	alert('确认失败,订单已冻结');
+      }else{
+        alert('确认失败');
+      }
+    });
+  });
+
+  $('.btn-plat-additional-return-confirm-comment').bind('click',function(){
+    var btn=$(this);
+    var oid=btn.data('order-id');
+
+    $.post('/rest_web/tasks/order/additionalaffirm/'+oid,{},function(res){
+      if(res.code==0){
+        alert('确认成功');
+        btn.hide();
+        $('#freeze_btn_'+oid).hide();
+      }else if(res.code==-120){
+      	alert('确认失败,余额不足');
+      }else if(res.code==-135){
+      	alert('确认失败,订单已冻结');
+      }else{
+        alert('确认失败');
+      }
+    });
+  });
+	$('.btn-freeze').bind('click',function(){
+		var btn=$(this);
+		var oid=btn.data('order-id');
+		location.href	= "/task/order/appeal/"+oid;
+	});
+  $('.addblack').bind('click',function(){
+    addblack($(this).data('buyer-id'));
+  });
+});
+</script>
+
+	</body>
+</html>

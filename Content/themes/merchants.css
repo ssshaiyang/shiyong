@@ -1,0 +1,34 @@
+﻿body {margin-left: auto; margin-right: auto;}
+.merch_top{ width: 965px; height: 161px;margin: 30px auto 0 auto}
+.merch_top h2{ height: 24px; background-image: url(/Content/images/lian_dh.png); background-position: 0 4px;
+    background-repeat: no-repeat; font-size: 18px;color: #3c3d45}
+.merch_top_a{ height: 1px; background-color: #f2655b;margin-top: 5px}
+.merch_top p{ font-size: 14px; color: #333333; margin-bottom: 10px;  margin-left: 30px;}
+.merch_top p a{ display: inline-block; vertical-align: middle;}
+.merch_center{width: 965px; margin: 20px auto 0 auto}
+.merch_center h2{height: 24px; background-image: url(/Content/images/biaojia_dbge.png); background-position: 0 4px;
+    background-repeat: no-repeat; font-size: 18px;color: #3c3d45}
+.head_a{  font-size: 14px;width: 965px;margin: 0 auto; color: #666666; border-left: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0}
+.head_b{  color: #fff;background: #f25f55;}
+.head_a td{ padding: 13px;}
+.merch_bottom{width: 965px; margin: 40px auto 0 auto}
+.merch_bottom h2{height: 24px; background-image: url(/Content/images/ggao_ds.png); background-position: 0 4px;
+    background-repeat: no-repeat; font-size: 18px;color: #3c3d45}
+.merch_bottom_a{ height: 18px;background-image: url(/Content/images/xiant_beoj.jpg)}
+.merch_bottom_biaot{ width: 110px; height: 18px; background-color: #ffffff; color: #666666; font-size: 18px;line-height: 17px;}
+.merch_bottom_biaohong{ width: 3px; height: 16px; background-color: #f66565; float: left;  margin-right: 8px;}
+.merch_bottom_b{ width: 980px; height: 687px;margin: 20px auto 0 auto}
+.merch_bottom_b img{float: left}
+.merch_bottom_b p{ font-size: 14px;color: #a3a3a3}
+.merch_bottom_c{ width: 265px; height: 642px; float: left;margin-left: 25px;}
+.bottom_b_a{ height: 390px;}
+.bottom_c_a{height: 390px;}
+.bottom_b_b{ height: 75px;}
+.bottom_c_b{ height: 75px;}
+.merch_bottom_bo{width: 965px;margin: 20px auto 0 auto}
+.merch_bottom_bo h2{height: 24px; background-image: url(/Content/images/pingp_gga.png); background-position: 0 4px;
+    background-repeat: no-repeat; font-size: 18px;color: #3c3d45}
+.merch_bottom_ba{ width: 965px; height: 80px; margin-bottom: 15px;}
+.merch_bottom_ba a{ display: block; width: 152px; height: 80px; float: left; color: #666666;text-align: center}
+.merch_bottom_ba a img{ width: 152px; height: 48px;}

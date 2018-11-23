@@ -1,0 +1,278 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <title>修改绑定手机号</title>
+    
+    <meta name="keywords" content="试客网,试客联盟,试客之家,试客联盟网,试客联盟中心,免费试用,试用网,免费试用网,免费试用平台,试客,飞猪试用,试客平台,飞猪试用" />
+    <meta name="description" content="欢迎来免费飞猪试用试用网:飞猪试用—是全国领先的免费试用网和试客网,深得试客信赖的免费试用中心网站,是免费试用网和试客网站的首选,飞猪试用免费试用网为试客提供最优质和实用的优秀免费试用商品." />
+    <link rel="stylesheet" type="text/css" href="./Content/themes/base.css?70752855b2b4becb890ee28904769cae"/>
+<link rel="stylesheet" type="text/css" href="./Content/themes/index.css?feb7fa97c3a9e7c848d170ff2bc1480c"/>
+<link rel="stylesheet" type="text/css" href="./Content/pagination/css/pagination.css?4983b5c10bde10c615b150678bdca342"/>
+<link rel="stylesheet" type="text/css" href="./Content/fancybox/jquery.fancybox.css?cd3adc6dae37113b897d5c08f529c611"/>
+<link rel="stylesheet" type="text/css" href="./Content/themes/credit.css?e613b01c757ca8560e322db13cfcd94a"/>
+<link rel="stylesheet" type="text/css" href="./Content/font/iconfont.css?b0d1dc6721ac2a1f9b75ab0b55683aa5"/>
+
+    <script type="text/javascript" src="./Scripts/jquery-1.8.3.js?3abcbdff1ad084b023234ea421c4042e"></script>
+<script type="text/javascript" src="./Scripts/jquery.pagination.js?15b292e84183853f7571abd19f950921"></script>
+<script type="text/javascript" src="./Scripts/jquery.fancybox.pack.js?402cc442860bd19fc48250d6b786b9d9"></script>
+<script type="text/javascript" src="./PageScript/Common.js?36568842f8c551531d9920f22039b2c2"></script>
+<script type="text/javascript" src="./Scripts/credit.js?5ee8324cbb0bee7d17c2f221650050fc"></script>
+<script type="text/javascript" src="./Scripts/jquery.form.js?bebb42d88be1e4d7a69944748522a581"></script>
+
+    
+    
+    <script>
+        $(document).ready(function(){
+           getBisdata();
+           getactivityNum();
+           getVipRankIndex();
+           getPayCode();
+           toVip();
+            var username = localStorage.getItem("username");
+            console.log(username);
+            $(".username").text(username)
+        });
+    </script>
+</head>
+<body>
+    
+<link rel="stylesheet" type="text/css" href="./Content/Security/css/base.css?4b2463251643b8c2027d477e25d79c61"/>
+<link rel="stylesheet" type="text/css" href="./Content/Security/css/zhanghuanquan.css?7f8b5731bdb8a7a80174dd564908460f"/>
+
+<div class="content">
+
+<div id="lingla-hd" style="background: #F2F2F2; width: 100%; height: 35px; border-bottom: 1px solid #e2e2e2;">
+    <div class="header_top" style="margin-left: auto; margin-right: auto;">
+            <div class="header_leftt">
+                    <div class="top_pm">
+                        <div class="op-menu">
+                            <a href="./index.html" target="_blank" class="top-nickname">无视2333<i class="top-down"></i></a>
+                            <div class="top-toggle" style="left: 0;">
+                               <!--  <a href="/JPinShopIssueBis" target="_blank"><i style="background: url(./Content/images/bis_bg_head_icon2.png); width: 15px; height: 15px; margin-top: -2px;"></i>活动管理</a>
+                                <a href="/ShopissueOfTaskBis/TaskManageList" target="_blank"><i style="background: url(./Content/images/bis_bg_head_icon3.png); width: 15px; height: 15px; margin-top: -5px;"></i>有奖竞猜</a> -->
+                                <a style="border: none;" onclick="logout()">
+                                    <i style="background: url(//www.meilipa.com./Content/images/nav5.png); width: 15px; height: 15px; margin-top: -2px;">
+                                    </i>退出
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <!-- <span class="color_fg" style="float:left;">|</span> -->
+                <!--top_pm-->
+               <!--  <div class="top_ml">
+                    <dl>
+                        <dd>
+                            <a class="xin_po" href="/bisremind" target="_blank">提醒(<strong>0</strong>)</a>
+                        </dd>
+                    </dl>
+                </div>
+                <span class="color_fg" style="float: left">|</span> -->
+                <!--top_ml-->
+               <!--  <div class="top_left">
+                    <a href="/Regist/about" target="_blank" class="on-service">在线客服</a>
+                </div> -->
+                <!--top_ml-->
+                <!-- <div class="shou_btn">
+                    <em>&nbsp;&nbsp;收藏</em>
+                    <div class="shou_toggle"><span>Ctrl</span>或<span>Cmd+D</span>收藏本站</div>
+                </div> -->
+            </div>
+        <!--header_left-->
+        <!-- <div class="header_right">
+            <a href="/" title="试客联盟官网">飞猪试用首页</a><span class="color_fg">|</span>
+            <a href="/other/appdownload" target="_blank"><i class="top-icon-ph"></i>手机客户端</a><span class="color_fg">|</span>
+            <a href="/invitation/NewInvitation" target="_blank">分享赚钱<span style="color: #ed594f; font-weight: bold;">月入4000</span></a><span class="color_fg">|</span>
+                <a href="javascript:" onclick="login()">做问卷送金币</a>
+                <span class="color_fg">|</span>
+            <a href="/help/index" target="_blank">帮助中心</a><span class="color_fg">|</span>
+            <span class="wzdh">
+                <a href="/help/index" target="_blank" class="sbdjx" id="naviatetext">网站导航</a>
+                <div class="oneto" id="naviate">
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="//jing.meilipa.com">免费试用</a>
+                        </p>
+                        <p>
+                            <a href="//jing.meilipa.com" target="_blank">试用专区</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="/invitation/NewInvitation">站内活动</a>
+                        </p>
+                        <p>
+                            <a href="/invitation/NewInvitation" target="_blank">邀请有奖</a>&nbsp;&nbsp;<a href="/lottery" target="_blank">金币抽奖</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p style="padding-top: 8px;">
+                            <a href="/help/MerchantApply" target="_blank">商家报名</a>&nbsp;&nbsp;
+                            <a href="/Feedback" target="_blank">意见反馈</a>
+                        </p>
+                    </div>
+                </div>
+            </span>
+        </div> -->
+    </div>
+</div>
+
+
+<!--head_top-->
+<div class="head_mian">
+    <div class="head_mit">
+        <div class="logo">
+            <a href="./index.html" target="_self">
+                <img style="height: 67px" src="./Content/images/user_logoone.png"style="margin-top: -3px;">
+                <span>账号安全</span>
+            </a>
+        </div>
+        <!--logo-->
+        <div class="logo_right" style="float: left; margin-left: 160px;">
+            <a href="./index.html" target="_parent">我的首页</a>
+        </div>
+        <!--logo_right-->
+    </div>
+    <!--head_mit-->
+</div>
+    
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/zhanghuanquan.css" rel="stylesheet" type="text/css">
+<link href="./Content/Security/css/base.css" rel="stylesheet" type="text/css">
+<link href="./Content/Security/css/zhanghuanquan.css" rel="stylesheet" type="text/css">
+<script src="../.../Scripts/jquery-1.8.3.js" type="text/javascript"> </script>
+<script type="text/javascript">
+    $(function () {
+        setInterval("ReturnUrl()", 3000);
+    })
+</script>
+<div class="contair">
+    <div class="main" style="width: 1070px;">
+        <div class="acco_topt">
+            <strong>绑定手机</strong>
+        </div>
+        <!--acco_topt-->
+        <div class="clearfix acco_center">
+            <div style="width:820px;height:26px;margin:60px auto 50px auto;border-bottom:1px solid #ddd;">
+                <span style="float: left;margin-left: 165px;display: block;width: 130px;height: 25px;color: #666;font-size: 14px;text-align: center">
+                    <i style="width: 16px;height: 16px;background: #ccc;border-radius: 16px;color: #fff;font-size: 12px;text-align: center;line-height: 16px;">1</i>
+                    验证手机
+                </span>
+                <span style="float: left; margin-left: 50px; display: block; width: 130px; height: 25px; color: #666; font-size: 14px; text-align: center">
+                    <i style="width: 16px;height: 16px;background: #ccc;border-radius: 16px;color: #fff;font-size: 12px;text-align: center;line-height: 16px;">2</i>
+                    填写新号码
+                </span>
+                <span style="float: left; margin-left: 50px; display: block; width: 130px; height: 25px; border-bottom: 2px solid #f25f55; color: #f25f55; font-size: 14px; text-align: center">
+                    <i style="width: 16px;height: 16px;background: #f25f55;border-radius: 16px;color: #fff;font-size: 12px;text-align: center;line-height: 16px;">3</i>
+                    完成
+                </span>
+            </div>
+            <div class="axd_cet">              
+                <!--acct_pxc-->
+                <div class="sj_bdc">
+                    <img src="./Content/Security/images/tel_right.png"/><br/>
+                    <strong style="color: #44a100;">您的手机号码更换成功</strong>
+                </div>
+                <!--sj_bdc-->
+                <div class="sj_bdct">
+                        <span>您现在可以：<a href="./login.html" target="_parent">到首页</a>|<a href="./index.html" target="_self">到我的首页</a></span>
+                </div>
+                <!--sj_bdct-->
+            </div>
+            <!--axd_cet-->
+        </div>
+        <!--acco_center-->
+    </div>
+    <!--main-->
+</div>
+    <!--contair-->
+
+<div class="footer">
+    <div class="footer_main">
+        <div class="footer_left">
+            <div class="footer_xy" style="padding-top: 58px;">
+                <a href="//www.meilipa.com/Regist/about" target="_blank">联系我们</a><span>|</span>
+                <a href="//www.meilipa.com/Help/AdvertisingCost" target="_blank">商务合作</a><span>|</span>
+                <a href="//www.meilipa.com/Regist/UserAgreement" target="_blank">用户协议</a><span>|</span>
+                <a href="//www.meilipa.com/help/index" target="_blank">帮助中心</a>
+            </div>
+            <div class="footer_fl">
+                <span>Copyright © 2017 meili.com</span> 浙ICP备17042206号-1&nbsp;&nbsp;浙公网安备33010302003013号&nbsp;&nbsp;杭州美名科技有限公司
+            </div>
+            <div>
+                <a class="f_t" rel="nofollow" title="飞猪试用官网" target="_blank"></a>
+                
+                <a class="f_f" rel="nofollow" href="https://v.pinpaibao.com.cn/cert/site/?site=www.meilipa.com&at=business" title="飞猪试用官网" target="_blank"></a>
+                <a class="f_g" rel="nofollow" href="https://v.pinpaibao.com.cn/cert/site/?site=www.meilipa.com&at=business" title="飞猪试用官网" target="_blank"></a>
+            </div>
+        </div>
+        <div class="footer_right" style="float: right; margin-left: 80px;">
+            <div class="footer-sp1">bussiness@feizhugou.com</div>
+            
+        </div>
+        <div style="float: left; margin-top: 52px;margin-left: 80px;">
+            <p style="width: 100px;text-align: center">关注飞猪试用公众号</p>
+            <img style="width: 100px; height: 100px;" src="/shangjia_code.jpg" />
+        </div>      
+    </div>
+</div>
+    <!--bottom-->
+</div>
+    <script src="./Scripts/jquery.form.js" type="text/javascript"></script>
+<div class="tchs" id="logindialog" style="display: none;">
+    <div id="dialog_log_qiandao" class="dialog-wrapper dialog_log_qiandao" style="width: 416px;">
+        <span class="red">
+            登录/注册
+            <a href="javascript:void(0)" title="关闭窗口" onclick="$('#logindialog').hide()">
+                <span class="close"></span>
+            </a>
+        </span>
+        <div class="diginfo" style="border: none">
+            <div class="log-cont">
+                <ul class="clickTitle">
+                    <li onclick="tab(this,0)" class="active"><i class="icon-1"></i> 用户登录</li>
+                    <li onclick="window.open('//www.meilipa.com/Regist/UserRegister')"><i class="icon-2"></i> 用户注册</li>
+                </ul>
+                <div class="tabcont">
+                    <div class="tab">
+                        <form style=" width: 288px; margin: 0 auto;" method="POST">
+                            <div class="mb-20 msg-input">
+                                <input type="text" id="username" placeholder="请输入邮箱/手机号/用户名" title="邮箱/手机号/用户名" onkeydown=keyLogin(event)>
+                                <input type="password" class="pwd" id="password" placeholder="请输入密码" autocomplete="off" disableautocomplete="" onkeydown=keyLogin(event)>
+                            </div>
+                            <div class="btn">
+                                <input id="submitbtn" type="button" class="btn-input" value="立即登录" title="登 录" onclick="loginSubmit(1, location.href)">
+                            </div>
+                            <div class="clearfix msg-tip" style="height: 52px;">
+                                <div class="msg-tip-lf">
+                                    <p id="error" class="err-txt" style="display:none;">请输入密码</p>
+                                    <p class="tip-txt" style="margin-bottom:0;">使用其他账号登录</p>
+                                </div>
+                                <a class="msg-tip-rt" href="//www.meilipa.com/Security/FindPassword?usertype=1">
+                                    <p>忘记密码？</p>
+                                </a>
+                                <div class="jiao"></div>
+                            </div>
+                        </form>
+                        <div class="qq-login">
+                            <a href="javascript:" onclick="WxLogin()">
+                                <div class="qq-icon wx-icon"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    <a class="totop" id="back-to-top" style="display: none" />
+</body>
+</html>
+<div style="display: none">
+     
+</div>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <title>飞猪试用业务招商</title>
+    
+    <meta name="keywords" content="双十一报名入口,天猫双11,双11,淘宝双11活动报名,试客联盟商家报名,试用报名,飞猪试用商家入口" />
+    <meta name="description" content="双11活动报名欢迎来免费飞猪试用试用网:飞猪试用网—是全国领先的免费试用网双十一报名入口,深得试客信 赖的双11活动报名网站,是免费试用网和试客网站的首选,飞猪试用免费试用网为试客提供最天猫双11，淘 宝双11活动报名." />
+    <link rel="stylesheet" type="text/css" href="/Content/themes/base.css?6b3328d694761ba5cdc1e95a673f54ce"/>
+<link rel="stylesheet" type="text/css" href="/Content/themes/index.css?a664e44f2465b840b9d4f3a068da381d"/>
+<link rel="stylesheet" type="text/css" href="/Content/pagination/css/pagination.css?4983b5c10bde10c615b150678bdca342"/>
+<link rel="stylesheet" type="text/css" href="/Content/fancybox/jquery.fancybox.css?cd3adc6dae37113b897d5c08f529c611"/>
+<link rel="stylesheet" type="text/css" href="/Content/themes/credit.css?e613b01c757ca8560e322db13cfcd94a"/>
+
+    <script type="text/javascript" src="/Scripts/jquery-1.8.3.js?3abcbdff1ad084b023234ea421c4042e"></script>
+<script type="text/javascript" src="/Scripts/jquery.pagination.js?93ca065f67595be1d02e5a6df5e31ab1"></script>
+<script type="text/javascript" src="/Scripts/jquery.fancybox.pack.js?402cc442860bd19fc48250d6b786b9d9"></script>
+<script type="text/javascript" src="/PageScript/Common.js?ae1a1c3195aaf4575ee99f4acfe97208"></script>
+<script type="text/javascript" src="/Scripts/credit.js?5ee8324cbb0bee7d17c2f221650050fc"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="/Content/font/iconfont.css" />
+    <script>
+        var userId = 0;
+        var userOrBisId=0;
+    </script>
+</head>
+<body>
+    
+<script src="/Scripts/jquery-1.8.3.js" type="text/javascript"> </script>
+<script src="/Scripts/Validform/Validform_v5.3.2.js"></script>
+<link rel="stylesheet" type="text/css" href="/Content/help/css/help.css?c901263ce16b93017bdaeac12ab04363"/>
+<link rel="stylesheet" type="text/css" href="/Content/themes/help.css?afab682fd205e7964c9153f8ca20a0a4"/>
+<link rel="stylesheet" type="text/css" href="/Content/themes/zs_index.css?3d43ef2ec056482a98484e9510a846a1"/>
+<link rel="stylesheet" type="text/css" href="/Content/themes/signup.css?c0dfebc21e0cca9eb73d23ef9054a829"/>
+
+<link rel="stylesheet" type="text/css" href="/Content/themes/zhaoshang4.css">
+<script type="text/javascript"> 
+    function initLinB2c() {
+        if (window.location.host != "www.nouqu.com")
+            return;
+        var from = getUrlParam("fromothersite");
+        from = from == null ? "" : from;
+        $('a').each(function () {
+            var link = $(this).attr('href');
+            if (link != null) {
+                if (link.indexOf('javascript') >= 0) {
+                    link = "http://www.meilipa.com?fromothersite=" + from;
+                } else {
+                    link = link.indexOf('?') >= 0 ? link + "&fromothersite=" + from : link + "?fromothersite=" + from;
+                }
+                $(this).attr('href', link);
+                $(this).attr('target', '_self');
+            }
+        });
+    }
+
+    $(function () {
+        initLinB2c();
+
+        //顶部导航
+        var offset = $('.zs_nav').offset();
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            if (offset.top < scrollTop) {
+                $('.zs_nav').addClass('fixed-box');
+                $(".zs_banner").css("margin-top", "81px");
+            } else {
+                $('.zs_nav').removeClass('fixed-box');
+                $(".zs_banner").css("margin-top", "0");
+            }
+        });
+
+        $(".zs_menu").click(function () {
+            $(this).siblings().removeClass("zs_menu_choosed");
+            $(this).addClass("zs_menu_choosed");
+            var id = $(this).data("num");
+            window.scrollTo(0, id);
+        });
+
+        $("#Instantly").click(function () {
+            var u = $("#sk_store_url").val();
+            var n = $("#sk_name").val();
+            var m = $("#sk_mobile").val();
+            var q = $("#sk_qq").val();
+            var w = $("#sk_alipay").val();
+            //if (u == "") {
+            //    myAlert("请输入您的店铺链接地址！");
+            //}
+            if (n == "") {
+                myAlert("请输入您的姓名！");
+            }
+            else if (m == "" || !isPhone(m)) {
+                myAlert("请填写正确的手机！");
+            }
+            else if (q == "") {
+                myAlert("请输入您的QQ号码！");
+            } else {
+                $.post("/Help/MerchantApplySave", { url: u, name: n, mobile: m, qq: q, alipay: w }, function (data) {
+                    if (data.Result) {
+                        myDialog({
+                            msg: data.Message,
+                            cancelText: '去注册',
+                            cancel: function () { window.open('http://www.meilipa.com/regist/bisregister'); }
+                        });
+                    } else {
+                        myAlert(data.Message);
+                    }
+                });
+            }
+        });
+    });
+    function isPhone(aPhone) {
+        var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
+        var isMob = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+        if (!isPhone.test(aPhone) && !isMob.test(aPhone)) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    
+</script>
+
+<div id="lingla-hd" style="background: #F2F2F2; width: 100%; height: 35px; border-bottom: 1px solid #e2e2e2;">
+    <div class="header_top" style="margin-left: auto; margin-right: auto;">
+            <div class="header_leftt">
+                <div class="top_mb">
+                    <a href="javascript:" onclick="qqLogin()" style="color: #ff464e">QQ登录</a>
+                    <span class="color_fg">|</span>
+                    <a href="javascript:" onclick="WxLogin()" style="color: #ff464e">微信登录</a>
+                    <span class="color_fg">|</span>
+                    <a href="javascript:" onclick="login()" style="color: #ff464e;">用户登录</a>
+                    <span class="color_fg">|</span>
+                    <a href="/login?type=0" style="color:#888">商家登录</a>
+                    <span class="color_fg">|</span>
+                    <a href="/regist" style="color: #ff464e;">免费注册</a>
+                </div>
+                <div class="top_left">
+                    <a href="/Regist/about" target="_blank" class="on-service">在线客服</a>
+                </div>
+                <div class="shou_btn">
+                    <em>&nbsp;&nbsp;收藏</em>
+                    <div class="shou_toggle"><span>Ctrl</span>或<span>Cmd+D</span>收藏本站</div>
+                </div>
+            </div>
+        <!--header_left-->
+        <div class="header_right">
+            <a href="/" title="试客联盟官网">飞猪试用首页</a><span class="color_fg">|</span>
+            <a href="/other/appdownload" target="_blank"><i class="top-icon-ph"></i>手机客户端</a><span class="color_fg">|</span>
+            <a href="/invitation/NewInvitation" target="_blank">分享赚钱<span style="color: #ed594f; font-weight: bold;">月入4000</span></a><span class="color_fg">|</span>
+                <a href="javascript:" onclick="login()">做问卷送金币</a>
+                <span class="color_fg">|</span>
+            <a href="/help/index" target="_blank">帮助中心</a><span class="color_fg">|</span>
+            <span class="wzdh">
+                <a href="/help/index" target="_blank" class="sbdjx" id="naviatetext">网站导航</a>
+                <div class="oneto" id="naviate">
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="http://jing.meilipa.com">免费试用</a>
+                        </p>
+                        <p>
+                            <a href="http://jing.meilipa.com" target="_blank">试用专区</a>&nbsp;&nbsp;<a href="http://report.meilipa.com" target="_blank">试用报告</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p class="tcbt">
+                            <a href="/invitation/NewInvitation">站内活动</a>
+                        </p>
+                        <p>
+                            <a href="/invitation/NewInvitation" target="_blank">邀请有奖</a>&nbsp;&nbsp;<a href="/lottery" target="_blank">金币抽奖</a>
+                        </p>
+                    </div>
+                    <div class="onetoa">
+                        <p style="padding-top: 8px;">
+                            <a href="/help/MerchantApply" target="_blank">商家报名</a>&nbsp;&nbsp;
+                            <a href="/Feedback" target="_blank">意见反馈</a>
+                        </p>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+<div class="zs_left animated">
+    <a href="/regist/bisregister" class="zs_left_menu zs_left4" target="_blank"></a>
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=3003716676&site=qq&menu=yes" class="zs_left_menu zs_left2" target="_blank"></a>
+
+    <a href="#" class="zs_left_menu zs_left3"></a>
+</div>
+<div class="zs_nav">
+    <div class="zs_center">
+        <a href="/" style="float: left; margin-top: 18px;" target="_blank"><img src="/Content/images/zs_logo.jpg"/></a>
+             <a href="/regist/bisregister" target="_blank" class="zs_nav_register" data-num="500">商家注册</a>
+        <a href="javascript:" class="zs_menu" data-num="4150">入驻流程</a>
+        <a href="javascript:" class="zs_menu" data-num="3300">成功案例</a>
+        <a href="javascript:" class="zs_menu" data-num="2600">平台对比</a>
+        <a href="javascript:" class="zs_menu" data-num="1850">运营难题</a>
+        <a href="javascript:" class="zs_menu" data-num="1200">产品服务</a>
+        <a href="javascript:" class="zs_menu" data-num="500">飞猪试用优势</a>
+        <a href="#" class="zs_menu zs_menu_choosed" data-num="0">首页</a>
+    </div>
+</div>
+<div class="zs_banner" id="zs_banner">
+    <div class="zs_center">
+        <a href="/regist/bisregister" target="_blank">注册商家账号</a>
+        <a href="/regist/bisregister" target="_blank">马上咨询</a>
+    </div>
+</div>
+
+<div class="zsimg2"></div>
+<div class="zsimg3"></div>
+<div class="zsimg4">
+    <div style="padding-top: 1048px; text-align: center;">
+            <a href="/regist/bisregister" style="display: inline-block; width: 470px; height: 73px;" target="_blank" class="com-btn">体验飞猪试用数据参谋</a>
+    </div>
+</div>
+<div class="zsimg5"></div>
+<div class="zsimg6"></div>
+<div class="zsimg7"></div>
+<div class="zsimg8"></div>
+
+<div style="background: url(/Content/images/zs/zs6.png); padding-bottom: 100px;">
+    <div class="zs_center">
+        <h2 style="color: #fff; text-align: center;padding: 77px 0  35px 0; font-size: 38px;">淘宝小二 帮你免费诊断</h2>
+        <p style="color: #fff;text-align: center;padding-bottom: 50px;font-size: 18px">填写信息后，会有相关类目资深运营，帮你诊断建议</p>
+        <div style="margin-left: 95px">
+            <div class="zs_bis_msg" style="width: 908px;">
+                    <span>您的店铺链接：</span>
+                    <input type="text" style="width: 750px;" id="sk_store_url">
+                </div>
+            <div class="clearfix">
+                <div class="zs_bis_msg myfl">
+                    <span><em>* </em>联系人姓名：</span>
+                    <input id="sk_name" type="text" datatype="*" />
+                </div>
+                <div class="zs_bis_msg myfl">
+                    <span><em>* </em>联系人手机：</span>
+                    <input id="sk_mobile" type="text" datatype="m" />
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="zs_bis_msg myfl">
+                    <span><em>* </em>联系人QQ：</span>
+                    <input id="sk_qq" type="text" datatype="*" />
+                </div>
+                <div class="zs_bis_msg myfl">
+                    <span>联系人旺旺：</span>
+                    <input id="sk_alipay" type="text" />
+                </div>
+            </div>
+            <a href="javascript:" style="border-radius:30px; margin-top:20px;color: #fff;" id="Instantly" class="zs_bis_msg_btn">立即提交</a>
+        </div>
+    </div>
+</div>
+
+<script src="/PageScript/sendcaptcha.js"></script>
+<script>
+    $(function () {
+        bindCaptcha('#sendbtn', "#phone");
+        $("#quick_regist").click(function () {
+            if ($("#quick_regist").text() == "快速注册中...") {
+                return;
+            }
+            var phone = $("#phone").val();
+            var pwd = $("#pwd").val();
+            var repeatPwd = $("#repeatPwd").val();
+            var QQ = $("#QQ").val();
+            var vCode = $("#v_code").val();
+            if (!isPhone(phone)) {
+                myAlert("请填写正确的手机！");
+                return;
+            }
+            if (!(pwd && pwd.trim())) {
+                myAlert("请输入密码！");
+                return;
+            }
+            if (pwd.length < 6 || pwd.length > 16) {
+                myAlert("密码由6-16位字母、数字和下划线组成，区分大小写！");
+                return;
+            }
+            if (repeatPwd != pwd) {
+                myAlert("密码不一致！");
+                return;
+            }
+            if (!isQQ(QQ)) {
+                myAlert("请输入正确的QQ！");
+                return;
+            }
+            if (!(vCode && vCode.trim())) {
+                myAlert("请输入验证码！");
+                return;
+            }
+            $("#quick_regist").text("快速注册中...");
+            $.post("/regist/BisRegisterSubmit", { sk_mobile: phone, sk_password: pwd, repassword: repeatPwd, sk_qq: QQ, code: vCode, sk_name: "p_" + phone }, function (data) {
+                if (data.Result) {
+                    location.href = "/bisindex";
+                } else {
+                    myAlert(data.Message);
+                    $("#quick_regist").text("立即注册");
+                }
+               
+            })
+        });
+    });
+ 
+    function isPhone(aPhone) {
+        var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
+        var isMob = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+        if (!isPhone.test(aPhone) && !isMob.test(aPhone)) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    function isQQ(qq) {
+        var isQQ = /^[1-9][0-9]{3,12}$/;
+        if (!isQQ.test(qq)) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>
+<div class="quick-register">
+    <div>
+        <img src="/Content/images/help_superman.png" class="quick-superman">
+        <!--<div class="quick-text">
+                <p><span class="yellow">7天</span>关键词到手淘首页</p>
+                <p><span class="yellow">3天</span>猜你喜欢过万</p>
+            </div>
+            -->
+        <img src="/Content/images/help_text.png" class="quick-text" style="margin-top:60px;">
+        <div class="input-text-container">
+            <div class="input-text"><span onclick="$('#phone').focus()"><em>*</em>手机号：</span><input id="phone" type="text"><span id="sendbtn" class="submit">发送验证码</span></div>
+            <div class="input-text"><span onclick="$('#pwd').focus()"><em>*</em>用户密码：</span><input id="pwd" type="password"></div>
+            <div class="input-text"><span onclick="$('#v_code').focus()"><em>*</em>验证码：</span><input id="v_code" type="text"></div>
+            <div class="input-text"><span onclick="$('#repeatPwd').focus()"><em>*</em>确认密码：</span><input id="repeatPwd" type="password"></div>
+            <div class="input-text"><span onclick="$('#QQ').focus()"><em>*</em>QQ：</span><input id="QQ" type="text"></div>
+            <div class="input-text color-btn" id="quick_regist">立即注册</div>
+        </div>
+        <img class="quick-register-cancel" src="/Content/images/guanbaniu.png" onclick="$('.quick-register').hide()">
+    </div>
+</div>
+
+<style>
+    .quick-register {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        background: rgba(56,53,58,0.85);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 100000000;
+    }
+
+        .quick-register > div {
+            width: 1265px;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .quick-register img.quick-register-cancel {
+            position: absolute;
+            right: -43px;
+            top: 17px;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+        }
+
+        .quick-register .quick-superman {
+            width: 271px;
+            margin-top: -78px;
+            vertical-align: middle;
+            display: block;
+            float: left;
+        }
+
+        .quick-register .quick-text {
+            margin-top: 48px;
+            width: 437px;
+            height: 104px;
+            display: block;
+            float: left;
+            font-size: 42px;
+            line-height: 62px;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-left: -40px;
+        }
+
+            .quick-register .quick-text > p > span.yellow {
+                color: #ffc41d;
+            }
+
+    .input-text-container {
+        float: right;
+        width: 588px;
+        height: 150px;
+        margin-top: 28px;
+    }
+
+    .input-text {
+        width: 274px;
+        height: 38px;
+        background: #fff;
+        border: 1px solid #d4d4d4;
+        margin: 5px 9px;
+        float: left;
+        line-height: 38px;
+        position: relative;
+    }
+
+        .input-text > span {
+            color: #b4b4b4;
+            font-size: 16px;
+            line-height: 38px;
+        }
+
+            .input-text > span > em {
+                color: #f25f55;
+                margin-left: 15px;
+                margin-right: 4px;
+                vertical-align: middle;
+            }
+
+        .input-text > input {
+            width: 165px;
+            color: #666;
+            height: 30px;
+            border: none;
+            outline: none;
+        }
+
+        .input-text.color-btn {
+            background: #ffc41d;
+            color: #ff3b2e;
+            text-align: center;
+            border: 1px solid #ffc41d;
+            font-size: 16px;
+        }
+
+        .input-text #sendbtn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+            background-color: #DBDBDB;
+            color: #666;
+            height: 38px;
+            font-size: 12px;
+            margin: 0;
+        }
+</style>
+
+
+<div class="main_bo">
+    <div class="main_bo1">
+        <div class="xiabdb">
+          
+            <!--help_center-->
+            <div class="link">
+                <p>
+                    友情链接
+                </p>
+                <div class="link_kl">
+                        <a href="http://www.meilipa.com" target="_blank" title="试用">试用</a>
+                        <a href="http://www.meilipa.com" target="_blank" title="免费试用">免费试用</a>
+                </div>
+                <!--link_kl-->
+            </div>
+            <!--link-->
+        </div>
+    </div>
+</div>
+<!--main_bo-->
+
+<div class="footer">
+    <div class="footer_main">
+        <div class="footer_left">
+            <div class="footer_xy" style="padding-top: 58px;">
+                <a href="###" target="_blank">联系我们</a><span>|</span>
+                <a href="###" target="_blank">商务合作</a><span>|</span>
+                <a href="###" target="_blank">用户协议</a><span>|</span>
+                <a href="###" target="_blank">帮助中心</a>
+            </div>
+            <div class="footer_fl">
+                <span>Copyright © 2017 meili.com</span> 浙ICP备17042206号-1&nbsp;&nbsp;浙公网安备33010302003013号&nbsp;&nbsp;杭州美名科技有限公司
+            </div>
+            <div>
+                <a class="f_t" rel="nofollow" title="试客联盟官网" target="_blank"></a>
+                
+                <a class="f_f"  rel="nofollow" title="试客联盟官网" target="_blank"></a>
+                <a class="f_g" rel="nofollow" title="试客联盟官网" target="_blank"></a>
+            </div>
+        </div>
+        <div class="footer_right" style="float: right; margin-left: 80px;">
+            <div class="footer-sp1">bussiness@feizhugou.com</div>
+            
+        </div>
+        <div style="float: left; margin-top: 52px;margin-left: 80px;">
+            <p style="width: 100px;text-align: center">关注飞猪试用公众号</p>
+            <img style="width: 100px; height: 100px;" src="../shangjia_code.png" />
+        </div>      
+    </div>
+</div>
+    <link href="/Scripts/Validform/style.css" rel="stylesheet" />
+<script src="http://www.meilipa.com/Scripts/Validform/Validform_v5.3.2.js"></script>
+<script src="/Scripts/jquery.form.js" type="text/javascript"></script>
+<script>
+    $(function () {
+        initUserRegist();
+    });
+</script>
+<style>
+    .msg-tip-lf .tip-txt {
+        margin-bottom: 0;
+    }
+    .Validform_right,.Validform_wrong {
+        line-height: 20px;
+    }
+</style>
+<div class="tchs" id="logindialog" style="display: none;">
+    <div id="dialog_log_qiandao" class="dialog-wrapper dialog_log_qiandao" style="width: 416px;">
+        <span class="red">
+            登录/注册
+            <a href="javascript:void(0)" title="关闭窗口" onclick="$('#logindialog').hide()">
+                <span class="close"></span>
+            </a>
+        </span>
+        <div class="diginfo" style="border: none">
+            <div class="log-cont">
+                <ul class="clickTitle">
+                    <li onclick="tab(this,0)" class="active"><i class="icon-1"></i> 用户登录</li>
+                    <li onclick="window.open('http://www.meilipa.com/Regist/UserRegister')"><i class="icon-2"></i> 用户注册</li>
+                </ul>
+                <div class="tabcont">
+                    <div class="tab">
+                        <form style=" width: 288px; margin: 0 auto;" method="POST">
+                            <div class="mb-20 msg-input">
+                                <input type="text" id="username" placeholder="请输入邮箱/手机号/用户名" title="邮箱/手机号/用户名" onkeydown=keyLogin(event)>
+                                <input type="password" class="pwd" id="password" placeholder="请输入密码" autocomplete="off" disableautocomplete="" onkeydown=keyLogin(event)>
+                            </div>
+                            <div class="btn">
+                                <input id="submitbtn" type="button" class="btn-input" value="立即登录" title="登 录" onclick="loginSubmit(1, location.href)">
+                            </div>
+                            <div class="clearfix msg-tip" style="height: 52px;">
+                                <div class="msg-tip-lf">
+                                    <p id="error" class="err-txt" style="display:none;">请输入密码</p>
+                                    <p class="tip-txt">使用其他账号登录</p>
+                                </div>
+                                <a class="msg-tip-rt" href="http://www.meilipa.com/Security/FindPassword?usertype=1">
+                                    <p>忘记密码？</p>
+                                </a>
+                                <div class="jiao"></div>
+                            </div>
+                        </form>
+                        <div class="qq-login">
+                            <a href="javascript:" onclick="qqLogin()">
+                                <div class="qq-icon"></div>
+                            </a>
+                            <a href="javascript:" onclick="WxLogin()">
+                                <div class="qq-icon wx-icon"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab" style="display: none;padding-bottom: 10px;">
+                        <form id="regform" action="/CommonBase/UserRegisterSubmit" style="width: 288px;margin: 0 auto;" method="POST">
+                            <div class="phoneno msg-input" style="position: relative;margin-bottom: 10px;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input id="uname" type="text" name="sk_name" placeholder="用户名" class=" textfield" datatype="username" ajaxurl="/CommonBase/CheckUserNameExist">
+                            </div>
+                            <div class="phoneno msg-input" style="position: relative;margin-bottom: 10px;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input type="password" name="sk_password" placeholder="密码" class="textfield" datatype="*6-16">
+                            </div>
+                            <div class="phoneno msg-input" style="position: relative;margin-bottom: 10px;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input type="password" class="textfield" placeholder="重复密码" datatype="*6-16" recheck="sk_password">
+                            </div>
+                            <div class="phoneno msg-input" style="position: relative; margin-bottom: 10px;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input id="qq" type="text" name="sk_qq" placeholder="QQ号" datatype="*4-15" class=" textfield">
+                            </div>
+                           
+                            <div class="phoneno" style="position: relative;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 26px;">*</i>
+                                <span class="phone">来源：</span>
+                                <select name="sk_from" datatype="*" class="textfield" style="width: 140px;height: 30px">
+                                    <option value=""></option>
+                                    <option value="百度搜索">百度搜索</option>
+                                    <option value="360搜索">360搜索</option>
+                                    <option value="搜狗搜索">搜狗搜索</option>
+                                    <option value="问答【百度知道、百度文库、百度经验】">问答【百度知道、百度文库、百度经验】</option>
+                                    <option value="朋友介绍">朋友介绍</option>
+                                    <option value="QQ空间、微博、微信等分享">QQ空间、微博、微信等分享</option>
+                                    <option value="其他网站">其他网站</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                                <span>正确填写<i style="color: #f3564d;">送20金币</i></span>
+                            </div>
+                            <div id="isphone" class="phoneno clearfix" style="position: relative; margin: 10px 0 8px 0;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 34px;">*</i><input id="zt-mobile" type="text" name="sk_mobile" class=" textfield" style="width: 150px" datatype="m" ajaxurl="/CommonBase/CheckTelExistUser" placeholder="11位手机号码">
+                                <span id="zt-ispan" style="margin: 0 0 0 0;padding-top: 7px;padding-bottom: 11px;padding-left: 15px;padding-right: 15px " class="submit">发送验证码</span>
+                            </div>
+                             <div class="phoneno clearfix" style="position: relative;margin: 10px 0 8px 0;">
+                                <i style="color: #f3564d;position: absolute;left: -10px;line-height: 26px;">*</i>
+                                <span class="phone" style="line-height: 30px;float: left">填写验证码：</span>
+                                <input type="text" name="code" datatype="*" style="float: left; width: 70px; height: 25px; border: 1px solid #c9caca; margin-right: 10px; line-height: 25px;">
+                            </div>
+                           
+                            <div class="checkbox" style="margin-bottom: 10px;">
+                                <input id="checkbox" type="checkbox" checked="checked" disabled="disabled">
+                                <label for="checkbox">我已仔细阅读并同意接受<a href="http://www.meilipa.com/Regist/UserAgreement" style="color: #007db7" target="_blank">《用户使用协议》</a>。</label>
+                            </div>
+                            <div class="submit" id="regsubmitbtn" onclick="$('#regform').submit()">提交</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    function tab(Nav, Num) {
+        if (Nav.className == "active") return;//为了提高效率
+        $(Nav).addClass('active').siblings().removeClass();
+        $(Nav).parent().next().find(".tab").eq(Num).show().siblings().hide();
+    }
+</script>
+
+
+
+    <a class="totop" id="back-to-top" style="display: none" />
+</body>
+</html>
+<div style="display: none">
+     
+</div>
